@@ -27,7 +27,7 @@ steps:
     npm run build
     popd
   displayName: 'npm install and build'
-  workingDirectory: '$(Build.SourcesDirectory)/$(uiBuild)'
+  workingDirectory: '$(Build.SourcesDirectory)/$(uiSource)'
 
 #archive (zip) artifact
 - task: ArchiveFiles@2
