@@ -4,43 +4,43 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+  - master
 
 #directories
 variables:
-  uiSource: 'frontend'
-  uiBuild: '$(uiSource)/dist'
+  uiSource: "frontend"
+  uiBuild: "$(uiSource)/dist"
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '20.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "20.x"
+    displayName: "Install Node.js"
 
-#install dependencies and run
-- script: |
-    pushd $(uiSource)
-    npm install
-    npm run build
-    popd
-  displayName: 'npm install and build'
-  #workingDirectory: '$(Build.SourcesDirectory)/$(uiSource)'
+  #install dependencies and run
+  - script: |
+      pushd $(uiSource)
+      npm install
+      npm run build
+      popd
+    displayName: "npm install and build"
+    #workingDirectory: '$(Build.SourcesDirectory)/$(uiSource)'
 
-#archive (zip) artifact
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(uiBuild)'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+  #archive (zip) artifact
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: "$(uiBuild)"
+      includeRootFolder: false
+      archiveType: "zip"
+      archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip"
+      replaceExistingArchive: true
 
-#publish artifact
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+  #publish artifact
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      ArtifactName: "drop"
+      publishLocation: "Container"
