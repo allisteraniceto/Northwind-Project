@@ -1,13 +1,23 @@
-export default function NavBar() {
-    return (
-        <div>
-            <nav>
-                <ul>
-                    <li>hello 1</li>
-                    <li>hello 2</li>
-                    <li>hello 3</li>
-                </ul>
-            </nav>
-        </div>
-    );
+import { Link } from "react-router-dom";
+
+function NavBar() {
+  return (
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/Employee">Employee</Link>
+          </li>
+          <li>
+            <Link to="/Manager">Manager</Link>
+          </li>
+          <li>
+            <Link to="/Hr">HR</Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 }
+
+export default NavBar;
