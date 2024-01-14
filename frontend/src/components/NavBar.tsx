@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import "../styles/NavBar.css";
 
 function NavBar() {
   return (
-    <div>
-      <nav>
-        <ul>
+    <>
+      <nav className="navbar">
+        <ul className="nav-list">
           <li>
             <Link to="/Employee">Employee</Link>
           </li>
@@ -16,7 +17,7 @@ function NavBar() {
           </li>
         </ul>
       </nav>
-    </div>
+    </>
   );
 }
 

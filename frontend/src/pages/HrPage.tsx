@@ -1,11 +1,12 @@
 //HR Dashboard
 
 import NavBar from "../components/NavBar";
+import Header from "../components/Header";
 
 function HrPage() {
   return (
     <>
-      <h2>HR Dashboard</h2>
+      <Header dashboard="HR" />
       <NavBar />
     </>
   );
