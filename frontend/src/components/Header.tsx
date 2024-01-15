@@ -10,11 +10,7 @@ export default function Header(props: HeaderProps): JSX.Element {
     <>
       <div className="topbar">
         <div>
-          <img
-            className="headshot"
-            src="../../public/pug.jpg"
-            alt="User Headshot"
-          />
+          <img className="headshot" src="/pug.jpg" alt="User Headshot" />
         </div>
         <div>
           <p>Name Here</p>
