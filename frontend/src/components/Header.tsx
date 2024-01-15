@@ -1,6 +1,6 @@
 import Nav from "../components/NavBar";
 
-import "../styles/topbar.css";
+import "../styles/Topbar.css";
 interface HeaderProps {
   dashboard: string;
 }
