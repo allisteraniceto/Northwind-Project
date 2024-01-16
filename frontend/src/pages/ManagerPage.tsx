@@ -1,12 +1,11 @@
 //Manager Dashboard
 
-import NavBar from "../components/NavBar";
+import Header from "../components/Header";
 
 function ManagerPage() {
   return (
     <>
-      <h2>Manager Dashboard</h2>
-      <NavBar />
+      <Header dashboard="Manager" />
     </>
   );
 }
