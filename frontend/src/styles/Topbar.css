@@ -1,0 +1,16 @@
+.topbar {
+  background-color: #fff;
+  height: px;
+  margin: 0;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.headshot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  padding-right: 10px;
+}

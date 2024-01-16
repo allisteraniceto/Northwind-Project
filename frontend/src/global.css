@@ -1,0 +1,8 @@
+/*reset styling of webpage because browsers render differently*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}

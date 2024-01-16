@@ -1,12 +1,11 @@
 //Employee Dashboard
 
-import NavBar from "../components/NavBar";
+import Header from "../components/Header";
 
 function EmployeePage() {
   return (
     <>
-      <h2>Employee Dashboard</h2>
-      <NavBar />
+      <Header dashboard="Employee" />
     </>
   );
 }

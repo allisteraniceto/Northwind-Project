@@ -4,6 +4,8 @@ import EmployeePage from "./pages/EmployeePage";
 import HrPage from "./pages/HrPage";
 import ManagerPage from "./pages/ManagerPage";
 
+import "./global.css";
+
 export default function App() {
   return (
     <div>
