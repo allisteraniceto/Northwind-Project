@@ -1,11 +1,14 @@
 import Header from "../components/Header"
-import Form from "../components/Form"
+import FormSection from "../components/FormSection"
 
 export default function ReviewFormPage(){
     return(
         <>
             <Header dashboard="Forms"/>
-            <Form/>
+            <div className="divide">
+                <FormSection formType="Question" formStyle="QuestionForm"/>
+                <FormSection formType="Feedback" formStyle="FeedbackForm"/>     
+            </div>    
         </>
     );
 }

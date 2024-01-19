@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-import "../styles/Forms.css"
+import "../styles/Form.css"
 
 interface FormsProps{
-    questionNum: string;
+    questionNum: number;
+    formType: String;
 }
 
 export default function Form(props: FormsProps) {
@@ -39,17 +40,15 @@ export default function Form(props: FormsProps) {
   return (
     <>
         <form>
-            <label>Question #1</label><br/>
+            <label>{props.formType} {props.questionNum>0?props.questionNum:""}</label>
             <input
             type="text"
             value={inputObject.inputString} //original state
             onChange={handleInputChange} //once forms changes, handle the new input
             placeholder = "type here"
             />
-            <button type="submit" onClick={handlePostRequest}>Save</button>
+            <button type="button" onClick={handlePostRequest}>Save</button>
         </form>
     </>
-
-
   )
 }
