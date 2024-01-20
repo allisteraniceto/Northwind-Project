@@ -16,7 +16,7 @@ export default function Form(props: FormsProps) {
     });
 
     //handler funciton to update state when input changes
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         const newInput = event.target.value; //captures forms input in an event
 
         setInputObject({...inputObject, inputString: newInput}); //spread operator to help update the object
@@ -41,11 +41,11 @@ export default function Form(props: FormsProps) {
     <>
         <form>
             <label>{props.formType} {props.questionNum>0?props.questionNum:""}</label>
-            <input
-            type="text"
+            <textarea
             value={inputObject.inputString} //original state
             onChange={handleInputChange} //once forms changes, handle the new input
             placeholder = "type here"
+            rows = {3}
             />
             <button type="button" onClick={handlePostRequest}>Save</button>
         </form>
