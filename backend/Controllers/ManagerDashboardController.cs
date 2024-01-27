@@ -52,6 +52,7 @@ public class ManagerDashboardController : ControllerBase
         // Serialize the query result to a JSON string
         var queryResult = JsonSerializer.Serialize(employeesWithManager4);
 
+
         return Ok(queryResult);
     }
 }

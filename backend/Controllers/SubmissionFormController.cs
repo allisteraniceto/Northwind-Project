@@ -17,19 +17,19 @@ public class SubmissionFormController : ControllerBase
     public IActionResult SaveResponse()
     {
          //This action saves an individual response to the database. This does not finalize the form for the user
-        var jsonObject = new
-        {
-            Content = "Hello world",
-            QuestionID = 1,
-            HID = 25,
-            Name = "Mark Kneblik"         
-        };
+        // var jsonObject = new
+        // {
+        //     Content = "Hello world",
+        //     QuestionID = 1,
+        //     HID = 25,
+        //     Name = "Mark Kneblik"         
+        // };
 
-        var textResponse = JsonSerializer.Deserialize<TextResponse>(JsonSerializer.Serialize(jsonObject));
-        _dbContext.Responses.Add(textResponse);
-        _dbContext.SaveChanges();
+        // var textResponse = JsonSerializer.Deserialize<TextResponse>(JsonSerializer.Serialize(jsonObject));
+        // _dbContext.Responses.Add(textResponse);
+        // _dbContext.SaveChanges();
 
-        return Ok("Response saved successfully");
+        return Ok(Globals.UserIdentity);
     }
 
     [HttpGet]
