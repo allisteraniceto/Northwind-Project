@@ -9,7 +9,7 @@ trigger:
 #directories
 variables:
   uiSource: "frontend"
-  uiBuild: "$(uiBuild)/dist"
+  uiBuild: "$(uiSource)/dist"
 
 pool:
   vmImage: ubuntu-latest

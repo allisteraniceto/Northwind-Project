@@ -16,20 +16,31 @@ public class SubmissionFormController : ControllerBase
     [HttpPost]
     public IActionResult SaveResponse()
     {
-        //This action saves an individual response to the database. This does not finalize the form for the user
-        var jsonObject = new
-        {
-            Content = "Hello world",
-            QuestionID = 1,
-            HID = 25,
-            Name = "Mark Kneblik"         
-        };
+         //This action saves an individual response to the database. This does not finalize the form for the user
+        // var jsonObject = new
+        // {
+        //     Content = "Hello world",
+        //     QuestionID = 1,
+        //     HID = 25,
+        //     Name = "Mark Kneblik"         
+        // };
 
-        var textResponse = JsonSerializer.Deserialize<TextResponse>(JsonSerializer.Serialize(jsonObject));
-        _dbContext.Responses.Add(textResponse);
-        _dbContext.SaveChanges();
+        // var textResponse = JsonSerializer.Deserialize<TextResponse>(JsonSerializer.Serialize(jsonObject));
+        // _dbContext.Responses.Add(textResponse);
+        // _dbContext.SaveChanges();
 
-        return Ok("Response saved successfully");
+        return Ok(Globals.UserIdentity);
+    }
+
+    [HttpGet]
+    public IActionResult GetResponses()
+    {
+         //This action displays responses (null or not) associated with each question
+        var reviewResponses = _dbContext.Responses.Where(response => response.ReviewID == 2).ToList();
+
+        // Serialize the query result to a JSON string
+        var queryResult = JsonSerializer.Serialize(reviewResponses);
+        return Ok(queryResult);
     }
 
     // [HttpPost]

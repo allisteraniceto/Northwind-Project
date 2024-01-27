@@ -19,4 +19,7 @@ public class TextResponse
     [Required]
     [Column(TypeName = "nvarchar(60)")]
     public string Name {get; set;} = string.Empty;
+
+    [Required]
+    public int ReviewID {get; set;}
 }
