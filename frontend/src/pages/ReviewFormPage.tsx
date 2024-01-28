@@ -8,27 +8,37 @@ export default function ReviewFormPage() {
       <Header dashboard="Forms" />
       <div className="formSection">
         <div className="divide">
-          <h1>Questions</h1>
-          <FormRow
-            questionNum={questionNum}
-            formQuestion="Job description and/or Job highlights noting any significant changes"
-          />
-          <FormRow
-            questionNum={++questionNum}
-            formQuestion="Evaluate performance and achieved goals"
-          />
-          <FormRow
-            questionNum={++questionNum}
-            formQuestion="Discuss Areas of excellance or improvement"
-          />
-          <FormRow
-            questionNum={++questionNum}
-            formQuestion="Discuss areas of development or improvement"
-          />
-          <FormRow
-            questionNum={++questionNum}
-            formQuestion="Develop future goals with set expectation"
-          />
+          <div className="question-card">
+            <div className="form-header">
+              <h1>Questions</h1>
+            </div>
+            <div className="form-header-3">
+              <h3>Current Responsibilites</h3>
+            </div>
+            <FormRow
+              questionNum={questionNum}
+              formQuestion="Job description and/or Job highlights noting any significant changes"
+            />
+            <div className="form-header-3">
+              <h3>Performance Review</h3>
+            </div>
+            <FormRow
+              questionNum={++questionNum}
+              formQuestion="Evaluate performance and achieved goals"
+            />
+            <FormRow
+              questionNum={++questionNum}
+              formQuestion="Discuss Areas of excellance or improvement"
+            />
+            <FormRow
+              questionNum={++questionNum}
+              formQuestion="Discuss areas of development or improvement"
+            />
+            <FormRow
+              questionNum={++questionNum}
+              formQuestion="Develop future goals with set expectation"
+            />
+          </div>
         </div>
       </div>
     </>

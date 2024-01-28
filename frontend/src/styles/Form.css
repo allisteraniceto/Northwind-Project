@@ -11,8 +11,8 @@ form {
   width: 350px;
   height: 200px;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 8px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*20 percent transparency*/
 }
 
 /* Style labels */

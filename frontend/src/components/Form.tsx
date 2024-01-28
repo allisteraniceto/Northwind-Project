@@ -9,6 +9,8 @@ interface FormsProps {
 }
 
 export default function Form(props: FormsProps) {
+  //Get request to retrieve latest inputs
+
   //State to store the input value
   const [inputObject, setInputObject] = useState({
     questionNum: props.questionNum,
