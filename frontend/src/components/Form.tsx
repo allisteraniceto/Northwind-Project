@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState } from 'react';
+import axios from 'axios';
+import config from '../../config.json';
 
 import "../styles/Form.css";
 
@@ -17,20 +18,20 @@ export default function Form(props: FormsProps) {
   });
 
   //Get request to retrieve latest inputs
-  axios
-    .get("https://dotnet/endpoint", {
-      params: {
-        parameter1: inputObject.questionNum,
-        parameter2: inputObject.formType,
-      },
-    })
-    .then((response) => {
-      setInputObject({ ...inputObject, inputString: response.data });
-    })
-    .catch((error) => {
-      //handle errors
-      console.error("Error making Get request:", error.message);
-    });
+  // axios
+  //   .get("https://dotnet/endpoint", {
+  //     params: {
+  //       parameter1: inputObject.questionNum,
+  //       parameter2: inputObject.formType,
+  //     },
+  //   })
+  //   .then((response) => {
+  //     setInputObject({ ...inputObject, inputString: response.data });
+  //   })
+  //   .catch((error) => {
+  //     //handle errors
+  //     console.error("Error making Get request:", error.message);
+  //   });
 
   //handler funciton to update state when input changes
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -39,26 +40,19 @@ export default function Form(props: FormsProps) {
     setInputObject({ ...inputObject, inputString: newInput }); //spread operator to help update the object
   };
 
-  //send post request once save button using async/await function
-  const handlePostRequest = async () => {
-    try {
-      //axios.post(api endpoint, data, headers)
-      const response = await axios.post(
-        "https://dotnet/endpoint",
-        inputObject,
-        {
-          headers: {
-            //metadata for server
-            "Content-Type": "applicaiton/json",
-          },
-        }
-      );
+    //send post request once save button using async/await function
+    const handlePostRequest = async () => {
+        try{ //axios.post(api endpoint, data, headers)
+            const response = await axios.post(`${config.apiUrl}/SubmissionForm/SaveResponse`, inputObject, {
+                headers:{ //metadata for server
+                    'Content-Type': 'application/json'
+                }
+            });
 
-      console.log("Resoponse data: ", response.data);
-    } catch (error: any) {
-      //post request error handling
-      console.error("Error making Post request:", error.message);
-    }
+            console.log('Response data: ', response.data);
+        } catch(error: any){ //post request error handling
+            console.error('Error making Post request:', error.message)
+        }
   };
 
   return (
