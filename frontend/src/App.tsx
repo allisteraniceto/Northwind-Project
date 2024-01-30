@@ -3,7 +3,8 @@ import NoPage from "./pages/NoPage";
 import EmployeePage from "./pages/EmployeePage";
 import HrPage from "./pages/HrPage";
 import ManagerPage from "./pages/ManagerPage";
-import ReviewFormPage from "./pages/ReviewFormPage"
+import EmployeeReviewFormPage from "./pages/EmployeeReviewFormPage"
+import ManagerReviewFormPage from "./pages/ManagerReviewFormPage"
 
 import "./global.css";
 
@@ -16,7 +17,8 @@ export default function App() {
           <Route path="/Employee" element={<EmployeePage />} />
           <Route path="/Hr" element={<HrPage />} />
           <Route path="/Manager" element={<ManagerPage />} />
-          <Route path="/ReviewForm" element={<ReviewFormPage/>}/>
+          <Route path="/EmployeeReviewForm" element={<EmployeeReviewFormPage/>}/>
+          <Route path="/ManagerReviewForm" element={<ManagerReviewFormPage/>}/>
           <Route path="*" element={<NoPage />} />{" "}
           {/* *: anything else another the other routes */}
         </Routes>

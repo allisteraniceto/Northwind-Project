@@ -25,8 +25,8 @@ public class SubmissionFormController : ControllerBase
 
         var textResponse = new TextResponse
         {
-            Content = response.Content,
-            QuestionID = response.QuestionID,
+            Content = response.inputString,
+            QuestionID = response.questionNum,
             HID = Globals.UserIdentity.HID,
             Name = Globals.UserIdentity.FirstName + Globals.UserIdentity.LastName,
             ReviewID = review.ReviewID
@@ -35,7 +35,7 @@ public class SubmissionFormController : ControllerBase
         _dbContext.Responses.Add(textResponse);
         _dbContext.SaveChanges();
 
-        return Ok(Globals.UserIdentity);
+        return Ok();
     }
 
     [HttpGet]
