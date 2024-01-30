@@ -18,20 +18,20 @@ export default function Form(props: FormsProps) {
   });
 
   //Get request to retrieve latest inputs
-  axios
-    .get("https://dotnet/endpoint", {
-      params: {
-        parameter1: inputObject.questionNum,
-        parameter2: inputObject.formType,
-      },
-    })
-    .then((response) => {
-      setInputObject({ ...inputObject, inputString: response.data });
-    })
-    .catch((error) => {
-      //handle errors
-      console.error("Error making Get request:", error.message);
-    });
+  // axios
+  //   .get("https://dotnet/endpoint", {
+  //     params: {
+  //       parameter1: inputObject.questionNum,
+  //       parameter2: inputObject.formType,
+  //     },
+  //   })
+  //   .then((response) => {
+  //     setInputObject({ ...inputObject, inputString: response.data });
+  //   })
+  //   .catch((error) => {
+  //     //handle errors
+  //     console.error("Error making Get request:", error.message);
+  //   });
 
   //handler funciton to update state when input changes
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -53,13 +53,6 @@ export default function Form(props: FormsProps) {
         } catch(error: any){ //post request error handling
             console.error('Error making Post request:', error.message)
         }
-      );
-
-      console.log("Resoponse data: ", response.data);
-    } catch (error: any) {
-      //post request error handling
-      console.error("Error making Post request:", error.message);
-    }
   };
 
   return (
