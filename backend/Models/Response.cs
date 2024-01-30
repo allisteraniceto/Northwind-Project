@@ -3,7 +3,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 public class Response
 {
-    public int QuestionID {get; set;}
-    public string Content {get; set;} = string.Empty;
+    public string formType {get; set;} = string.Empty;
+
+    public string inputString {get; set;} = string.Empty;
+
+    public int questionNum {get; set;}
 
 }

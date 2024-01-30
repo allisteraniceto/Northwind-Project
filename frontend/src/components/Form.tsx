@@ -7,6 +7,7 @@ import "../styles/Form.css";
 interface FormsProps {
   questionNum: number; //question number
   formType: String;
+  readonly: boolean;
 }
 
 export default function Form(props: FormsProps) {
@@ -37,7 +38,10 @@ export default function Form(props: FormsProps) {
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newInput = event.target.value; //captures forms input in an event
 
-    setInputObject({ ...inputObject, inputString: newInput }); //spread operator to help update the object
+    setInputObject((prevInputObject) => ({
+      ...prevInputObject,
+      inputString: newInput,
+    })); //spread operator to help update the object
   };
 
     //send post request once save button using async/await function
@@ -65,10 +69,13 @@ export default function Form(props: FormsProps) {
           onChange={handleInputChange} //once forms changes, handle the new input
           placeholder="type here"
           rows={4}
+          readOnly={props.readonly}
         />
+        {!props.readonly && (
         <button type="button" onClick={handlePostRequest}>
           Save
         </button>
+      )}
       </form>
     </>
   );

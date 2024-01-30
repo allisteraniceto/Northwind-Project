@@ -16,7 +16,10 @@ function NavBar() {
             <Link to="/Hr">HR</Link>
           </li>
           <li>
-            <Link to="/ReviewForm">Review Form</Link>
+            <Link to="/EmployeeReviewForm">Employee Review Form</Link>
+          </li>
+          <li>
+            <Link to="/ManagerReviewForm">Manager Review Form</Link>
           </li>
         </ul>
       </nav>
