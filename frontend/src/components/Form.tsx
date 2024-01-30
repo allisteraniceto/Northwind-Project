@@ -37,7 +37,10 @@ export default function Form(props: FormsProps) {
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newInput = event.target.value; //captures forms input in an event
 
-    setInputObject({ ...inputObject, inputString: newInput }); //spread operator to help update the object
+    setInputObject((prevInputObject) => ({
+      ...prevInputObject,
+      inputString: newInput,
+    })); //spread operator to help update the object
   };
 
     //send post request once save button using async/await function
