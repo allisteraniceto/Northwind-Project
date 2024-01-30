@@ -14,20 +14,26 @@ public class SubmissionFormController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult SaveResponse()
+    [Route("SaveResponse")] 
+    public IActionResult SaveResponse([FromBody] Response response)
     {
          //This action saves an individual response to the database. This does not finalize the form for the user
-        // var jsonObject = new
-        // {
-        //     Content = "Hello world",
-        //     QuestionID = 1,
-        //     HID = 25,
-        //     Name = "Mark Kneblik"         
-        // };
 
-        // var textResponse = JsonSerializer.Deserialize<TextResponse>(JsonSerializer.Serialize(jsonObject));
-        // _dbContext.Responses.Add(textResponse);
-        // _dbContext.SaveChanges();
+        var review = _dbContext.Reviews.FirstOrDefault(review => review.Status != "finalized" && 
+                     (review.EmployeeHID == Globals.UserIdentity.HID || 
+                      review.ManagerHID == Globals.UserIdentity.HID));
+
+        var textResponse = new TextResponse
+        {
+            Content = response.Content,
+            QuestionID = response.QuestionID,
+            HID = Globals.UserIdentity.HID,
+            Name = Globals.UserIdentity.FirstName + Globals.UserIdentity.LastName,
+            ReviewID = review.ReviewID
+        };
+
+        _dbContext.Responses.Add(textResponse);
+        _dbContext.SaveChanges();
 
         return Ok(Globals.UserIdentity);
     }

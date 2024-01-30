@@ -9,4 +9,6 @@ public class Identity
     public int HID { get; set; }
 
     public int ManagerHID { get; set; }
+
+    public string Role { get; set; } = string.Empty;
 }

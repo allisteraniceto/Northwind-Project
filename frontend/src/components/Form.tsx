@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import config from '../../config.json';
 
 import "../styles/Form.css"
 
@@ -25,13 +26,13 @@ export default function Form(props: FormsProps) {
     //send post request once save button using async/await function
     const handlePostRequest = async () => {
         try{ //axios.post(api endpoint, data, headers)
-            const response = await axios.post('https://dotnet/endpoint', inputObject, {
+            const response = await axios.post(`${config.apiUrl}/SubmissionForm/SaveResponse`, inputObject, {
                 headers:{ //metadata for server
-                    'Content-Type': 'applicaiton/json'
+                    'Content-Type': 'application/json'
                 }
             });
 
-            console.log('Resoponse data: ', response.data);
+            console.log('Response data: ', response.data);
         } catch(error: any){ //post request error handling
             console.error('Error making Post request:', error.message)
         }
