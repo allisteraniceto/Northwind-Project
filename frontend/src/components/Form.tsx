@@ -7,6 +7,7 @@ import "../styles/Form.css";
 interface FormsProps {
   questionNum: number; //question number
   formType: String;
+  readonly: boolean;
 }
 
 export default function Form(props: FormsProps) {
@@ -68,10 +69,13 @@ export default function Form(props: FormsProps) {
           onChange={handleInputChange} //once forms changes, handle the new input
           placeholder="type here"
           rows={4}
+          readOnly={props.readonly}
         />
+        {!props.readonly && (
         <button type="button" onClick={handlePostRequest}>
           Save
         </button>
+      )}
       </form>
     </>
   );

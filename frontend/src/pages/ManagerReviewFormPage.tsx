@@ -1,7 +1,7 @@
 import Header from "../components/Header";
-import FormRow from "../components/FormRow";
+import ManagerFormRow from "../components/ManagerFormRow";
 
-export default function ReviewFormPage() {
+export default function EmployeeReviewFormPage() {
   let questionNum: number = 1;
   return (
     <>
@@ -15,26 +15,26 @@ export default function ReviewFormPage() {
             <div className="form-header-3">
               <h3>Current Responsibilites</h3>
             </div>
-            <FormRow
+            <ManagerFormRow
               questionNum={questionNum}
               formQuestion="Job description and/or Job highlights noting any significant changes"
             />
             <div className="form-header-3">
               <h3>Performance Review</h3>
             </div>
-            <FormRow
+            <ManagerFormRow
               questionNum={++questionNum}
               formQuestion="Evaluate performance and achieved goals"
             />
-            <FormRow
+            <ManagerFormRow
               questionNum={++questionNum}
               formQuestion="Discuss Areas of excellance or improvement"
             />
-            <FormRow
+            <ManagerFormRow
               questionNum={++questionNum}
               formQuestion="Discuss areas of development or improvement"
             />
-            <FormRow
+            <ManagerFormRow
               questionNum={++questionNum}
               formQuestion="Develop future goals with set expectation"
             />
