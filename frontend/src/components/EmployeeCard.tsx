@@ -1,13 +1,18 @@
 import "../styles/EmployeeList.css";
 
-export default function EmployeeCard() {
+interface EmployeeProps {
+  employee: String;
+  key: Number;
+}
+
+export default function EmployeeCard(props: EmployeeProps) {
   return (
     <div className="employee-card">
       <div>
         <img className="headshot" src="/pug.jpg" alt="User Headshot" />
       </div>
       <div>
-        <p>John Doe</p>
+        <p>{props.employee}</p>
       </div>
       <div>
         <svg

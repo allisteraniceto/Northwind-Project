@@ -1,0 +1,244 @@
+{
+ "employees": [
+    {
+      "employee_id": 1,
+      "first_name": "Rosanne",
+      "last_name": "Bleything",
+      "email": "rbleything0@nyu.edu",
+      "job_title": "Employee",
+      "manager_id": 4
+    },
+    {
+      "employee_id": 2,
+      "first_name": "Lyndell",
+      "last_name": "Brewster",
+      "email": "lbrewster1@cloudflare.com",
+      "job_title": "Manager",
+      "manager_id": 4
+    },
+    {
+      "employee_id": 3,
+      "first_name": "Cindi",
+      "last_name": "Ackenson",
+      "email": "cackenson2@yahoo.co.jp",
+      "job_title": "Manager",
+      "manager_id": 3
+    },
+    {
+      "employee_id": 4,
+      "first_name": "Patrica",
+      "last_name": "Korneev",
+      "email": "pkorneev3@twitpic.com",
+      "job_title": "Manager",
+      "manager_id": 4
+    },
+    {
+      "employee_id": 5,
+      "first_name": "Kirby",
+      "last_name": "Dendle",
+      "email": "kdendle4@admin.ch",
+      "job_title": "Employee",
+      "manager_id": 5
+    },
+    {
+      "employee_id": 6,
+      "first_name": "Terry",
+      "last_name": "Goggey",
+      "email": "tgoggey5@google.com.hk",
+      "job_title": "Employee",
+      "manager_id": 3
+    },
+    {
+      "employee_id": 7,
+      "first_name": "Emelia",
+      "last_name": "Skegg",
+      "email": "eskegg6@ycombinator.com",
+      "job_title": "Employee",
+      "manager_id": 5
+    },
+    {
+      "employee_id": 8,
+      "first_name": "Adair",
+      "last_name": "Armatys",
+      "email": "aarmatys7@ow.ly",
+      "job_title": "Employee",
+      "manager_id": 5
+    },
+    {
+      "employee_id": 9,
+      "first_name": "Paula",
+      "last_name": "Boni",
+      "email": "pboni8@jalbum.net",
+      "job_title": "Employee",
+      "manager_id": 3
+    },
+    {
+      "employee_id": 10,
+      "first_name": "Natale",
+      "last_name": "Pittaway",
+      "email": "npittaway9@fastcompany.com",
+      "job_title": "Employee",
+      "manager_id": 5
+    },
+    {
+      "employee_id": 11,
+      "first_name": "Gonzalo",
+      "last_name": "Wibrew",
+      "email": "gwibrewa@ucsd.edu",
+      "job_title": "Employee",
+      "manager_id": 4
+    },
+    {
+      "employee_id": 12,
+      "first_name": "Niko",
+      "last_name": "Collough",
+      "email": "ncolloughb@macromedia.com",
+      "job_title": "Employee",
+      "manager_id": 5
+    },
+    {
+      "employee_id": 13,
+      "first_name": "Chuck",
+      "last_name": "Terbeck",
+      "email": "cterbeckc@dot.gov",
+      "job_title": "Employee",
+      "manager_id": 5
+    },
+    {
+      "employee_id": 14,
+      "first_name": "Farah",
+      "last_name": "Blanchard",
+      "email": "fblanchardd@pen.io",
+      "job_title": "Employee",
+      "manager_id": 3
+    },
+    {
+      "employee_id": 15,
+      "first_name": "Binnie",
+      "last_name": "Josofovitz",
+      "email": "bjosofovitze@tripod.com",
+      "job_title": "Employee",
+      "manager_id": 3
+    },
+    {
+      "employee_id": 16,
+      "first_name": "Lauryn",
+      "last_name": "Jones",
+      "email": "ljonesf@yellowpages.com",
+      "job_title": "Employee",
+      "manager_id": 5
+    },
+    {
+      "employee_id": 17,
+      "first_name": "Rozella",
+      "last_name": "Abrahamsen",
+      "email": "rabrahamseng@europa.eu",
+      "job_title": "Employee",
+      "manager_id": 4
+    },
+    {
+      "employee_id": 18,
+      "first_name": "Juieta",
+      "last_name": "Etches",
+      "email": "jetchesh@symantec.com",
+      "job_title": "Employee",
+      "manager_id": 4
+    },
+    {
+      "employee_id": 19,
+      "first_name": "Vinson",
+      "last_name": "Chantrell",
+      "email": "vchantrelli@networkadvertising.org",
+      "job_title": "Employee",
+      "manager_id": 3
+    },
+    {
+      "employee_id": 20,
+      "first_name": "Cherise",
+      "last_name": "Barosch",
+      "email": "cbaroschj@mozilla.com",
+      "job_title": "Employee",
+      "manager_id": 3
+    },
+    {
+      "employee_id": 21,
+      "first_name": "Carolus",
+      "last_name": "Sills",
+      "email": "csillsk@google.ca",
+      "job_title": "Employee",
+      "manager_id": 3
+    },
+    {
+      "employee_id": 22,
+      "first_name": "Tiffanie",
+      "last_name": "Garlee",
+      "email": "tgarleel@slideshare.net",
+      "job_title": "Employee",
+      "manager_id": 5
+    },
+    {
+      "employee_id": 23,
+      "first_name": "Druci",
+      "last_name": "Reisen",
+      "email": "dreisenm@theglobeandmail.com",
+      "job_title": "Employee",
+      "manager_id": 4
+    },
+    {
+      "employee_id": 24,
+      "first_name": "Corty",
+      "last_name": "Lydon",
+      "email": "clydonn@istockphoto.com",
+      "job_title": "Employee",
+      "manager_id": 3
+    },
+    {
+      "employee_id": 25,
+      "first_name": "Nelie",
+      "last_name": "Fairpo",
+      "email": "nfairpoo@umich.edu",
+      "job_title": "Employee",
+      "manager_id": 4
+    },
+    {
+      "employee_id": 26,
+      "first_name": "Hadrian",
+      "last_name": "Brownell",
+      "email": "hbrownellp@blinklist.com",
+      "job_title": "Employee",
+      "manager_id": 5
+    },
+    {
+      "employee_id": 27,
+      "first_name": "Dennison",
+      "last_name": "Parnby",
+      "email": "dparnbyq@mozilla.com",
+      "job_title": "Employee",
+      "manager_id": 5
+    },
+    {
+      "employee_id": 28,
+      "first_name": "Cate",
+      "last_name": "Caneo",
+      "email": "ccaneor@wufoo.com",
+      "job_title": "Employee",
+      "manager_id": 3
+    },
+    {
+      "employee_id": 29,
+      "first_name": "Cordi",
+      "last_name": "Brooke",
+      "email": "cbrookes@amazonaws.com",
+      "job_title": "Employee",
+      "manager_id": 4
+    },
+    {
+      "employee_id": 30,
+      "first_name": "Cole",
+      "last_name": "Saggs",
+      "email": "csaggst@rambler.ru",
+      "job_title": "Employee",
+      "manager_id": 4
+    }
+  ]
+}
