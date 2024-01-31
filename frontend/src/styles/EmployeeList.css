@@ -1,0 +1,12 @@
+.employee-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.employee-list {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 800px;
+}
