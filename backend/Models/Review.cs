@@ -26,6 +26,6 @@ public class Review
     public int ManagerHID {get; set;}
 
     [Required]
-    [Column(TypeName = "nvarchar(15)")]
+    [Column(TypeName = "nvarchar(40)")]
     public string Status {get; set;} = "Initiated";
 }

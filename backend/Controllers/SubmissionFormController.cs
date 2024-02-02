@@ -86,6 +86,40 @@ public class SubmissionFormController : ControllerBase
         }
     }
 
+    [HttpPost]
+    [Route("HandleSubmission")]
+    public IActionResult HandleSubmission([FromBody] string formType)
+    {
+         //This action will discern whether a manager or employee hit their "submit" button. It will then change the status of the 
+        //review in the database
+        if(formType == "employee")
+        {
+            var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
+            review.Status = "Employee Comments Submitted";
+            _dbContext.SaveChanges();
+        }
+        else
+        {
+            var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
+            review.Status = "Manager Feedback Submitted";
+            _dbContext.SaveChanges();
+        }
+        return Ok();
+
+    }
+
+    [HttpGet]
+    [Route("GetStatus")]
+    public IActionResult GetStatus()
+    {
+         //This action will discern whether a manager or employee hit their "submit" button. It will then change the status of the 
+        //review in the database
+        var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
+
+        return Ok(review.Status);
+
+    }
+
     // [HttpPost]
     // public IActionResult SubmitPerformanceReview()
     // {

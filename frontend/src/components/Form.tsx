@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import config from '../../config.json';
-
 import "../styles/Form.css";
 
 interface FormsProps {
@@ -34,14 +33,14 @@ export default function Form(props: FormsProps) {
           const responseData = response.data.Content;
           setInputObject((prevInputObject) => ({
             ...prevInputObject,
-            inputString: responseData // Set the fetched response as the placeholder
+            inputString: responseData // Set the fetched response as the input string
           }));
       } catch (error: any) {
           console.error('Error fetching data:', error.message);
       }
     };
         fetchResponse(); // Call the fetchData function
-}, []); // Run the effect only when props.questionNum changes
+}, []); // Run the effect only when component mounts for the first time
 
 
 

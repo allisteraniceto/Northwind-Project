@@ -1,0 +1,26 @@
+.employee-container {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+  }
+  
+  .performance-review-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  /* Hover effect on the button */
+  .performance-review-button:hover {
+    background-color: #45a049;
+  }
