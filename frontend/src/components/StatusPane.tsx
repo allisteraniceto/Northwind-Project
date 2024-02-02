@@ -21,7 +21,6 @@ export default function StatusPane({ completed, managerPicture }: Props) {
         )}
         {!completed && <button onClick={sendReminder}>Send Reminder</button>}
         <br />
-        test
         <img src={managerPicture} alt="Manager Headshot" />
       </nav>
     </>
