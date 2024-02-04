@@ -1,15 +1,24 @@
-.employee-list {
-  margin: 30px;
-  padding: 10px;
+.employee_list-container {
   padding-top: 20px;
   padding-bottom: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.employee-list {
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
   display: flex;
+  align-items: center;
   flex-direction: column;
-  width: 600px;
+  width: 700px;
+  min-width: 600px;
   height: 100vh;
   overflow: auto;
+  background-color: white;
 }
 
 .employee-list::-webkit-scrollbar {
@@ -35,6 +44,7 @@
   border-radius: 10px;
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.12);
   height: 100px;
+  width: 550px;
 }
 
 .employee-name {
