@@ -14,3 +14,7 @@
   object-fit: cover; /* Ensure the image covers the entire container */
   padding-right: 10px;
 }
+
+.topbar .name {
+  padding-left: 10px;
+}

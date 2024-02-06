@@ -1,26 +1,66 @@
+/* Right section of manager page */
+.interactions-section{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.selected-employee-container{
+  position: relative;
+  top: -90px;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.previous-years-container{
+  position: relative;
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  box-sizing: border-box;
+}
+
 .employee-container {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translate(0, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 50%;
-  }
-  
-  .performance-review-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 5px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 25px;
-  }
-  
-  /* Hover effect on the button */
-  .performance-review-button:hover {
-    background-color: #45a049;
-  }
+  position: relative;
+  top: -70px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+.performance-review-button {
+  position: absolute;
+  top: 180px;
+  transform: translate(0, -50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 15px;
+  margin: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* Hover effect on the button */
+.performance-review-button:hover {
+  background-color: #45a049;
+}
+
+
+
