@@ -35,8 +35,10 @@ public class ManagerDashboardController : ControllerBase
     //     //
     // }
 
+    //GET request to retrieve employees with manager_id: 4 (testing it out)
     [HttpGet]
-    public IActionResult GetEmployeeList()
+    [Route("EmployeeList")]
+    public IActionResult GetEmployeeList(string parameter1, string parameter2) //filter based on requester's parameters
     {
         string jsonPath = "employees.json";
         string jsonString = System.IO.File.ReadAllText(jsonPath);
@@ -52,6 +54,26 @@ public class ManagerDashboardController : ControllerBase
         // Serialize the query result to a JSON string
         var queryResult = JsonSerializer.Serialize(employeesWithManager4);
 
+
+        return Ok(queryResult);
+    }
+
+    //GET request to get ALL employees
+    [HttpGet]
+    [Route("EmployeeListAll")]
+    public IActionResult GetEmployeeListAll()
+    {
+        string jsonPath = "employees.json";
+        string jsonString = System.IO.File.ReadAllText(jsonPath);
+
+        //Deserialize "employees" field of json string to an employee list
+        var employeesList = JsonSerializer.Deserialize<EmployeeList>(jsonString);
+        
+        //Create list of employees that we can LINQ query
+        var employees = employeesList.Employees;
+
+        // Serialize the query result to a JSON string
+        var queryResult = JsonSerializer.Serialize(employees);
 
         return Ok(queryResult);
     }
