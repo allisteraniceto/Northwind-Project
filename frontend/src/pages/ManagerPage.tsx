@@ -15,12 +15,23 @@ function ManagerPage() {
         <div className="employee_list-container">
           <EmployeeList />
         </div>
-        <div className="employee-container">
-          <Link to="/ManagerReviewForm">
-            <button type="button" className="performance-review-button">
-              Take Me To This Employee's Performance Review
-            </button>
-          </Link>
+        <div className="interactions-section">
+          <div className="selected-employee-container">
+            {/*SELECTED EMPLOYEE*/}
+          </div>
+          <div className="employee-container">
+            <h3>Take Me To This Employee's Performance Review</h3>
+              <div>
+              <Link to="/ManagerReviewForm">
+                <button type="button" className="performance-review-button">
+                  Go
+                </button>
+              </Link>
+              </div>
+          </div>
+          <div className="previous-years-container">
+            {/*PREVIOUS REVIEWS*/}
+          </div>
         </div>
       </div>
     </>

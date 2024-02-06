@@ -3,10 +3,11 @@
   margin: 0;
   background-color: #446bec;
   padding: 15px;
-  height: 25px;
+  height: 50px;
   width: 100%;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /*ul*/
@@ -35,7 +36,7 @@
 }
 
 .dashboard {
-  height: 30px;
+  height: 50px;
   width: 100%;
   background-color: #446bec;
   padding: 10px;
@@ -43,4 +44,5 @@
   display: flex;
   align-items: center;
   color: #fff;
+  box-sizing: border-box;
 }
