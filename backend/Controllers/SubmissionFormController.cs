@@ -117,7 +117,7 @@ public class SubmissionFormController : ControllerBase
         if(formType == "employee")
         {
             var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
-            review.Status = "Signed by Employee";
+            review.Status = "Signed By Employee";
             review.EmployeeSignature = 1;
             _dbContext.SaveChanges();
         }
