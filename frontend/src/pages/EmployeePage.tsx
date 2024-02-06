@@ -2,7 +2,8 @@
 
 import Header from "../components/Header";
 
-function EmployeePage() {
+function EmployeePage() 
+{
   return (
     <>
       <Header dashboard="Employee" />
