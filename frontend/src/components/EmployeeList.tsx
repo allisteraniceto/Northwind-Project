@@ -5,7 +5,7 @@ import config from "../../config.json";
 import "../styles/EmployeeList.css";
 
 //import dummy employee json data
-import employeeData from "../dummy-employees.json";
+// import employeeData from "../dummy-employees.json";
 
 // Define the Employee interface (because Typescript lol)
 interface Employee {
