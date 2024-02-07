@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import ManagerFormRow from "../components/ManagerFormRow";
-import SubmitButton from "../components/SubmitButton";
+import SubmitOrSignButton from "../components/SubmitOrSignButton";
 
 export default function EmployeeReviewFormPage() {
   let questionNum: number = 1;
@@ -39,7 +39,11 @@ export default function EmployeeReviewFormPage() {
               questionNum={++questionNum}
               formQuestion="Develop future goals with set expectation"
             />
-            <SubmitButton formType="manager" status="Employee Comments Submitted"/>  
+
+
+            <SubmitOrSignButton formType="manager" status="" buttonType="submit"/>  
+            <SubmitOrSignButton formType="manager" status="" buttonType="sign"/>  
+            
           </div>
         </div>
       </div>
