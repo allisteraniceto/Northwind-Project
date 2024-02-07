@@ -2631,19 +2631,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mark\\.nuget\\packages\\": {}
+    "/Users/allisteraniceto/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\VSCodeProjects\\Northwind-Project\\backend\\backend.csproj",
+      "projectUniqueName": "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\VSCodeProjects\\Northwind-Project\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
-      "outputPath": "C:\\VSCodeProjects\\Northwind-Project\\backend\\obj\\",
+      "projectPath": "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/backend.csproj",
+      "packagesPath": "/Users/allisteraniceto/.nuget/packages/",
+      "outputPath": "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/allisteraniceto/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2709,6 +2709,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-x64",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2717,7 +2731,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -2727,6 +2741,16 @@
       "level": "Warning",
       "warningLevel": 1,
       "message": "backend depends on Newtonsoft.Json (>= 6.0.0) but Newtonsoft.Json 6.0.0 was not found. An approximate best match of Newtonsoft.Json 6.0.1 was resolved.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Newtonsoft.Json' 6.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net6.0"

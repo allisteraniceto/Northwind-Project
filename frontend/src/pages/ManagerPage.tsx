@@ -18,10 +18,11 @@ function ManagerPage() {
         <div className="interactions-section">
           <div className="selected-employee-container">
             {/*SELECTED EMPLOYEE*/}
+            <p>Selected Employee</p>
           </div>
           <div className="employee-container">
             <h3>Take Me To This Employee's Performance Review</h3>
-              <div>
+              <div className="go-button">
               <Link to="/ManagerReviewForm">
                 <button type="button" className="performance-review-button">
                   Go
@@ -31,6 +32,7 @@ function ManagerPage() {
           </div>
           <div className="previous-years-container">
             {/*PREVIOUS REVIEWS*/}
+            <p>Previous Reviews</p>
           </div>
         </div>
       </div>
