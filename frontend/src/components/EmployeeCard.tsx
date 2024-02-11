@@ -3,18 +3,19 @@ import "../styles/EmployeeList.css";
 interface EmployeeProps {
   employee: String;
   key: Number;
+  status: Boolean;
 }
 
 export default function EmployeeCard(props: EmployeeProps) {
   return (
     <div className="employee-card">
-      <div>
-        <img className="headshot" src="/pug.jpg" alt="User Headshot" />
+      <div className="headshot-container">
+        <img className="headshot-card" src="/pug.jpg" alt="User Headshot" />
       </div>
-      <div>
+      <div className="employee-name">
         <p>{props.employee}</p>
       </div>
-      <div>
+      <div className="status">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
