@@ -2,12 +2,31 @@
 //Employee Dashboard
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import YearRadioButton from "../components/YearRadioButton";
+import '../styles/YearRadioButton.css'
+
+import ClickableStarRating from '../components/ClickableStarRating';
+import React, { useState } from 'react';
+import "../styles/InteractionsPane.css";
 import EmployeeList from "../components/EmployeeList";
 
 import "../styles/InteractionsPane.css";
 import "../styles/ManagerSection.css";
 
 function ManagerPage() {
+  const [overallRating, setOverallRating] = useState<number | null>(null);
+
+  const handleOverallRatingChange = (newRating: number) => {
+    setOverallRating(newRating);
+    // You can perform additional actions based on the overall rating
+  };
+
+  const handleYearSelected = (year: string) => {
+    // Implement your logic when a year is selected
+    console.log("Year selected:", year);
+  };
+
+  
   return (
     <>
       <Header dashboard="Manager" />
@@ -30,8 +49,16 @@ function ManagerPage() {
               </Link>
               </div>
           </div>
+
+
           <div className="previous-years-container">
-            {/*PREVIOUS REVIEWS*/}
+
+               <div className="radio-buttons-container">
+               <YearRadioButton onYearSelected={handleYearSelected} />
+             </div>
+            
+            
+      
             <p>Previous Reviews</p>
           </div>
         </div>
