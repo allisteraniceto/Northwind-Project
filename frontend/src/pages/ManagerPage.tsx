@@ -2,15 +2,14 @@
 //Employee Dashboard
 import { Link } from 'react-router-dom';
 import Header from "../components/Header";
-<<<<<<< HEAD
-import YearSlider from '../components/YearSlide';
+import YearRadioButton from "../components/YearRadioButton";
+import '../styles/YearRadioButton.css'
+
 import ClickableStarRating from '../components/ClickableStarRating';
 import React, { useState } from 'react';
-=======
 import "../styles/InteractionsPane.css";
 import EmployeeList from "../components/EmployeeList";
 
->>>>>>> origin/main
 function ManagerPage() {
   const [overallRating, setOverallRating] = useState<number | null>(null);
 
@@ -19,12 +18,26 @@ function ManagerPage() {
     // You can perform additional actions based on the overall rating
   };
 
+  const handleYearSelected = (year: string) => {
+    // Implement your logic when a year is selected
+    console.log("Year selected:", year);
+  };
+
+  
   return (
     <>
-      <Header dashboard="Manager" />
-<<<<<<< HEAD
-      <YearSlider />
-=======
+      <div>
+      <div className="button-container">
+        <div className='performance-review-button'>
+          Take Me To This Employee's Performance Review
+          <button type="button">Go</button>
+        </div>
+      </div>
+
+      <div className="radio-buttons-container">
+        <YearRadioButton onYearSelected={handleYearSelected} />
+      </div>
+    </div>
       <EmployeeList />
       <div className='employee-container'>
         <Link to="/ManagerReviewForm">
@@ -33,7 +46,6 @@ function ManagerPage() {
           </button>
         </Link>
       </div>
->>>>>>> origin/main
     </>
   );
 }

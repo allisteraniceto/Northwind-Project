@@ -38,4 +38,4 @@ const YearSlider: React.FC<YearSliderProps> = () => {
   );
 };
 
-export default YearSlider;
+
