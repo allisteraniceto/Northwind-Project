@@ -108,6 +108,30 @@ public class SubmissionFormController : ControllerBase
 
     }
 
+    [HttpPost]
+    [Route("HandleSignature")]
+    public IActionResult HandleSignature([FromBody] string formType)
+    {
+         //This action will discern whether a manager or employee hit their "sign" button. It will then change the status of the 
+        //review in the database and update the respective signature field to 1, indicating a signature. Review will be "finalized" when manager clicks the sign button
+        if(formType == "employee")
+        {
+            var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
+            review.Status = "Signed By Employee";
+            review.EmployeeSignature = 1;
+            _dbContext.SaveChanges();
+        }
+        else
+        {
+            var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
+            review.Status = "Finalized";
+            review.ManagerSignature = 1;
+            _dbContext.SaveChanges();
+        }
+        return Ok();
+
+    }
+
     [HttpGet]
     [Route("GetStatus")]
     public IActionResult GetStatus()
