@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import axios from "axios";
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import config from '../../config.json';
 import "../styles/Form.css";
 
 interface FormsProps {
   questionNum: number; //question number
   formType: String;
+  readonly: boolean;
 }
 
 export default function Form(props: FormsProps) {
@@ -13,52 +14,59 @@ export default function Form(props: FormsProps) {
   const [inputObject, setInputObject] = useState({
     questionNum: props.questionNum,
     formType: props.formType,
-    inputString: "",
+    inputString: ""
   });
 
-  //Get request to retrieve latest inputs
-  axios
-    .get("https://dotnet/endpoint", {
-      params: {
-        parameter1: inputObject.questionNum,
-        parameter2: inputObject.formType,
-      },
-    })
-    .then((response) => {
-      setInputObject({ ...inputObject, inputString: response.data });
-    })
-    .catch((error) => {
-      //handle errors
-      console.error("Error making Get request:", error.message);
-    });
+ 
+
+  useEffect(() => {
+    // Make a GET request to API endpoint
+    const fetchResponse = async () => {
+      try {
+          const response = await axios.post(`${config.apiUrl}/SubmissionForm/GetResponse`, inputObject, {
+              headers: { 
+                  'Content-Type': 'application/json'
+              }
+          });
+  
+          // Handle the response data
+          const responseData = response.data.Content;
+          setInputObject((prevInputObject) => ({
+            ...prevInputObject,
+            inputString: responseData // Set the fetched response as the input string
+          }));
+      } catch (error: any) {
+          console.error('Error fetching data:', error.message);
+      }
+    };
+        fetchResponse(); // Call the fetchData function
+}, []); // Run the effect only when component mounts for the first time
+
+
 
   //handler funciton to update state when input changes
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newInput = event.target.value; //captures forms input in an event
 
-    setInputObject({ ...inputObject, inputString: newInput }); //spread operator to help update the object
+    setInputObject((prevInputObject) => ({
+      ...prevInputObject,
+      inputString: newInput,
+    })); //spread operator to help update the object
   };
 
-  //send post request once save button using async/await function
-  const handlePostRequest = async () => {
-    try {
-      //axios.post(api endpoint, data, headers)
-      const response = await axios.post(
-        "https://dotnet/endpoint",
-        inputObject,
-        {
-          headers: {
-            //metadata for server
-            "Content-Type": "applicaiton/json",
-          },
-        }
-      );
+    //send post request once save button using async/await function
+    const handlePostRequest = async () => {
+        try{ //axios.post(api endpoint, data, headers)
+            const response = await axios.post(`${config.apiUrl}/SubmissionForm/SaveResponse`, inputObject, {
+                headers:{ //metadata for server
+                    'Content-Type': 'application/json'
+                }
+            });
 
-      console.log("Resoponse data: ", response.data);
-    } catch (error: any) {
-      //post request error handling
-      console.error("Error making Post request:", error.message);
-    }
+            console.log('Response data: ', response.data);
+        } catch(error: any){ //post request error handling
+            console.error('Error making Post request:', error.message)
+        }
   };
 
   return (
@@ -69,12 +77,14 @@ export default function Form(props: FormsProps) {
         <textarea
           value={inputObject.inputString} //original state
           onChange={handleInputChange} //once forms changes, handle the new input
-          placeholder="type here"
-          rows={4}
+          rows={5}
+          readOnly={props.readonly}
         />
+        {!props.readonly && (       //only display save button if readonly is false
         <button type="button" onClick={handlePostRequest}>
           Save
         </button>
+      )}
       </form>
     </>
   );

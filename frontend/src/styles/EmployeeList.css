@@ -1,0 +1,18 @@
+.employee-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.employee-list {
+  margin: 30px;
+  padding: 10px;
+  padding-top: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 100vh;
+  overflow: auto;
+}

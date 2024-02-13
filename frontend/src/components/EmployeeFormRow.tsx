@@ -6,15 +6,15 @@ interface formTypeProp {
   questionNum: number;
 }
 
-export default function FormRow(prop: formTypeProp) {
+export default function EmployeeFormRow(prop: formTypeProp) {
   return (
     <div className="questionRow">
       <div className="question">
         <p>{prop.formQuestion}</p>
       </div>
       <div className="formRow">
-        <Form formType={"Employee Comments"} questionNum={prop.questionNum} />
-        <Form formType={"Manager Feedback"} questionNum={prop.questionNum} />
+        <Form formType={"Employee Comments"} questionNum={prop.questionNum} readonly={false}/>
+        <Form formType={"Manager Feedback"} questionNum={prop.questionNum} readonly={true} />
       </div>
     </div>
   );

@@ -1,0 +1,25 @@
+.submitandsignbutton {
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Ensures the button occupies the full width available */
+    margin: 0 auto; /* Center the button horizontally */
+  }
+
+  .readonlybutton {
+    background-color: #4f5050;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Ensures the button occupies the full width available */
+    margin: 0 auto; /* Center the button horizontally */
+  }
+
+  .readonlybutton:hover {
+    background-color: #4f5050; /* Change the background color to match the original color */
+  }

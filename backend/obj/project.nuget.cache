@@ -64,6 +64,12 @@
   ],
   "logs": [
     {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file c:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\obj\\project.nuget.cache : Unexpected character encountered while parsing value: <. Path '', line 0, position 0."
+    },
+    {
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
