@@ -1,4 +1,5 @@
 // /src/components/YearSlider.tsx
+/*
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/YearSlider.css';
@@ -39,3 +40,4 @@ const YearSlider: React.FC<YearSliderProps> = () => {
 };
 
 
+*/

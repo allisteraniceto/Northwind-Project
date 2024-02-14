@@ -1,3 +1,4 @@
+/*
 import Form from "./Form";
 import "../styles/FormSection.css";
 
@@ -19,3 +20,4 @@ export default function FormRow(prop: formTypeProp) {
     </div>
   );
 }
+*/
