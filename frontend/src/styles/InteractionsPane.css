@@ -18,15 +18,23 @@
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   background-color: white;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .previous-years-container{
-  position: relative;
-  height: 150px;
+  /* position: relative;
+  top: -10px; */
+  height: 200px;
   border-radius: 8px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   background-color: white;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .employee-container {
@@ -44,8 +52,8 @@
 }
 
 .performance-review-button {
-  position: absolute;
-  top: 180px;
+  /* position: relative;
+  top: 180px; */
   transform: translate(0, -50%);
   background-color: #4caf50;
   color: white;
