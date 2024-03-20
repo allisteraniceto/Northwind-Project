@@ -8,5 +8,6 @@ public static class IdentityService
 
         Globals.IdentityJsonString = jsonString;
         Globals.UserIdentity = JsonSerializer.Deserialize<Identity>(jsonString);
+        Globals.SelectedEmployeeHID = Globals.UserIdentity.HID;
     }
 }

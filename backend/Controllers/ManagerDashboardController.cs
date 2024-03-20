@@ -5,11 +5,7 @@ using System.Text.Json;
 [Route("[controller]")]
 public class ManagerDashboardController : ControllerBase
 {
-    // [HttpGet]
-    //  public IActionResult SubmissionFormRedirect()
-    // {
-        
-    // }
+
 
     // [HttpGet]
     // public IActionResult SendReminder()
@@ -17,11 +13,7 @@ public class ManagerDashboardController : ControllerBase
         
     // }
 
-    // [HttpGet]
-    // public IActionResult InitiateAllPerformanceReviews()
-    // {
-        
-    // }
+
 
     // [HttpGet]
     // public IActionResult ScheduleAppointment()

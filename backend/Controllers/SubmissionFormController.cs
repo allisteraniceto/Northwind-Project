@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 using System.Text.Json;
 
 
@@ -14,24 +15,38 @@ public class SubmissionFormController : ControllerBase
     }
 
     [HttpPost]
+    [Route("SetSelectedEmployeeHID")]
+    public IActionResult SetSelectedEmployeeHID([FromBody] int employee_HID)
+    {
+        if(employee_HID == -1)
+        {
+            Globals.SelectedEmployeeHID = Globals.UserIdentity.HID;
+        }
+        else
+        {
+            Globals.SelectedEmployeeHID = employee_HID; //The EmployeeHID for this SubmissionForm will be used to find the current review associated with that Employee
+        }
+
+        return Ok();
+    }
+
+    [HttpGet]
+    [Route("GetEmployeeHID")]
+    public IActionResult GetEmployeeHID()
+    {
+       return Ok(Globals.UserIdentity.HID);
+
+    }
+
+    [HttpPost]
     [Route("SaveResponse")] 
     public IActionResult SaveResponse([FromBody] Response response)
     {
          //This action saves an individual response to the database. This does not finalize the form for the user
-
         var review = default(Review);
-        //find the current review for the user
-        if(response.formType == "Employee Comments")
-        {
-            review = _dbContext.Reviews.FirstOrDefault(review => review.Status != "finalized" && 
-                review.EmployeeHID == Globals.UserIdentity.HID);
-        }
-        else
-        {
-            review = _dbContext.Reviews.FirstOrDefault(review => review.Status != "finalized" && 
-                review.ManagerHID == Globals.UserIdentity.HID);
-        }
-        
+
+        //find the current review for the employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
 
         //query to see if there is already a response associated with this question for this user
         var existingResponse = _dbContext.Responses.FirstOrDefault(r => 
@@ -71,17 +86,22 @@ public class SubmissionFormController : ControllerBase
          //This action displays responses (null or not) associated with each question
         var formType = response.formType;
         var questionNum = response.questionNum;
+
+        var review = default(Review);
+        //find the current review for the employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
+
          
         if(formType == "Employee Comments")
         {
-            var reviewResponses = _dbContext.Responses.FirstOrDefault(response => response.ReviewID == 3 && response.QuestionID == questionNum && response.HID == Globals.UserIdentity.HID);
-            var queryResult = JsonSerializer.Serialize(reviewResponses);
+            var reviewResponse = _dbContext.Responses.FirstOrDefault(response => response.ReviewID == review.ReviewID && response.QuestionID == questionNum && response.HID == Globals.SelectedEmployeeHID);
+            var queryResult = JsonSerializer.Serialize(reviewResponse);
             return Ok(queryResult);
         }
         else
         {
-            var reviewResponses = _dbContext.Responses.FirstOrDefault(response => response.ReviewID == 3 && response.QuestionID == questionNum && response.HID == Globals.UserIdentity.ManagerHID);
-            var queryResult = JsonSerializer.Serialize(reviewResponses);
+            var reviewResponse = _dbContext.Responses.FirstOrDefault(response => response.ReviewID == review.ReviewID && response.QuestionID == questionNum && response.HID == review.ManagerHID);
+            var queryResult = JsonSerializer.Serialize(reviewResponse);
             return Ok(queryResult);
         }
     }
@@ -92,15 +112,17 @@ public class SubmissionFormController : ControllerBase
     {
          //This action will discern whether a manager or employee hit their "submit" button. It will then change the status of the 
         //review in the database
+
+        var review = default(Review);
+        //find the current review for the employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
         if(formType == "employee")
         {
-            var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
             review.Status = "Employee Comments Submitted";
             _dbContext.SaveChanges();
         }
         else
         {
-            var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
             review.Status = "Manager Feedback Submitted";
             _dbContext.SaveChanges();
         }
@@ -114,16 +136,19 @@ public class SubmissionFormController : ControllerBase
     {
          //This action will discern whether a manager or employee hit their "sign" button. It will then change the status of the 
         //review in the database and update the respective signature field to 1, indicating a signature. Review will be "finalized" when manager clicks the sign button
+
+        var review = default(Review);
+        //find the current review for the employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
+
         if(formType == "employee")
         {
-            var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
             review.Status = "Signed By Employee";
             review.EmployeeSignature = 1;
             _dbContext.SaveChanges();
         }
         else
         {
-            var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
             review.Status = "Finalized";
             review.ManagerSignature = 1;
             _dbContext.SaveChanges();
@@ -138,18 +163,12 @@ public class SubmissionFormController : ControllerBase
     {
          //This action will discern whether a manager or employee hit their "submit" button. It will then change the status of the 
         //review in the database
-        var review = _dbContext.Reviews.FirstOrDefault(review => review.ReviewID == 3);
+        
+        var review = default(Review);
+        //find the current review for the employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
 
         return Ok(review.Status);
 
     }
-
-    // [HttpPost]
-    // public IActionResult SubmitPerformanceReview()
-    // {
-    //     //This action inserts the entire form into the database and does not allow changes to responses once finished
-
-
-    // }
-
 }
