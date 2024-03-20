@@ -1,12 +1,9 @@
 import Header from "../components/Header";
 import EmployeeFormRow from "../components/EmployeeFormRow";
 import SubmitOrSignButton from "../components/SubmitOrSignButton";
-import { useParams } from 'react-router-dom';
 
 
 export default function EmployeeReviewFormPage() {
-
-  const { employeeHID } = useParams();
 
   let questionNum: number = 1;
 
