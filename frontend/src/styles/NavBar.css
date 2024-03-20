@@ -1,7 +1,7 @@
 /*nav*/
 .navbar {
   margin: 0;
-  background-color: #446bec;
+  background-color: #00649b;
   padding: 15px;
   height: 50px;
   width: 100%;
@@ -38,7 +38,7 @@
 .dashboard {
   height: 50px;
   width: 100%;
-  background-color: #446bec;
+  background-color: #00649b;
   padding: 10px;
   padding-left: 20px;
   display: flex;
