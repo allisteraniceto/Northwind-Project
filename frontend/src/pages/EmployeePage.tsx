@@ -1,10 +1,42 @@
 //Employee Dashboard
-import { Link } from 'react-router-dom';
+import {useEffect } from 'react';
+import axios from 'axios';
 import Header from "../components/Header";
 import "../styles/InteractionsPane.css";
 import "../styles/EmployeeDashboard.css";
+import config from '../../config.json';
+import PerformanceReviewButton from '../components/PerformanceReviewButton';
+
 
 export default function EmployeePage() {
+
+  useEffect(() => {
+    // Make a GET request to API endpoint for the EmployeeHID of the logged in employee
+    const fetchEmployeeHID = async () => {
+      try {
+          await axios.post(`${config.apiUrl}/SubmissionForm/SetSelectedEmployeeHID`, -1,  {
+              headers: { 
+                  'Content-Type': 'application/json'
+              }
+          });
+
+      } catch (error: any) {
+          console.error('Error fetching data:', error.message);
+      }
+    };
+        fetchEmployeeHID(); // Call the fetchData function
+
+
+
+}, []); // Run the effect only when component mounts for the first time
+
+
+useEffect(() => {
+  // Make a GET request to API endpoint for status of the current review
+  
+}, []); // Run the effect only when component mounts for the first time
+
+
   return (
     <>
       <Header dashboard="Employee" />
@@ -13,11 +45,7 @@ export default function EmployeePage() {
             {/*RATING CONTAINER */}
           </div>
           <div className="employee-reminder">
-            <Link to="/EmployeeReviewForm">
-              <button type="button" className='performance-review-button'>
-                Take Me To My Performance Review
-              </button>
-            </Link>
+            <PerformanceReviewButton reviewStatus="Finalized" />
           </div>
       </div>
 
