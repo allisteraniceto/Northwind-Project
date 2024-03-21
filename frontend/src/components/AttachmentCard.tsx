@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "../styles/EmployeeList.css";
 
 interface AttachmentProps {
@@ -6,7 +5,7 @@ interface AttachmentProps {
   attachFile: null | any;
 }
 
-export default function AttachmentCard(props: AttachmentProps) {
+export default function AttachmentCard() {
   //destructure AttachmentProps
   return <div className="employee-card">
     <div>

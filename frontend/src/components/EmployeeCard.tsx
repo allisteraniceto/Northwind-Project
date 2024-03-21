@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/EmployeeList.css";
 
 interface EmployeeProps {
@@ -10,7 +9,7 @@ interface EmployeeProps {
   isSelected: any;
 }
 
-export default function EmployeeCard({key, employee, onSelect, isSelected, employeeNum}:EmployeeProps) {
+export default function EmployeeCard({employee, onSelect, isSelected, employeeNum}:EmployeeProps) {
   //handle click state
   const handleClick = () => {
     onSelect(employeeNum);
