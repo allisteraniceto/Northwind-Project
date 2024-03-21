@@ -46,6 +46,18 @@
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.12);
   height: 100px;
   width: 550px;
+  background-color: #ffffff;
+}
+
+/*on hover, grey out*/
+.employee-card:hover {
+  background-color: #b5b3b3;
+  transition-delay: 5ms;
+}
+
+/*when clicked, use .clicked class selector*/
+.employee-card.clicked {
+  background-color: #7e7c7c;
 }
 
 .employee-name {

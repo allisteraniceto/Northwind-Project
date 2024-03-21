@@ -25,15 +25,6 @@ export default function EmployeePage() {
       }
     };
         fetchEmployeeHID(); // Call the fetchData function
-
-
-
-}, []); // Run the effect only when component mounts for the first time
-
-
-useEffect(() => {
-  // Make a GET request to API endpoint for status of the current review
-  
 }, []); // Run the effect only when component mounts for the first time
 
 
@@ -41,14 +32,18 @@ useEffect(() => {
     <>
       <Header dashboard="Employee" />
       <div className="employee-section">
-          <div className="employee-dashboard">
+        <div className="employee-dashboard">
+          <div className="employee-rating-pane">
             {/*RATING CONTAINER */}
           </div>
-          <div className="employee-reminder">
-            <PerformanceReviewButton reviewStatus="Finalized" />
+          <div className="employee-criteria-pane">
+            {/*CRITERIA CONTAINTER*/}
           </div>
+        </div>
+        <div className="employee-reminder">
+          <PerformanceReviewButton reviewStatus="Finalized" />
+        </div>
       </div>
-
     </>
   );
 }

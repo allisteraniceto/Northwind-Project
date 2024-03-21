@@ -2,18 +2,26 @@ import "../styles/EmployeeList.css";
 
 interface EmployeeProps {
   employee: String;
-  key: Number;
+  employeeNum: number;
+  key: number;
   status: Boolean;
+  onSelect: any;
+  isSelected: any;
 }
 
-export default function EmployeeCard(props: EmployeeProps) {
+export default function EmployeeCard({employee, onSelect, isSelected, employeeNum}:EmployeeProps) {
+  //handle click state
+  const handleClick = () => {
+    onSelect(employeeNum);
+  };
+
   return (
-    <div className="employee-card">
+    <div className={`employee-card ${isSelected ? "clicked" : ""}`} onClick={handleClick}>
       <div className="headshot-container">
         <img className="headshot-card" src="/pug.jpg" alt="User Headshot" />
       </div>
       <div className="employee-name">
-        <p>{props.employee}</p>
+        <p>{employee}</p>
       </div>
       <div className="status">
         <svg
