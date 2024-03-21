@@ -1,9 +1,9 @@
 import "../styles/EmployeeList.css";
 
-interface AttachmentProps {
-  attachName: string;
-  attachFile: null | any;
-}
+// interface AttachmentProps {
+//   attachName: string;
+//   attachFile: null | any;
+// }
 
 export default function AttachmentCard() {
   //destructure AttachmentProps
