@@ -69,15 +69,13 @@
   margin-top: 20px;
 }
 
-
-
 /*RIGHT SIDE*/
-.right-pane{
+.right-pane {
   display: flex;
   width: 35%;
   flex-direction: column;
 }
-.employee-info{
+.employee-info {
   position: relative;
   top: -75px;
   margin: 20px;
@@ -92,7 +90,7 @@
   justify-content: center;
   align-items: center;
 }
-.comments{
+.comments {
   position: relative;
   top: -70px;
   margin: 20px;
