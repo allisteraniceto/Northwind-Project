@@ -40,7 +40,7 @@ export default function AttachmentList() {
     <div className="attachment-list">
       {attachmentList.map(
         //use array map method to iterate through json onject
-        (attachment, index) => (
+        (attachment) => (
           <AttachmentCard
             attachName={attachment.name}
             attachNum={attachment.attachment_id}
