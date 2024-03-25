@@ -3,22 +3,21 @@
   margin-right: 10px;
   width: 50%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
+  border-radius: 15px;
   box-sizing: border-box;
 }
 
 .employee-list {
   padding: 20px;
+  padding-top: 0px;
   border-radius: 10px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 700px;
   min-width: 600px;
-  height: 100%;
   overflow: auto;
-  background-color: white;
   box-sizing: border-box;
 }
 
@@ -36,15 +35,26 @@
   border-radius: 6px;
 }
 
+.employee-list-header {
+  width: 100%;
+  padding-left: 10%;
+  margin: 20px;
+}
+
+.employee-list-header h3 {
+  font-weight: bold;
+}
+
 .employee-card {
-  box-sizing: content-box;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 5px;
-  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.12);
-  height: 100px;
+  height: 75px;
   width: 550px;
   background-color: #ffffff;
 }
