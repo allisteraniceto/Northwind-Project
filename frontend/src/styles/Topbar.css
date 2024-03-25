@@ -1,10 +1,9 @@
 .topbar {
-  background-color: #fff;
-  height: px;
+  min-height: 60px;
   margin: 0;
-  padding-left: 50px;
   display: flex;
   align-items: center;
+  flex-direction: row;
 }
 
 .headshot {
@@ -12,9 +11,31 @@
   height: 40px;
   border-radius: 50%;
   object-fit: cover; /* Ensure the image covers the entire container */
-  padding-right: 10px;
 }
 
 .topbar .name {
   padding-left: 10px;
+}
+
+.profile-side {
+  display: flex;
+  flex-direction: row-reverse;
+  box-sizing: border-box;
+  width: 50%;
+  padding-right: 30px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile .name {
+  align-items: center;
+}
+
+.northwind-logo {
+  width: 50%;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
