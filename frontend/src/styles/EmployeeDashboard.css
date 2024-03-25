@@ -8,6 +8,7 @@
 }
 
 .employee-dashboard {
+  box-sizing: border-box;
   width: 50%;
   height: 100%;
 }
@@ -18,30 +19,29 @@
   margin: 20px;
   margin-right: 10px;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 15px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   background-color: white;
   position: relative;
+  box-sizing: border-box;
 }
 
 .employee-rating-pane {
-  margin: 20px;
-  margin-right: 10px;
-  padding: 20px;
-  height: 50%;
-  border-radius: 8px;
+  box-sizing: border-box;
+  height: 45%;
+  border-radius: 15px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   background-color: white;
-  box-sizing: border-box;
+  margin: 20px;
+  margin-right: 10px;
 }
 
 .employee-criteria-pane {
-  margin: 20px;
-  margin-right: 10px;
-  padding: 20px;
-  height: 50%;
-  border-radius: 8px;
+  box-sizing: border-box;
+  height: 45%;
+  border-radius: 15px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   background-color: white;
-  box-sizing: border-box;
+  margin: 20px;
+  margin-right: 10px;
 }
