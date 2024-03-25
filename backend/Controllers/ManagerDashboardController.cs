@@ -5,27 +5,37 @@ using System.Text.Json;
 [Route("[controller]")]
 public class ManagerDashboardController : ControllerBase
 {
+    //create an instance of the EmailSender class
+   private readonly EmailSender _emailSender; 
+ 
+    // Receive an instance of the email sender service via dependency injection
+    public ManagerDashboardController(EmailSender emailSender) 
+    {
+        this._emailSender = emailSender;
+    }
+ 
+    [HttpPost]
+    [Route("SendReminder")]
+    public async Task<IActionResult> SendReminder(string recipient)
+    {
+        string subject = "Please Submit Your Responses";
+        string body = "Hello,\n\nYou have not submitted your performance review responses yet. Please do so shortly.\n\nNorth Wind Solutions Notification System";
+        await _emailSender.SendEmailAsync(recipient, subject, body);
+        return Ok();
+    }
+
+   
+    [HttpPost]
+    [Route("ScheduleAppointment")]
+    public async Task<IActionResult> ScheduleAppointment(string recipient)
+    {
+        string subject = "Scheduling a Performance Review Appointment";
+        string body = "Hello,\n\nAn appointment must be scheduled to discuss your performance review with your manager. Please email or give them a call to schedule.\n\nNorth Wind Solutions Notification System";
+        await _emailSender.SendEmailAsync(recipient, subject, body);
+        return Ok();
+    }
 
 
-    // [HttpGet]
-    // public IActionResult SendReminder()
-    // {
-        
-    // }
-
-
-
-    // [HttpGet]
-    // public IActionResult ScheduleAppointment()
-    // {
-        
-    // }
-
-    // [HttpGet]
-    // public IActionResult PreviousReviewsScrollBar()
-    // {
-    //     //
-    // }
 
     //GET request to retrieve employees with manager_id: 4 (testing it out)
     [HttpGet]
