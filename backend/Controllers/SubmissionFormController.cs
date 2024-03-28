@@ -107,6 +107,75 @@ public class SubmissionFormController : ControllerBase
         }
     }
 
+
+    [HttpPost]
+    [Route("SaveRating")] 
+    public IActionResult SaveRating([FromBody] RatingInput ratingInput)
+    {
+         //This action saves an individual response to the database. This does not finalize the form for the user
+        var review = default(Review);
+
+        //find the current review for the employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
+
+        //query to see if there is already a response associated with this question for this user
+        var existingRating = _dbContext.Ratings.FirstOrDefault(r => 
+            r.QuestionID == ratingInput.questionNum && 
+            r.HID == Globals.UserIdentity.HID && 
+            r.ReviewID == review.ReviewID);
+
+
+        if(existingRating != null)
+        {
+            // Update the existing response
+            existingRating.Value = ratingInput.inputValue;
+            _dbContext.SaveChanges();
+        }
+        else
+        {
+            // if no existing response, create new TextResponse instance and insert to DB
+            var rating = new Rating
+            {
+                Value = ratingInput.inputValue,
+                QuestionID = ratingInput.questionNum,
+                HID = Globals.UserIdentity.HID,
+                ReviewID = review.ReviewID
+            };
+
+            _dbContext.Ratings.Add(rating);
+            _dbContext.SaveChanges();
+        }
+        return Ok();
+    }
+
+
+    [HttpPost]
+    [Route("GetRating")]
+    public IActionResult GetRating([FromBody] Response response)
+    {
+         //This action displays responses (null or not) associated with each question
+        var formType = response.formType;
+        var questionNum = response.questionNum;
+
+        var review = default(Review);
+        //find the current review for the employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
+
+         
+        if(formType == "Employee Rating")
+        {
+            var rating = _dbContext.Ratings.FirstOrDefault(rating => rating.ReviewID == review.ReviewID && rating.QuestionID == questionNum && rating.HID == Globals.SelectedEmployeeHID);
+            var queryResult = JsonSerializer.Serialize(rating);
+            return Ok(queryResult);
+        }
+        else
+        {
+            var rating = _dbContext.Ratings.FirstOrDefault(rating => rating.ReviewID == review.ReviewID && rating.QuestionID == questionNum && rating.HID == review.ManagerHID);
+            var queryResult = JsonSerializer.Serialize(rating);
+            return Ok(queryResult);
+        }
+    }
+
     [HttpPost]
     [Route("HandleSubmission")]
     public IActionResult HandleSubmission([FromBody] string formType)
