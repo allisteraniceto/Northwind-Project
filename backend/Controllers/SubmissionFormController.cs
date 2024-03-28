@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualBasic;
+using System;
 using System.Text.Json;
 
 
@@ -7,7 +8,7 @@ using System.Text.Json;
 [Route("[controller]")]
 public class SubmissionFormController : ControllerBase
 {
-    private readonly APIDbContext _dbContext; // Replace YourDbContext with your actual DbContext
+    private readonly APIDbContext _dbContext; 
 
     public SubmissionFormController(APIDbContext dbContext)
     {
@@ -120,10 +121,30 @@ public class SubmissionFormController : ControllerBase
         {
             review.Status = "Employee Comments Submitted";
             _dbContext.SaveChanges();
+
+            var log = new Log
+            {
+                Event = "Employee Submitted Comments",
+                DateAndTime = DateTime.Now,
+                ReviewID = review.ReviewID
+            };
+
+            _dbContext.Logs.Add(log);
+            _dbContext.SaveChanges();
         }
         else
         {
             review.Status = "Manager Feedback Submitted";
+            _dbContext.SaveChanges();
+
+            var log = new Log
+            {
+                Event = "Manager Submitted Feedback",
+                DateAndTime = DateTime.Now,
+                ReviewID = review.ReviewID
+            };
+
+            _dbContext.Logs.Add(log);
             _dbContext.SaveChanges();
         }
         return Ok();
@@ -146,11 +167,31 @@ public class SubmissionFormController : ControllerBase
             review.Status = "Signed By Employee";
             review.EmployeeSignature = 1;
             _dbContext.SaveChanges();
+
+             var log = new Log
+            {
+                Event = "Employee Signed Review",
+                DateAndTime = DateTime.Now,
+                ReviewID = review.ReviewID
+            };
+
+            _dbContext.Logs.Add(log);
+            _dbContext.SaveChanges();
         }
         else
         {
             review.Status = "Finalized";
             review.ManagerSignature = 1;
+            _dbContext.SaveChanges();
+
+             var log = new Log
+            {
+                Event = "Manager Signed Review",
+                DateAndTime = DateTime.Now,
+                ReviewID = review.ReviewID
+            };
+
+            _dbContext.Logs.Add(log);
             _dbContext.SaveChanges();
         }
         return Ok();
