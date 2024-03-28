@@ -1,3 +1,5 @@
+//next thing to do: make only one employee selected at a time
+
 import EmployeeCard from "./EmployeeCard";
 import { useState, useEffect } from "react"; //will use later
 import axios from "axios";
@@ -21,6 +23,14 @@ export default function EmployeeList() {
   const [employeeList, setEmployeeList] = useState<Employee[]>( //specify type here
     [] //empty array of objects for now
   );
+
+  //handle state in parent component to track one selected employee only
+  const [selectedEmployee, setSelectedEmployee] = useState<number | null>(null); //null by default
+
+  //pass the set function down to EmployeeCard
+  const handleEmployeeSelect = (employeeId: number) => {
+    setSelectedEmployee(employeeId === selectedEmployee ? null : employeeId);
+  };
 
   //will use this when api works
   useEffect(() => {
@@ -50,7 +60,10 @@ export default function EmployeeList() {
           <EmployeeCard
             key={index}
             employee={employee.first_name + " " + employee.last_name}
+            employeeNum={employee.employee_id}
             status={true}
+            onSelect={handleEmployeeSelect}
+            isSelected={employee.employee_id === selectedEmployee} //if selected employee matches the employee id, returns true
           />
         )
       )}

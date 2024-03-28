@@ -1,4 +1,5 @@
 import Nav from "../components/NavBar";
+import Profile from "../components/Profile";
 
 import "../styles/Topbar.css";
 interface HeaderProps {
@@ -9,11 +10,11 @@ export default function Header(props: HeaderProps): JSX.Element {
   return (
     <>
       <div className="topbar">
-        <div>
-          <img className="headshot" src="/pug.jpg" alt="User Headshot" />
+        <div className="northwind-logo">
+          <img src="/frontend/public/vite.svg" alt="northwind logo" />
         </div>
-        <div>
-          <p>Name Here</p>
+        <div className="profile-side">
+          <Profile />
         </div>
       </div>
       <div className="dashboard">

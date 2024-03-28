@@ -5,11 +5,10 @@
   margin: 0;
   display: flex;
   flex-direction: row;
-  background-color: #edeceb;
 }
 
 /*go button container*/
-.go-button{
+.go-button {
   display: flex;
   justify-content: center;
   align-items: center;
