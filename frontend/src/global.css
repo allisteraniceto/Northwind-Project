@@ -11,8 +11,8 @@
 body,
 html {
   height: 100%; /*website only 1 page*/
-  min-width: 500px;
-  background-color: #929292;
+  min-width: 960px;
+  background-color: #535353;
 }
 
 .page {
@@ -70,7 +70,7 @@ html {
 h1,
 h2,
 h3 {
-  font-family: "Bank Gothic Medium";
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 p {

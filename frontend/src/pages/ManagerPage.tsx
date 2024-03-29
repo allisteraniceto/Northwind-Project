@@ -27,7 +27,6 @@ function ManagerPage() {
               linkTo="/ManagerReviewForm"
               reviewStatus="Finalized"
             />
-            <p>Selected Employee</p>
           </div>
           <div className="attachments-container">
             <div className="attachment-list-header">

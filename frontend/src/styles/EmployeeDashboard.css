@@ -23,9 +23,13 @@
   background-color: white;
   position: relative;
   box-sizing: border-box;
+  min-width: 400px;
 }
 
 .employee-rating-pane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   height: 45%;
   border-radius: 15px;
@@ -33,6 +37,22 @@
   background-color: white;
   margin: 20px;
   margin-right: 10px;
+}
+
+.rating-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 8em; /*em: relative length based on font size */
+  min-width: 8em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #242222;
+}
+
+.rating-tile h1 {
+  font-size: 200%;
+  color: #ffffff;
 }
 
 .employee-criteria-pane {

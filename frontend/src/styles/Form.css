@@ -7,13 +7,22 @@
   justify-content: flex-start;
 }
 
+.centered-form.big {
+  width: 400%;
+  position: relative;
+}
+
 form {
-  width: 300px;
-  height: 180px;
+  width: 45%;
+  max-width: 400px;
+  height: 90%;
   padding: 20px;
+  padding-bottom: 10px;
+  border: 1px solid #cccccc;
   border-radius: 8px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*20 percent transparency*/
   background-color: white;
+  box-sizing: border-box;
 }
 
 /* Style labels */
@@ -32,6 +41,7 @@ textarea {
   border-radius: 4px;
   resize: none;
   background-color: #fffffd;
+  cursor: pointer;
 }
 
 /*fixed position of the textarea*/
@@ -54,4 +64,3 @@ button {
 button:hover {
   background-color: #45a049;
 }
-

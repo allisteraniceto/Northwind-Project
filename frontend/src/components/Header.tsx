@@ -1,5 +1,6 @@
 import Nav from "../components/NavBar";
 import Profile from "../components/Profile";
+import NorthwindLogo from "/northwind-logo.png";
 
 import "../styles/Topbar.css";
 interface HeaderProps {
@@ -10,8 +11,12 @@ export default function Header(props: HeaderProps): JSX.Element {
   return (
     <>
       <div className="topbar">
-        <div className="northwind-logo">
-          <img src="/frontend/public/vite.svg" alt="northwind logo" />
+        <div className="northwind-logo-container">
+          <img
+            className="northwind-logo"
+            src={NorthwindLogo}
+            alt="northwind logo"
+          />
         </div>
         <div className="profile-side">
           <Profile />

@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import axios from "axios";
 import Header from "../components/Header";
+import RatingTile from "../components/RatingTile";
+
 import "../styles/InteractionsPane.css";
 import "../styles/EmployeeDashboard.css";
 import config from "../../config.json";
@@ -35,7 +37,9 @@ export default function EmployeePage() {
       <Header dashboard="Employee" />
       <div className="employee-section">
         <div className="employee-dashboard">
-          <div className="employee-rating-pane">{/* RATING CONTAINER */}</div>
+          <div className="employee-rating-pane">
+            <RatingTile ratingNum={12} />
+          </div>
           <div className="employee-criteria-pane">
             {/* CRITERIA CONTAINER */}
           </div>
@@ -47,7 +51,6 @@ export default function EmployeePage() {
               linkTo="/EmployeeReviewForm"
               reviewStatus="Finalized"
             />
-            <p>Selected Employee</p>
           </div>
           <div className="attachments-container">
             <div className="attachment-list-header">
