@@ -43,8 +43,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 8em; /*em: relative length based on font size */
-  min-width: 8em;
+  min-width: 15em; /*em: relative length based on font size */
+  min-width: 15em;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: #242222;

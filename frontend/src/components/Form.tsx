@@ -5,8 +5,10 @@ import "../styles/Form.css";
 
 interface FormsProps {
   questionNum: number; //question number
-  formType: String;
+  formType: string;
   readonly: boolean;
+  onExpand: (formType: string) => void;
+  isExpanded: boolean;
 }
 
 export default function Form(props: FormsProps) {
@@ -76,10 +78,18 @@ export default function Form(props: FormsProps) {
     }
   };
 
+  //handle expand click
+  const handleExpand = () => {
+    props.onExpand(props.formType);
+  };
+
   return (
     <>
-      <form className={"centered-form"}>
+      <form className={`centered-form ${props.isExpanded ? "big" : ""}`}>
         <label>{props.formType}</label>
+        <div className="expand-button">
+          <img onClick={handleExpand} src="/expand.svg" alt="expand" />
+        </div>
         {/*if questionFrom, display questionStriong, if not, feedback*/}
         <textarea
           value={inputObject.inputString} //original state
