@@ -17,7 +17,13 @@ import "../styles/InteractionsPane.css";
 import EmployeeList from "../components/EmployeeList";
 
 import "../styles/InteractionsPane.css";
+//import EmployeeList from "../components/EmployeeList";
+import AttachmentList from "../components/AttachmentList";
+import PerformanceReviewButton from "../components/PerformanceReviewButton";
+
+import "../styles/InteractionsPane.css"; //.interactions-section, .elected-employee-container, .previous-years-container
 import "../styles/ManagerSection.css";
+import "../styles/Attachments.css"; //.attachments-container
 
 
 
@@ -50,19 +56,14 @@ const ManagerPage: React.FC = () => {
             />
             <p>Selected Employee</p>
           </div>
-          <div className="employee-container">
-            
+          <div className="attachments-container">
+            <div className="attachment-list-header">
+              <h3>Attachments</h3>
+            </div>
+            <AttachmentList />
+                   
           <DeleteButton/>
                <DownloadButton/>
-              
-            <h3>Take Me To This Employee's Performance Review</h3>
-              <div className="go-button">
-              <Link to="/ManagerReviewForm">
-                <button type="button" className="performance-review-button">
-                  Go
-                </button>
-              </Link>
-              </div>
           </div>
 
 
