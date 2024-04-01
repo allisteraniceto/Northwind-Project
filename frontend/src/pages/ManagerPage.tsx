@@ -1,7 +1,6 @@
 
 //Manager Dashboard
 //Employee Dashboard
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 
 import DeleteButton from "../components/DeleteButton";
@@ -37,11 +36,18 @@ const ManagerPage: React.FC = () => {
       <Header dashboard="Manager" />
       <div className="manager-section">
         <div className="employee_list-container">
+          <div className="employee-list-header">
+            <h3>Direct Reports</h3>
+          </div>
           <EmployeeList />
         </div>
         <div className="interactions-section">
           <div className="selected-employee-container">
             {/*SELECTED EMPLOYEE*/}
+            <PerformanceReviewButton
+              linkTo="/ManagerReviewForm"
+              reviewStatus="Finalized"
+            />
             <p>Selected Employee</p>
           </div>
           <div className="employee-container">

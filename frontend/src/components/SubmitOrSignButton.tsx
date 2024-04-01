@@ -1,7 +1,7 @@
 import {useState, useEffect } from 'react';
 import axios from "axios";
 import config from '../../config.json';
-import '../styles/SubmitAndSignButtons.css'
+import '../styles/SubmitOrSignButtons.css'
 
 interface SubmitButtonProps {
     formType: string; //holds the type of form this is, either employee or manager
@@ -85,25 +85,25 @@ export default function SubmitButton(props: SubmitButtonProps) {
     if (props.buttonType == 'submit'){  // if this is a submit button
       if (props.formType === 'employee') { // if this submit button is on the EmployeeReviewFormPage
         isReadOnly = buttonStatus.status !== 'Initiated'; // Check if button should be read-only (only if review no longer has "Initiated" status, meaning the submit button has been clicked by the employee)
-        buttonClass = isReadOnly ? 'readonlybutton' : 'submitandsignbutton'; // Set the class based on read-only status
+        buttonClass = isReadOnly ? 'readonlybutton' : 'submitorsignbutton'; // Set the class based on read-only status
         
         // You can use the variables isReadOnly and buttonClass as needed within this block
       }
       else{ // if this submit button is on the ManagerReviewFormPage
         isReadOnly = buttonStatus.status !== 'Employee Comments Submitted'; // Check if button should be read-only (only if review no longer has "Employee Comments Submitted" status, meaning the submit button has been clicked by the manager)
-        buttonClass = isReadOnly ? 'readonlybutton' : 'submitandsignbutton'; // Set the class based on read-only status
+        buttonClass = isReadOnly ? 'readonlybutton' : 'submitorsignbutton'; // Set the class based on read-only status
       }
     }
     else{
       if (props.formType === 'employee') { // if this submit button is on the EmployeeReviewFormPage
         isReadOnly = buttonStatus.status !== 'Manager Feedback Submitted'; // Check if button should be read-only (only if review no longer has "Initiated" status, meaning the submit button has been clicked by the employee)
-        buttonClass = isReadOnly ? 'readonlybutton' : 'submitandsignbutton'; // Set the class based on read-only status
+        buttonClass = isReadOnly ? 'readonlybutton' : 'submitorsignbutton'; // Set the class based on read-only status
         
         // You can use the variables isReadOnly and buttonClass as needed within this block
       }
       else{ // if this submit button is on the ManagerReviewFormPage
         isReadOnly = buttonStatus.status !== 'Signed By Employee'; // Check if button should be read-only (only if review no longer has "Employee Comments Submitted" status, meaning the submit button has been clicked by the manager)
-        buttonClass = isReadOnly ? 'readonlybutton' : 'submitandsignbutton'; // Set the class based on read-only status
+        buttonClass = isReadOnly ? 'readonlybutton' : 'submitorsignbutton'; // Set the class based on read-only status
       }
     }
 

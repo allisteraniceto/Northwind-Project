@@ -1,22 +1,46 @@
-.employee-section{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: #edeceb;
+.employee-section {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
 }
 
-.employee-dashboard{
-    width: 50%;
-    height: 100%;
+.employee-dashboard {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
 }
 
-.employee-reminder{
-    margin: 20px;
-    padding: 10px;
-    width: 50%;
-    height: 100%;
-    border-radius: 8px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
-    background-color: white;
+.employee-reminder {
+  width: 50%;
+  height: 100%;
+  margin: 20px;
+  margin-right: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.employee-rating-pane {
+  box-sizing: border-box;
+  height: 45%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin: 20px;
+  margin-right: 10px;
+}
+
+.employee-criteria-pane {
+  box-sizing: border-box;
+  height: 45%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin: 20px;
+  margin-right: 10px;
 }
