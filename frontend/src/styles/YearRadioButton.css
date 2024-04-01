@@ -2,6 +2,17 @@
 /* styles.css */
 /* styles.css */
 /* styles.css */
+
+.timeline {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  left: 0;
+  width: 110%; /* Increase the width to make the line longer */
+  margin-left: -5%; /* Offset to ensure the line is centered */
+  border-top: 2px solid black; /* Adjust the color and thickness as needed */
+  z-index: -1;
+}
+
 .radio-buttons-container {
   position: absolute;
   bottom: 20px;

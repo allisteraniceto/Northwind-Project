@@ -3,9 +3,16 @@
 //Employee Dashboard
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import YearRadioButton from "../components/YearRadioButton";
-import '../styles/YearRadioButton.css'
 
+import DeleteButton from "../components/DeleteButton";
+import DownloadButton from "../components/DownloadButton";
+
+import YearCardList from "../components/YearCardList";
+import '../styles/YearRadioButton.css';
+import '../styles/DeleteButton.css'; // Import the CSS file
+import '../styles/YearCard.css'; // Import the CSS file
+
+import '../styles/YearCardList.css'; // Import the CSS file
 
 import "../styles/InteractionsPane.css";
 import EmployeeList from "../components/EmployeeList";
@@ -13,14 +20,18 @@ import EmployeeList from "../components/EmployeeList";
 import "../styles/InteractionsPane.css";
 import "../styles/ManagerSection.css";
 
-function ManagerPage() {
 
-  const handleYearSelected = (year: string) => {
-    // Implement your logic when a year is selected
-    console.log("Year selected:", year);
+
+const ManagerPage: React.FC = () => {
+  const navigateToReview = (year: number) => {
+    console.log(`Navigating to performance review for year ${year}`);
+    // Implement your navigation logic here
   };
 
-  
+  const handleClick = () => {
+    console.log('Year clicked');
+  };
+
   return (
     <>
       <Header dashboard="Manager" />
@@ -34,6 +45,10 @@ function ManagerPage() {
             <p>Selected Employee</p>
           </div>
           <div className="employee-container">
+            
+          <DeleteButton/>
+               <DownloadButton/>
+              
             <h3>Take Me To This Employee's Performance Review</h3>
               <div className="go-button">
               <Link to="/ManagerReviewForm">
@@ -46,16 +61,15 @@ function ManagerPage() {
 
 
           <div className="previous-years-container">
+          <YearCardList startYear={2023} endYear={2026} navigateToReview={() => console.log('Dummy navigateToReview function')} />
 
-               <div className="radio-buttons-container">
-               <YearRadioButton onYearSelected={handleYearSelected} />
-             </div>
+           </div>
             
             
       
             <p>Previous Reviews</p>
+
           </div>
-        </div>
       </div>
     </>
   );
