@@ -1,6 +1,6 @@
 .formSection {
+  position: relative;
   height: 100vh;
-  background-color: #edeceb;
   display: flex;
 }
 
@@ -25,6 +25,7 @@
   align-items: center; /*vertical alignment*/
   width: 100%;
   height: 265px;
+  box-sizing: border-box;
 }
 
 .question {
@@ -39,10 +40,11 @@
 .questionRow {
   width: 100%;
   height: 300px;
+  box-sizing: border-box;
 }
 
 /*questions pane*/
-.question-card {
+.question-pane {
   border-radius: 20px;
   margin: 20px;
   margin-right: 10px;
@@ -51,15 +53,16 @@
   padding-left: 15px;
   padding-right: 15px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
-  overflow: auto;
   background-color: white;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .form-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  height: 10%;
 }
 
 .form-header-3 {
@@ -104,4 +107,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.review-form-list {
+  height: 90%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
