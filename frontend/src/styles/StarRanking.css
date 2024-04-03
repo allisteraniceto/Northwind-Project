@@ -1,0 +1,30 @@
+.starRanking {
+    background-color: #fff;
+    height: px;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: column
+  }
+  
+  .category{
+    background-color: #fff;
+    height: px;
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: row
+  }
+  
+  .text{
+    display: flex;
+    flex-direction: row;
+  } 
+
+  .rating{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+  } 

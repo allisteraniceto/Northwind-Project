@@ -1,17 +1,24 @@
-.formCompleted {
-    background-color: #fff;
-    height: px;
-    margin: 0;
-    padding-left: 50px;
-    display: flex;
-    align-items: center;
-  }
+.statusPane {
+  background-color: #fff;
+  height: px;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  align-items: left;
+  flex-direction: column
+}
 
-  .managerCompleted {
-    background-color: #fff;
-    height: px;
-    margin: 0;
-    padding-left: 50px;
-    display: flex;
-    align-items: center;
-  }
+.status{
+  background-color: #fff;
+  height: px;
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  align-items: left;
+  flex-direction: row
+}
+
+.statusButton {
+  display: flex;
+  flex-direction: column;
+}

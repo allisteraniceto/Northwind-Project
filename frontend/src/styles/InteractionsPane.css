@@ -19,8 +19,9 @@
   background-color: white;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
   padding: 20px;
 }
 
