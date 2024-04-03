@@ -9,6 +9,7 @@ import employees from '../dummy-employees.json';
 const Rectangle = (EmployeeId: number): JSX.Element => {
     const employee = employees.employees.find(emp => emp.employee_id === EmployeeId);
     const name = employee ? `${employee.first_name} ${employee.last_name}` : '';
+    const headshot = employee ? `${employee.headshot}` : '';
 
     return (
         <div>
@@ -21,7 +22,7 @@ const Rectangle = (EmployeeId: number): JSX.Element => {
                 borderRadius: '10px',
             }}>
                 <p>{name}</p>
-                <OvalVignette src="/pug.jpg" alt="Descriptive Alt Text" />
+                <OvalVignette src={headshot} alt="Descriptive Alt Text" />
             </div>
         </div>
     );
