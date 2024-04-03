@@ -1,5 +1,5 @@
 import FormRow from "./FormRow";
-import SubmitOrSignButton from "../components/SubmitOrSignButton";
+import SubmitOrSignButton from "./SubmitOrSignButton";
 import "../styles/FormSection.css";
 
 interface ReviewFormListProps {
@@ -33,12 +33,6 @@ export default function ReviewFormList(prop: ReviewFormListProps) {
               isEmployee={prop.isEmployee}
             />
           ))}
-          <SubmitOrSignButton
-            formType="employee"
-            status=""
-            buttonType="submit"
-          />
-          <SubmitOrSignButton formType="employee" status="" buttonType="sign" />
         </div>
       </div>
     </>
