@@ -1,15 +1,14 @@
 
 import OvalVignette from './vignette';
 import "../styles/Form.css"
-
 import React from 'react';
-import OvalVignette from './vignette';
+import axios from 'axios';
 import "../styles/Form.css";
-import employees from '../path/to/employees.json';
+import employees from '../dummy-employees.json';
 
-const Rectangle = (EmployeeId): JSX.Element => {
-    const employee = employees.find((emp) => emp.id === EmployeeId);
-    const name = employee ? employee.name : '';
+const Rectangle = (EmployeeId: number): JSX.Element => {
+    const employee = employees.employees.find(emp => emp.employee_id === EmployeeId);
+    const name = employee ? `${employee.first_name} ${employee.last_name}` : '';
 
     return (
         <div>
@@ -21,8 +20,7 @@ const Rectangle = (EmployeeId): JSX.Element => {
                 padding: '5%',
                 borderRadius: '10px',
             }}>
-                <p>{first_name}</p>
-                <p>{last_name}</p>
+                <p>{name}</p>
                 <OvalVignette src="/pug.jpg" alt="Descriptive Alt Text" />
             </div>
         </div>
