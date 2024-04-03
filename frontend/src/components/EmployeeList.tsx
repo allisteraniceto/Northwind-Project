@@ -10,6 +10,8 @@ import "../styles/EmployeeList.css";
 // import employeeData from "../dummy-employees.json";
 
 // Define the Employee interface (because Typescript lol)
+
+type HandleFunction = (employeeId: number | null) => void; //defined type here
 interface Employee {
   employee_id: number;
   first_name: string;
@@ -19,7 +21,11 @@ interface Employee {
   manager_id: number;
 }
 
-export default function EmployeeList() {
+interface EmployeeListProps {
+  setEmployeeID?: HandleFunction; //can mark prop options w/ ? in typescript
+}
+
+export default function EmployeeList(props: EmployeeListProps) {
   const [employeeList, setEmployeeList] = useState<Employee[]>( //specify type here
     [] //empty array of objects for now
   );
@@ -30,6 +36,8 @@ export default function EmployeeList() {
   //pass the set function down to EmployeeCard
   const handleEmployeeSelect = (employeeId: number) => {
     setSelectedEmployee(employeeId === selectedEmployee ? null : employeeId);
+    props.setEmployeeID &&
+      props.setEmployeeID(employeeId === selectedEmployee ? null : employeeId); //for manager page (setEmployeeID optional: use && to check for null)
   };
 
   //will use this when api works

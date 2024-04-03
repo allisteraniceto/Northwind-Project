@@ -1,4 +1,5 @@
 //HR Dashboard
+import { useState } from "react";
 
 import Header from "../components/Header";
 import EmployeeList from "../components/EmployeeList";
@@ -11,6 +12,15 @@ import "../styles/Attachments.css"; //.attachments-container
 import "../styles/InteractionsPane.css"; //.interactions-section, .elected-employee-container, .previous-years-container
 
 function HrPage() {
+  const [selectedEmployeeID, setSelectedEmployeeID] = useState<number | null>(
+    null
+  );
+
+  //pass down handler function to set selected employee id
+  const handleSelectedEmployee = (employeeID: number | null) => {
+    setSelectedEmployeeID(employeeID);
+  };
+
   return (
     <>
       <Header dashboard="HR" />
@@ -19,7 +29,7 @@ function HrPage() {
           <div className="employee-list-header">
             <h3>Direct Reports</h3>
           </div>
-          <EmployeeList />
+          <EmployeeList setEmployeeID={handleSelectedEmployee} />
         </div>
         <div className="interactions-section">
           <div className="selected-employee-container">
@@ -28,12 +38,14 @@ function HrPage() {
               linkTo="/ManagerReviewForm"
               reviewStatus="Finalized"
             />
+            <p>User ID: {selectedEmployeeID}</p>
           </div>
           <div className="attachments-container">
             <div className="attachment-list-header">
               <h3>Attachments</h3>
             </div>
-            <AttachmentList />
+            {/*conditionally render attachment list*/}
+            {selectedEmployeeID && <AttachmentList />}
           </div>
           <div className="previous-years-container">
             {/*PREVIOUS REVIEWS*/}
