@@ -18,6 +18,13 @@
   /* min-width: 1000px; */
 }
 
+.review-form-list {
+  height: 90%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
 .formRow {
   display: flex;
   flex-direction: row;
@@ -73,45 +80,61 @@
 }
 
 /*RIGHT SIDE*/
-.right-pane {
+.right-side {
   display: flex;
   width: 35%;
   flex-direction: column;
-}
-.employee-info {
   position: relative;
+}
+.employee-info-container {
+  position: absolute;
+  width: 85%;
+  height: 15%;
+  max-height: 150px;
   top: -75px;
   margin: 20px;
   margin-left: 10px;
   margin-bottom: 10px;
+  margin-right: 20px;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  height: 300px;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.comments {
-  position: relative;
-  top: -70px;
+.ratings-container {
+  position: absolute;
+  width: 85%;
+  height: 45%;
+  top: 15%;
   margin: 20px;
   margin-left: 10px;
+  margin-bottom: 10px;
   margin-top: 10px;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  height: 400px;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.review-form-list {
-  height: 90%;
-  overflow-x: auto;
-  box-sizing: border-box;
-  margin-bottom: 10px;
+.signature-submit-container {
+  position: absolute;
+  top: 68%;
+  width: 85%;
+  height: 25%;
+  margin: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

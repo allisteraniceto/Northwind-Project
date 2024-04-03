@@ -1,5 +1,6 @@
 import Header from "../components/Header";
-import ReviewFormList from "../components/ReviewFormList";
+import FormList from "../components/FormList";
+import SubmitOrSignButton from "../components/SubmitOrSignButton";
 
 export default function EmployeeReviewFormPage() {
   return (
@@ -7,14 +8,27 @@ export default function EmployeeReviewFormPage() {
       <Header dashboard="Forms" />
       <div className="formSection">
         <div className="question-container">
-          <ReviewFormList isEmployee={true} />
+          <FormList isEmployee={true} />
         </div>
-        <div className="right-pane">
-          <div className="employee-info">
+        <div className="right-side">
+          <div className="employee-info-container">
             <p>Employee Info</p>
           </div>
-          <div className="comments">
+          <div className="ratings-container">
             <p>Ratings</p>
+          </div>
+          <div className="signature-submit-container">
+            <p>Signature and Submit</p>
+            <SubmitOrSignButton
+              formType="employee"
+              status=""
+              buttonType="submit"
+            />
+            <SubmitOrSignButton
+              formType="employee"
+              status=""
+              buttonType="sign"
+            />
           </div>
         </div>
       </div>
