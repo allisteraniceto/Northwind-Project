@@ -18,6 +18,8 @@ IdentityService.ObtainIdentity(); //Obtain the identity of the user
 var provider = builder.Services.BuildServiceProvider();
 var configuration = provider.GetRequiredService<IConfiguration>();
 var frontendURL = configuration.GetValue<string>("frontend_url");
+//dependency injection for EmailSender
+builder.Services.AddTransient<EmailSender>();
 
 
 // builder.Services.AddCors(options => 

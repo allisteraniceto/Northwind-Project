@@ -32,10 +32,6 @@ namespace backend.Migrations
                     b.Property<DateTime>("DateAndTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Event")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(200)");
-
                     b.Property<int>("ReviewID")
                         .HasColumnType("int");
 
@@ -91,6 +87,10 @@ namespace backend.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RatingID"), 1L, 1);
+
+                    b.Property<string>("HID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("QuestionID")
                         .HasColumnType("int");
