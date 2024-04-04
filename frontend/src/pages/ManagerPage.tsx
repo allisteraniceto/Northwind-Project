@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import EmployeeList from "../components/EmployeeList";
 import AttachmentList from "../components/AttachmentList";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
+import Rectangle from "../components/rectangle";
 
 import "../styles/InteractionsPane.css"; //.interactions-section, .elected-employee-container, .previous-years-container
 import "../styles/ManagerSection.css";
@@ -22,7 +23,7 @@ function ManagerPage() {
         </div>
         <div className="interactions-section">
           <div className="selected-employee-container">
-            {/*SELECTED EMPLOYEE*/}
+            {Rectangle(1)}
             <PerformanceReviewButton
               linkTo="/ManagerReviewForm"
               reviewStatus="Finalized"
