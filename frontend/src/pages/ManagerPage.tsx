@@ -1,5 +1,6 @@
 //Manager Dashboard
-//Employee Dashboard
+import { useState } from "react";
+
 import Header from "../components/Header";
 import EmployeeList from "../components/EmployeeList";
 import AttachmentList from "../components/AttachmentList";
@@ -10,6 +11,15 @@ import "../styles/ManagerSection.css";
 import "../styles/Attachments.css"; //.attachments-container
 
 function ManagerPage() {
+  const [selectedEmployeeID, setSelectedEmployeeID] = useState<number | null>(
+    null
+  );
+
+  //pass down handler function to set selected employee id
+  const handleSelectedEmployee = (employeeID: number | null) => {
+    setSelectedEmployeeID(employeeID);
+  };
+
   return (
     <>
       <Header dashboard="Manager" />
@@ -18,7 +28,7 @@ function ManagerPage() {
           <div className="employee-list-header">
             <h3>Direct Reports</h3>
           </div>
-          <EmployeeList />
+          <EmployeeList setEmployeeID={handleSelectedEmployee} />
         </div>
         <div className="interactions-section">
           <div className="selected-employee-container">
@@ -27,13 +37,14 @@ function ManagerPage() {
               linkTo="/ManagerReviewForm"
               reviewStatus="Finalized"
             />
-            <p>Selected Employee</p>
+            <p>User ID: {selectedEmployeeID}</p>
           </div>
           <div className="attachments-container">
             <div className="attachment-list-header">
               <h3>Attachments</h3>
             </div>
-            <AttachmentList />
+            {/*conditionally render attachment list*/}
+            {selectedEmployeeID && <AttachmentList />}
           </div>
           <div className="previous-years-container">
             {/*PREVIOUS REVIEWS*/}
