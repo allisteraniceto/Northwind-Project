@@ -35,45 +35,45 @@ export default function EmployeePage() {
   return (
     <>
       <Header dashboard="Employee" />
-      <div className="employee-section">
-        <div className="employee-dashboard">
-          <div className="employee-rating-pane">
-            <RatingTile ratingNum={12} />
-          </div>
-          <div className="employee-criteria-pane">
-            <ul>
-              <li>
-                Job description and/or Job highlights noting any significant
-                changes
-              </li>
-              <li>Evaluate performance and achieved goals</li>
-              <li>Discuss areas of excellence within performance</li>
-              <li>Discuss areas of development or improvement</li>
-              <li>Develop future goals with set expectation</li>
-            </ul>
-            {/* CRITERIA CONTAINER */}
-          </div>
+      {/* <div className="employee-section"> */}
+      <div className="employee-dashboard">
+        <div className="employee-rating-pane">
+          <RatingTile ratingNum={12} />
         </div>
-        <div className="interactions-section">
-          <div className="selected-employee-container">
-            {/* SELECTED EMPLOYEE */}
-            <PerformanceReviewButton
-              linkTo="/EmployeeReviewForm"
-              reviewStatus="Finalized"
-            />
-          </div>
-          <div className="attachments-container">
-            <div className="attachment-list-header">
-              <h3>Attachments</h3>
-            </div>
-            <AttachmentList />
-          </div>
-          <div className="previous-years-container">
-            {/* PREVIOUS REVIEWS */}
-            <p>Previous Reviews</p>
-          </div>
+        <div className="employee-criteria-pane">
+          <ul>
+            <li>
+              Job description and/or Job highlights noting any significant
+              changes
+            </li>
+            <li>Evaluate performance and achieved goals</li>
+            <li>Discuss areas of excellence within performance</li>
+            <li>Discuss areas of development or improvement</li>
+            <li>Develop future goals with set expectation</li>
+          </ul>
+          {/* CRITERIA CONTAINER */}
         </div>
       </div>
+      {/* <div className="interactions-section"> */}
+      <div className="selected-employee-container">
+        {/* SELECTED EMPLOYEE */}
+        <PerformanceReviewButton
+          linkTo="/EmployeeReviewForm"
+          reviewStatus="Finalized"
+        />
+      </div>
+      <div className="attachments-container">
+        <div className="attachment-list-header">
+          <h3>Attachments</h3>
+        </div>
+        <AttachmentList />
+      </div>
+      <div className="previous-years-container">
+        {/* PREVIOUS REVIEWS */}
+        <p>Previous Reviews</p>
+      </div>
+      {/* </div> */}
+      {/* </div> */}
     </>
   );
 }
