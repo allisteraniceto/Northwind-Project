@@ -114,3 +114,4 @@ public class ManagerDashboardController : ControllerBase
         return Ok(queryResult);
     }
 }
+

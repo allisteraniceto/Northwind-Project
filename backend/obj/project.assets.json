@@ -2636,11 +2636,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "c:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\backend.csproj",
+      "projectPath": "C:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\xxmar\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\obj\\",
+      "outputPath": "C:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xxmar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2650,7 +2650,6 @@
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -2743,12 +2742,6 @@
     }
   },
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file c:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1603",
       "level": "Warning",

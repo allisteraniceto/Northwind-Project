@@ -4,14 +4,19 @@
     background-color: white;
     border: none;
     padding: 5px;
-  }
+}
   
-  .image {
-    width: 20px;
-    height: 20px;
-  }
+.image {
+    width: 7px;
+    height: 7px;
+}
   
   /* Hover effect */
 .button:hover {
     background-color: #ccc; /* Change to gray color when hovered over */
-  }
+}
+
+.download-image {
+    width: 30px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}

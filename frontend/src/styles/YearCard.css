@@ -25,8 +25,9 @@
     cursor: pointer; /* Add pointer cursor to indicate clickable */
     transition: background-color 0.3s ease;
   }
-  
+
   .year-card-button {
+    
     width: 30px;
     height: 30px;
     background-color: white;
@@ -34,22 +35,24 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 50%;
-    position: relative; /* Set position to relative */
+   position: relative;/* Set position to relative */
     border-width: 3px; /* Increase the border width */
+
+    margin-top: 1px; /* Adjust margin as needed */
   }
-  
   .year-card-button::before {
     content: ''; /* Add content to the pseudo-element */
-    position: absolute; /* Position the pseudo-element */
-    width: 20px; /* Set desired width */
-    height: 20px; /* Set desired height */
-    background-color: #ccc; /* Set background color */
-    border-radius: 50%; /* Make it circular */
-    top: 50%; /* Position it vertically */
-    left: 50%; /* Position it horizontally */
-    transform: translate(-50%, -50%); /* Center it */
-  }
-  
+    display: none; /* Hide the circle by default */
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
   .year-card.selected, /* Apply styles when selected */
   .year-card-container.selected .year-card-button { /* Apply styles to the button when selected */
     background-color: #2b2648; /* Dark purple-blue color for selected state */

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bGN5XAC2IOQJrWLwQLOkspT0KsXSm0hxHv25BxmnQewMXnUOGvHnf5O35e2nkLvegQLHs6bYF7T1apx61qKDaw==",
+  "dgSpecHash": "/zkWh6nSWOYjHVgotKV+z5GMYSV82nXdtx2zY2jH/Ks9+f92Jh9Zp6tjZ1EOVIAhMAQn2I15xYRfCaL/CcxkPA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\backend.csproj",
+  "projectFilePath": "C:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xxmar\\.nuget\\packages\\csvhelper\\6.0.0\\csvhelper.6.0.0.nupkg.sha512",
     "C:\\Users\\xxmar\\.nuget\\packages\\entityframework\\6.0.0\\entityframework.6.0.0.nupkg.sha512",
@@ -63,12 +63,6 @@
     "C:\\Users\\xxmar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file c:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1603",
       "level": "Warning",

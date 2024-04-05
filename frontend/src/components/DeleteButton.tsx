@@ -1,19 +1,17 @@
-import React from 'react';
+
 import trashcan from '../assets/trash.png'; // Import the trashcan image
 import '../styles/DeleteButton.css'; // Import the CSS file
 
-const DeleteButton = () => {
+interface DeleteButtonProps {
+    onClick: () => void; // Define the onClick function
+  }
   
-    const handleClick = () => {
-        // Add functionality for when the button is clicked
-        console.log('Delete button clicked');
-    };
-
+  const DeleteButton: React.FC<DeleteButtonProps> = ({ onClick }) => {
     return (
-        <button className="button" onClick={handleClick}>
+      <button className="button" onClick={onClick}>
         <img src={trashcan} alt="Trashcan" className="image" />
-        </button>
+      </button>
     );
-    };
-
-export default DeleteButton;
+  };
+  
+  export default DeleteButton;

@@ -2,10 +2,7 @@
 //Manager Dashboard
 //Employee Dashboard
 import Header from "../components/Header";
-
-import DeleteButton from "../components/DeleteButton";
-import DownloadButton from "../components/DownloadButton";
-
+import React, { useState } from 'react';
 import YearCardList from "../components/YearCardList";
 import '../styles/YearRadioButton.css';
 import '../styles/DeleteButton.css'; // Import the CSS file
@@ -28,14 +25,17 @@ import "../styles/Attachments.css"; //.attachments-container
 
 
 const ManagerPage: React.FC = () => {
-  const navigateToReview = (year: number) => {
-    console.log(`Navigating to performance review for year ${year}`);
-    // Implement your navigation logic here
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+
+  const handleYearSelected = (year: number | null) => {
+    console.log(`Year ${year} selected`);
+    setSelectedYear(year);
+
   };
 
-  const handleClick = () => {
-    console.log('Year clicked');
-  };
+ // const handleClick = () => {
+   // console.log('Year clicked');
+  //};
 
   return (
     <>
@@ -49,6 +49,7 @@ const ManagerPage: React.FC = () => {
         </div>
         <div className="interactions-section">
           <div className="selected-employee-container">
+          {selectedYear !== null && <p>Selected Employee for Year: {selectedYear}</p>}
             {/*SELECTED EMPLOYEE*/}
             <PerformanceReviewButton
               linkTo="/ManagerReviewForm"
@@ -61,21 +62,14 @@ const ManagerPage: React.FC = () => {
               <h3>Attachments</h3>
             </div>
             <AttachmentList />
-                   
-          <DeleteButton/>
-               <DownloadButton/>
           </div>
 
 
           <div className="previous-years-container">
-          <YearCardList startYear={2023} endYear={2026} navigateToReview={() => console.log('Dummy navigateToReview function')} />
+        <YearCardList startYear={2023} endYear={2030} onYearSelected={handleYearSelected} />
 
            </div>
             
-            
-      
-            <p>Previous Reviews</p>
-
           </div>
       </div>
     </>

@@ -4,26 +4,23 @@ import '../styles/YearCard.css'; // Import CSS file for styling
 interface YearCardProps {
   year: number;
   onClick: () => void;
-  navigateToReview: (year: number) => void; // Function to navigate to review for the selected year
+  isSelected: boolean; 
 }
 
-const YearCard: React.FC<YearCardProps> = ({ year, onClick, navigateToReview }) => {
-  const [selected, setSelected] = useState<boolean>(false);
-
+const YearCard: React.FC<YearCardProps> = ({ year, onClick, isSelected }) => {
   const handleClick = () => {
-    setSelected(!selected); // Toggle the selected state
     onClick(); // Call the onClick function passed from props
-    navigateToReview(year); // Navigate to review for the selected year
   };
 
   return (
-    <div className={`year-card-container ${selected ? 'selected' : ''}`} onClick={handleClick}>
+    <div className={`year-card-container ${isSelected ? 'selected' : ''}`} onClick={handleClick}>
       <div className="year-card">
         {year}
       </div>
-      <button className="year-card-button" onClick={handleClick}></button>
+      <button className="year-card-button"></button>
     </div>
   );
 };
 
 export default YearCard;
+

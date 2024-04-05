@@ -5,6 +5,8 @@ import attachmentsData from "../dummy-attachments.json"; //attachmentsData will 
 
 import "../styles/Attachments.css";
 
+interface AttachmentListProps {}
+
 interface Attachment {
   attachment_id: number;
   name: string;
@@ -14,10 +16,11 @@ interface Attachment {
   uploaded_date: string;
 }
 
-export default function AttachmentList() {
+export default function AttachmentList(props: AttachmentListProps) {
   const [attachmentList, setAttachmentList] = useState<Attachment[]>(
-    [] //empty for now
-  );
+    []); //empty for now
+
+
 
   //handle state in parent component to track one selected employee only
   const [selectedAttachment, setSelectedAttachment] = useState<number | null>(
@@ -26,10 +29,25 @@ export default function AttachmentList() {
 
   //pass the set function down to EmployeeCard
   const handleAttachmentSelect = (attachmentId: number) => {
-    setSelectedAttachment(
+    setSelectedAttachment
+    (
       attachmentId === selectedAttachment ? null : attachmentId
     );
   };
+
+
+  const handleAttachmentDelete = (attachmentId: number) => {
+    // Filter out the selected attachment from the attachment list
+    const updatedAttachments = attachmentList.filter(
+      (attachment) => attachment.attachment_id !== attachmentId
+    );
+    setAttachmentList(updatedAttachments);
+    // If the selected attachment is deleted, clear the selection
+    if (attachmentId === selectedAttachment) {
+      setSelectedAttachment(null);
+    }
+  };
+
 
   useEffect(() => {
     // Set the attachment list when the component mounts
@@ -38,18 +56,17 @@ export default function AttachmentList() {
 
   return (
     <div className="attachment-list">
-      {attachmentList.map(
-        //use array map method to iterate through json onject
-        (attachment) => (
-          <AttachmentCard
-            attachName={attachment.name}
-            attachNum={attachment.attachment_id}
-            attachPath="./path"
-            onSelect={handleAttachmentSelect} //pass click handle function to get selected ID
-            isSelected={attachment.attachment_id === selectedAttachment}
-          />
-        )
-      )}
+ {attachmentList.map((attachment) => (
+        <AttachmentCard
+          key={attachment.attachment_id}
+          attachName={attachment.name}
+          attachNum={attachment.attachment_id}
+          attachPath="./path"
+          onSelect={handleAttachmentSelect}
+          onDelete={handleAttachmentDelete} // Pass delete function to AttachmentCard
+          isSelected={attachment.attachment_id === selectedAttachment}
+        />
+      ))}
     </div>
   );
 }
