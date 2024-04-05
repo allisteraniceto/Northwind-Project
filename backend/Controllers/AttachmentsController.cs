@@ -1,3 +1,4 @@
+using System.Net.Mail;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -31,7 +32,7 @@ public class AttachmentsController : ControllerBase
             stream.Position = 0;
 
             //create the path for the attachments folder, this is where the attachment will be saved
-            var attachmentsFolder = Path.Combine("files");
+            var attachmentsFolder = Path.Combine("attachments");
             var filePath = Path.Combine(attachmentsFolder, file.FileName);
 
             //create a filestream with the path as the attachments folder, then copy to file stream
@@ -47,14 +48,14 @@ public class AttachmentsController : ControllerBase
         review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
 
         //create a File model instance to insert into Files table
-        var upload = new File
+        var upload = new Attachment
         {
             ReviewID = review.ReviewID,
-            FileName = file.FileName,
+            AttachmentName = file.FileName,
             Caption = caption
         };
 
-        _dbContext.Files.Add(upload);
+        _dbContext.Attachments.Add(upload);
         _dbContext.SaveChanges();
 
         //create a Log model instance to insert into Logs table
@@ -71,4 +72,37 @@ public class AttachmentsController : ControllerBase
 
         return Ok("File uploaded successfully.");
     }
+
+    [HttpPost]
+    [Route("DownloadAttachment")]
+    public async Task<IActionResult> DownloadAttachment(string attachmentName, int year)
+    {
+        var review = default(Review);
+        //find the current review for the selected employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Year == year);
+
+        //query for all attachments in list form for the 
+        var attachment = _dbContext.Attachments.FirstOrDefault(attachment => attachment.ReviewID == review.ReviewID && review.Year == year && attachment.AttachmentName == attachmentName);
+
+        if(attachment == null)
+        {
+            return NotFound("No file of that name was found for this review.");
+        }
+
+        var attachmentsFolder = Path.Combine("attachments");
+        var filePath = Path.Combine(attachmentsFolder, attachmentName);
+
+        //read the file into memory
+        byte[] fileBytes = await System.IO.File.ReadAllBytesAsync(filePath);
+
+        //set HTTP headers
+        string contentType = "application/octet-stream";
+        Response.Headers.Add("Content-Disposition", "attachment; filename=" + attachmentName);
+
+        //return file
+        return File(fileBytes, contentType);
+
+    }
+
+
 }
