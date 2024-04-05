@@ -1,6 +1,6 @@
 //Manager Dashboard
 import { useState } from "react";
-
+import StatusIcon from "../components/statusicon.tsx";
 import Header from "../components/Header";
 import EmployeeList from "../components/EmployeeList";
 import AttachmentList from "../components/AttachmentList";
@@ -46,6 +46,7 @@ function ManagerPage() {
             </div>
             {/*conditionally render attachment list*/}
             {selectedEmployeeID && <AttachmentList />}
+            {StatusIcon("completed")}
           </div>
           <div className="previous-years-container">
             {/*PREVIOUS REVIEWS*/}

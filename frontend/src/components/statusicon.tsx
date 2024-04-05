@@ -13,3 +13,5 @@ const StatusIcon = (status: string): JSX.Element => {
 
     return icon;
 };
+
+export default StatusIcon;
