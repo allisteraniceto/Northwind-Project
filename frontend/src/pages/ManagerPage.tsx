@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 import Header from "../components/Header";
-import React, { useState } from 'react';
 import YearCardList from "../components/YearCardList";
 import '../styles/YearRadioButton.css';
 import '../styles/DeleteButton.css'; // Import the CSS file
@@ -73,6 +72,7 @@ const ManagerPage: React.FC = () => {
             </div>
             {/*conditionally render attachment list*/}
             {selectedEmployeeID && <AttachmentList />}
+        
           </div>
 
 
