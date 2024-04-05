@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; //import react-router-dom
+import { useState } from "react";
 import NoPage from "./pages/NoPage";
 import EmployeePage from "./pages/EmployeePage";
 import HrPage from "./pages/HrPage";
@@ -9,8 +10,14 @@ import ManagerReviewFormPage from "./pages/ManagerReviewFormPage";
 import "./global.css";
 
 export default function App() {
+  const [reviewFormPage, setReviewFormPage] = useState(false);
+
+  // to see if routed to a review form page
+  const handleReviewFormPage = (isReviewForm: boolean) => {
+    setReviewFormPage(isReviewForm);
+  };
   return (
-    <div className="page">
+    <div className={reviewFormPage ? "page-review-form" : "page"}>
       <Router>
         <Routes>
           <Route index element={<EmployeePage />} />
@@ -19,11 +26,15 @@ export default function App() {
           <Route path="/Manager" element={<ManagerPage />} />
           <Route
             path="/EmployeeReviewForm"
-            element={<EmployeeReviewFormPage />}
+            element={
+              <EmployeeReviewFormPage setReviewForm={handleReviewFormPage} />
+            }
           />
           <Route
             path="/ManagerReviewForm"
-            element={<ManagerReviewFormPage />}
+            element={
+              <ManagerReviewFormPage setReviewForm={handleReviewFormPage} />
+            }
           />
           <Route path="*" element={<NoPage />} />{" "}
           {/* *: anything else another the other routes */}
