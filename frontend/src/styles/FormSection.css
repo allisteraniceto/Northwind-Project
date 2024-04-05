@@ -38,6 +38,7 @@
   overflow-x: auto;
   box-sizing: border-box;
   margin-bottom: 10px;
+  scroll-behavior: smooth;
 }
 
 .formRow {
