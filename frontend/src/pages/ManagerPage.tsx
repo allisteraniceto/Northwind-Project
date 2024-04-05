@@ -1,6 +1,7 @@
 
 //Manager Dashboard
-//Employee Dashboard
+import { useState } from "react";
+
 import Header from "../components/Header";
 import React, { useState } from 'react';
 import YearCardList from "../components/YearCardList";
@@ -37,6 +38,15 @@ const ManagerPage: React.FC = () => {
    // console.log('Year clicked');
   //};
 
+  const [selectedEmployeeID, setSelectedEmployeeID] = useState<number | null>(
+    null
+  );
+
+  //pass down handler function to set selected employee id
+  const handleSelectedEmployee = (employeeID: number | null) => {
+    setSelectedEmployeeID(employeeID);
+  };
+
   return (
     <>
       <Header dashboard="Manager" />
@@ -45,7 +55,7 @@ const ManagerPage: React.FC = () => {
           <div className="employee-list-header">
             <h3>Direct Reports</h3>
           </div>
-          <EmployeeList />
+          <EmployeeList setEmployeeID={handleSelectedEmployee} />
         </div>
         <div className="interactions-section">
           <div className="selected-employee-container">
@@ -55,13 +65,14 @@ const ManagerPage: React.FC = () => {
               linkTo="/ManagerReviewForm"
               reviewStatus="Finalized"
             />
-            <p>Selected Employee</p>
+            <p>User ID: {selectedEmployeeID}</p>
           </div>
           <div className="attachments-container">
             <div className="attachment-list-header">
               <h3>Attachments</h3>
             </div>
-            <AttachmentList />
+            {/*conditionally render attachment list*/}
+            {selectedEmployeeID && <AttachmentList />}
           </div>
 
 

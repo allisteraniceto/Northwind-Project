@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import AttachmentCard from "./AttachmentCard";
 import attachmentsData from "../dummy-attachments.json"; //attachmentsData will be an aray
 
+// import axios from "axios";
+// import config from "../../config.json";
 import "../styles/Attachments.css";
 
 interface AttachmentListProps {}
@@ -49,6 +51,21 @@ export default function AttachmentList(props: AttachmentListProps) {
   };
 
 
+  // //GET request to retreive list of attachments from employee
+  // useEffect(() => {
+  //   axios
+  //     .get(`${config.apiUrl}/EmployeeDashboard/AttachmentListAll`) //no endpoint yet for attachments
+  //     .then((response) => {
+  //       setAttachmentList(response.data);
+  //       console.log(`AttachmentList: ${attachmentList}`);
+  //     })
+  //     .catch((error) => {
+  //       //handle errors
+  //       console.error("Errore making GET request", error.message);
+  //     });
+  // });
+
+  //hardcoded for now
   useEffect(() => {
     // Set the attachment list when the component mounts
     setAttachmentList(attachmentsData.attachments);
