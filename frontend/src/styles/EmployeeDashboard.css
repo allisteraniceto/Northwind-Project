@@ -46,6 +46,13 @@
   color: #ffffff;
 }
 
+.rating-tile-default {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .employee-criteria-pane {
   display: flex;
   align-items: center;
