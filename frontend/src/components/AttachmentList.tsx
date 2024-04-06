@@ -7,10 +7,8 @@ import attachmentsData from "../dummy-attachments.json"; //attachmentsData will 
 // import config from "../../config.json";
 import "../styles/Attachments.css";
 
-interface AttachmentListProps {
 
-  
-}
+
 
 interface Attachment {
   attachment_id: number;
@@ -22,7 +20,7 @@ interface Attachment {
 }
 
 
-export default function AttachmentList(props: AttachmentListProps) {
+export default function AttachmentList() {
 
   const [attachmentList, setAttachmentList] = useState<Attachment[]>(
     []); //empty for now
