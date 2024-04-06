@@ -83,9 +83,9 @@ export default function AttachmentList() {
           attachNum={attachment.attachment_id}
           attachPath="./path"
           onSelect={handleAttachmentSelect}
-          onDelete={handleAttachmentDelete} // Pass delete function to AttachmentCard
           isSelected={attachment.attachment_id === selectedAttachment}
 
+          onDelete={handleAttachmentDelete}
         />
       ))}
     </div>

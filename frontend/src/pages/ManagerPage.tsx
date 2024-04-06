@@ -22,20 +22,8 @@ import "../styles/InteractionsPane.css"; //.interactions-section, .elected-emplo
 import "../styles/ManagerSection.css";
 import "../styles/Attachments.css"; //.attachments-container
 
-
-
-const ManagerPage: React.FC = () => {
+function ManagerPage() {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
-
-  const handleYearSelected = (year: number | null) => {
-    console.log(`Year ${year} selected`);
-    setSelectedYear(year);
-
-  };
-
- // const handleClick = () => {
-   // console.log('Year clicked');
-  //};
 
   const [selectedEmployeeID, setSelectedEmployeeID] = useState<number | null>(
     null
@@ -46,43 +34,49 @@ const ManagerPage: React.FC = () => {
     setSelectedEmployeeID(employeeID);
   };
 
+  const handleYearSelected = (year: number | null) => {
+    console.log(`Year ${year} selected`);
+    setSelectedYear(year);
+  };
+
+
   return (
     <>
       <Header dashboard="Manager" />
-      <div className="manager-section">
-        <div className="employee_list-container">
-          <div className="employee-list-header">
-            <h3>Direct Reports</h3>
-          </div>
-          <EmployeeList setEmployeeID={handleSelectedEmployee} />
+      {/* <div className="manager-section"> */}
+      <div className="employee_list-container">
+        <div className="employee-list-header">
+          <h3>Direct Reports</h3>
         </div>
-        <div className="interactions-section">
-          <div className="selected-employee-container">
-          {selectedYear !== null && <p>Selected Employee for Year: {selectedYear}</p>}
-            {/*SELECTED EMPLOYEE*/}
-            <PerformanceReviewButton
-              linkTo="/ManagerReviewForm"
-              reviewStatus="Finalized"
-            />
-            <p>User ID: {selectedEmployeeID}</p>
-          </div>
-          <div className="attachments-container">
-            <div className="attachment-list-header">
-              <h3>Attachments</h3>
-            </div>
-            {/*conditionally render attachment list*/}
-            {selectedEmployeeID && <AttachmentList />}
-        
-          </div>
-
-
-          <div className="previous-years-container">
-        <YearCardList startYear={2023} endYear={2030} onYearSelected={handleYearSelected} />
-
-           </div>
-            
-          </div>
+        <EmployeeList setEmployeeID={handleSelectedEmployee} />
       </div>
+      {/* <div className="interactions-section"> */}
+      <div className="selected-employee-container">
+        {/*SELECTED EMPLOYEE*/}
+        {selectedYear !== null && <p>Performance Review Year: {selectedYear}</p>}
+
+        <PerformanceReviewButton
+          linkTo="/ManagerReviewForm"
+          reviewStatus="Finalized"
+        />
+        <p>User ID: {selectedEmployeeID}</p>
+
+      </div>
+      <div className="attachments-container">
+        
+        <div className="attachment-list-header">
+          <h3>Attachments</h3>
+        </div>
+        {/*conditionally render attachment list*/}
+        {selectedEmployeeID && <AttachmentList />}
+      </div>
+      <div className="previous-years-container">
+        {/*PREVIOUS REVIEWS*/}
+        <YearCardList startYear={2023} endYear={2029} onYearSelected={handleYearSelected} />
+
+      </div>
+      {/* </div> */}
+      {/* </div> */}
     </>
   );
 }

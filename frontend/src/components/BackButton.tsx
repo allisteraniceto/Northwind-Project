@@ -1,6 +1,6 @@
 
 
-const BackButton = () => 
+function BackButton ()  
 
 {
   const goBack = () => {

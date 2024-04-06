@@ -46,7 +46,9 @@
 
 .action-buttons {
   display: flex;
-  align-items: center;
+  align-items: left;
+  justify-content: flex-end;
+  margin-right: 5px; 
 }
 
 .right-buttons {
