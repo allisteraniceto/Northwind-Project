@@ -23,7 +23,6 @@ export default function ReviewFormList(prop: ReviewFormListProps) {
       <div className="question-pane">
         <div className="form-header">
           <h1>2024 REVIEW FORM</h1>
-          <UploadButton />
         </div>
         <div className="review-form-list">
           <div className="form-header-3">
@@ -37,6 +36,7 @@ export default function ReviewFormList(prop: ReviewFormListProps) {
             />
           ))}
         </div>
+        <UploadButton />
       </div>
     </>
   );

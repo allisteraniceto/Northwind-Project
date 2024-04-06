@@ -1,4 +1,4 @@
-import CorgiGif from "../../public/cool-corgi.gif";
+import CorgiGif from "/cool-corgi.gif";
 
 import "../styles/EmployeeList.css";
 

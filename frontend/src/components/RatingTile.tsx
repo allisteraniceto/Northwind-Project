@@ -1,4 +1,4 @@
-import DogeGif from "../../public/dogedance.gif";
+import DogeGif from "/dogedance.gif";
 
 import "../styles/EmployeeList.css";
 import "../styles/EmployeeDashboard.css";
