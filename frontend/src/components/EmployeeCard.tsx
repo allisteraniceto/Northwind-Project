@@ -1,3 +1,5 @@
+import CorgiGif from "/cool-corgi.gif";
+
 import "../styles/EmployeeList.css";
 
 interface EmployeeProps {
@@ -25,7 +27,7 @@ export default function EmployeeCard({
       className={`employee-card ${isSelected ? "clicked" : ""}`}
       onClick={handleClick}>
       <div className="headshot-container">
-        <img className="headshot-card" src="/pug.jpg" alt="User Headshot" />
+        <img className="headshot-card" src={CorgiGif} alt="User Headshot" />
       </div>
       <div className="employee-name">
         <p>{employee}</p>

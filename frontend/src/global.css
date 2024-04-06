@@ -15,6 +15,7 @@ html {
   background-color: #535353;
   box-sizing: border-box;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 #root {
@@ -36,7 +37,7 @@ html {
 .page-review-form {
   display: grid;
   grid-template-rows: 45px 40px 50px 100px 1fr 150px;
-  grid-template-columns: 1.75fr 1fr;
+  grid-template-columns: 2.2fr 1fr;
   max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
