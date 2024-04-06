@@ -23,14 +23,16 @@ function ManagerPage() {
   return (
     <>
       <Header dashboard="Manager" />
-      {/* <div className="manager-section"> */}
       <div className="employee_list-container">
         <div className="employee-list-header">
           <h3>Direct Reports</h3>
         </div>
-        <EmployeeList setEmployeeID={handleSelectedEmployee} />
+        <EmployeeList
+          setEmployeeID={handleSelectedEmployee}
+          dashboard="ManagerDashboard"
+          listType="EmployeeList"
+        />
       </div>
-      {/* <div className="interactions-section"> */}
       <div className="selected-employee-container">
         {/*SELECTED EMPLOYEE*/}
         <PerformanceReviewButton
@@ -50,8 +52,6 @@ function ManagerPage() {
         {/*PREVIOUS REVIEWS*/}
         <p>Previous Reviews</p>
       </div>
-      {/* </div> */}
-      {/* </div> */}
     </>
   );
 }

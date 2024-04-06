@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; //import react-router-dom
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NoPage from "./pages/NoPage";
 import EmployeePage from "./pages/EmployeePage";
 import HrPage from "./pages/HrPage";
@@ -11,6 +11,12 @@ import "./global.css";
 
 export default function App() {
   const [reviewFormPage, setReviewFormPage] = useState(false);
+  const [loggedInHID, setLoggedInHID] = useState<number>();
+
+  useEffect(() => {
+    setLoggedInHID(4); //will have to set this once login is implemented
+    console.log(loggedInHID);
+  }, []);
 
   // to see if routed to a review form page
   const handleReviewFormPage = (isReviewForm: boolean) => {

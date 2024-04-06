@@ -24,14 +24,16 @@ function HrPage() {
   return (
     <>
       <Header dashboard="HR" />
-      {/* <div className="hr-section"> */}
       <div className="employee_list-container">
         <div className="employee-list-header">
-          <h3>Direct Reports</h3>
+          <h3>Managers</h3>
         </div>
-        <EmployeeList setEmployeeID={handleSelectedEmployee} />
+        <EmployeeList
+          setEmployeeID={handleSelectedEmployee}
+          dashboard="HRDashboard"
+          listType="ManagerList"
+        />
       </div>
-      {/* <div className="interactions-section"> */}
       <div className="selected-employee-container">
         {/*SELECTED EMPLOYEE*/}
         <PerformanceReviewButton
@@ -51,8 +53,6 @@ function HrPage() {
         {/*PREVIOUS REVIEWS*/}
         <p>Previous Reviews</p>
       </div>
-      {/* </div> */}
-      {/* </div> */}
     </>
   );
 }
