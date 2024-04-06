@@ -33,7 +33,8 @@ function ManagerPage() {
         </div>
         <div className="interactions-section">
           <div className="selected-employee-container">
-            {Rectangle(1)}
+          <Rectangle EmployeeId={1} />
+
             <PerformanceReviewButton
               linkTo="/ManagerReviewForm"
               reviewStatus="Finalized"

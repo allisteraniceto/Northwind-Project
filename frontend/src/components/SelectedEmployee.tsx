@@ -11,7 +11,7 @@ const SelectedEmployee = () => (
     padding: '0'
     }}>
         <div style={{ position: 'relative', top: 0, left: 0 }}>
-            <Rectangle />
+            <Rectangle EmployeeId={1} />
             
         </div>
     </div>

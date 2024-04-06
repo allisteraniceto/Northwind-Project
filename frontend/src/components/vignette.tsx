@@ -1,10 +1,19 @@
 import '../styles/EmployeeList.css';
+//import PropTypes from 'prop-types';
 
-const OvalVignette = ({ src, alt }) => (
+
+
+
+interface OvalVignetteProps {
+    src: string;
+    alt: string;
+  }
+  
+  const OvalVignette: React.FC<OvalVignetteProps> = ({ src, alt }) => (
     <div className='headshot-selected'>
-        <img src={src} alt={alt} className='headshot-selectedcard'/>
-        
+      <img src={src} alt={alt} className='headshot-selectedcard'/>
     </div>
-);
-
-export default OvalVignette;
+  );
+  
+  export default OvalVignette;
+  

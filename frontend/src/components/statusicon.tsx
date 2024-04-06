@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import  { useState, useEffect} from "react";
 import { FcApprove, FcDisapprove } from "react-icons/fc";
 
 const StatusIcon = (status: string): JSX.Element => {

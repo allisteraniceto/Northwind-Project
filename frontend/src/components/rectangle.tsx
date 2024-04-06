@@ -6,7 +6,11 @@ import "../styles/Form.css"
 import "../styles/Form.css";
 import employees from '../dummy-employees.json';
 
-const Rectangle = (EmployeeId: number): JSX.Element => {
+interface RectangleProps {
+    EmployeeId: number;
+}
+
+const Rectangle: React.FC<RectangleProps> = ({ EmployeeId }) => {
     const employee = employees.employees.find(emp => emp.employee_id === EmployeeId);
     const name = employee ? `${employee.first_name} ${employee.last_name}` : '';
     const headshot = employee ? `${employee.headshot}` : '';
