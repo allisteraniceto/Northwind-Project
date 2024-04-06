@@ -23,6 +23,8 @@ interface Employee {
 
 interface EmployeeListProps {
   setEmployeeID?: HandleFunction; //can mark prop options w/ ? in typescript
+  dashboard: string;
+  listType: string;
 }
 
 export default function EmployeeList(props: EmployeeListProps) {
@@ -44,7 +46,7 @@ export default function EmployeeList(props: EmployeeListProps) {
   useEffect(() => {
     //Get request to retrieve list of employees
     axios
-      .get(`${config.apiUrl}/ManagerDashboard/EmployeeListAll`, {
+      .get(`${config.apiUrl}/${props.dashboard}/${props.listType}`, {
         params: {
           parameter1: "employees",
           parameter2: "inputObject.formType",
