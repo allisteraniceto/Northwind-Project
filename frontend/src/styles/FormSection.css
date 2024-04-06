@@ -1,5 +1,5 @@
 .formSection {
-  position: relative;
+  /* position: relative; */
   height: 100vh;
   display: flex;
 }
@@ -10,19 +10,38 @@
 
 /*left side contianer*/
 .question-container {
+  grid-row: 4/7;
   display: flex;
   flex-direction: column;
-  width: 65%;
-  height: 100%; /*100 percent of parent div height*/
+  min-height: 600px;
+  max-height: 100vh;
   box-sizing: border-box;
-  /* min-width: 1000px; */
+  margin: 10px;
+  margin-right: 5px;
+}
+
+/*questions pane*/
+.question-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: #ffffff91;
+  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
+  background-color: white;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .review-form-list {
-  height: 90%;
+  height: 85%;
   overflow-x: auto;
   box-sizing: border-box;
   margin-bottom: 10px;
+  scroll-behavior: smooth;
 }
 
 .formRow {
@@ -50,26 +69,12 @@
   box-sizing: border-box;
 }
 
-/*questions pane*/
-.question-pane {
-  border-radius: 20px;
-  margin: 20px;
-  margin-right: 10px;
-  background-color: #ffffff91;
-  padding: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
-  background-color: white;
-  height: 100%;
-  box-sizing: border-box;
-}
-
 .form-header {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10%;
+  height: 60px;
 }
 
 .form-header-3 {
@@ -79,7 +84,28 @@
   margin-top: 20px;
 }
 
+.upload-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+}
+
+.upload-button {
+  /* position: absolute;
+  right: 20px; */
+  display: flex;
+  align-items: center;
+}
+
+.upload-button:hover {
+  color: green;
+}
+
 /*RIGHT SIDE*/
+
 .right-side {
   display: flex;
   width: 35%;
@@ -87,15 +113,12 @@
   position: relative;
 }
 .employee-info-container {
-  position: absolute;
-  width: 85%;
-  height: 15%;
+  grid-row: 3/5;
+  grid-column: 2/3;
+  /* width: 85%; */
   max-height: 150px;
-  top: -75px;
-  margin: 20px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  margin-right: 20px;
+  margin: 10px;
+  margin-top: 0;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -105,14 +128,9 @@
   align-items: center;
 }
 .ratings-container {
-  position: absolute;
-  width: 85%;
-  height: 45%;
-  top: 15%;
-  margin: 20px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  grid-row: 5/6;
+  grid-column: 2/3;
+  margin: 10px;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -123,13 +141,9 @@
 }
 
 .signature-submit-container {
-  position: absolute;
-  top: 68%;
-  width: 85%;
-  height: 25%;
-  margin: 20px;
-  margin-left: 10px;
-  margin-top: 10px;
+  grid-row: 6/7;
+  grid-column: 2/3;
+  margin: 10px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   background-color: white;

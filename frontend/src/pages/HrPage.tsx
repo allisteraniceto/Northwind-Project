@@ -24,35 +24,35 @@ function HrPage() {
   return (
     <>
       <Header dashboard="HR" />
-      <div className="hr-section">
-        <div className="employee_list-container">
-          <div className="employee-list-header">
-            <h3>Direct Reports</h3>
-          </div>
-          <EmployeeList setEmployeeID={handleSelectedEmployee} />
+      {/* <div className="hr-section"> */}
+      <div className="employee_list-container">
+        <div className="employee-list-header">
+          <h3>Direct Reports</h3>
         </div>
-        <div className="interactions-section">
-          <div className="selected-employee-container">
-            {/*SELECTED EMPLOYEE*/}
-            <PerformanceReviewButton
-              linkTo="/ManagerReviewForm"
-              reviewStatus="Finalized"
-            />
-            <p>User ID: {selectedEmployeeID}</p>
-          </div>
-          <div className="attachments-container">
-            <div className="attachment-list-header">
-              <h3>Attachments</h3>
-            </div>
-            {/*conditionally render attachment list*/}
-            {selectedEmployeeID && <AttachmentList />}
-          </div>
-          <div className="previous-years-container">
-            {/*PREVIOUS REVIEWS*/}
-            <p>Previous Reviews</p>
-          </div>
-        </div>
+        <EmployeeList setEmployeeID={handleSelectedEmployee} />
       </div>
+      {/* <div className="interactions-section"> */}
+      <div className="selected-employee-container">
+        {/*SELECTED EMPLOYEE*/}
+        <PerformanceReviewButton
+          linkTo="/ManagerReviewForm"
+          reviewStatus="Finalized"
+        />
+        <p>User ID: {selectedEmployeeID}</p>
+      </div>
+      <div className="attachments-container">
+        <div className="attachment-list-header">
+          <h3>Attachments</h3>
+        </div>
+        {/*conditionally render attachment list*/}
+        {selectedEmployeeID && <AttachmentList />}
+      </div>
+      <div className="previous-years-container">
+        {/*PREVIOUS REVIEWS*/}
+        <p>Previous Reviews</p>
+      </div>
+      {/* </div> */}
+      {/* </div> */}
     </>
   );
 }
