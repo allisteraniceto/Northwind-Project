@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import '../styles/YearCard.css'; // Import CSS file for styling
 
 interface YearCardProps {
