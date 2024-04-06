@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Header from "../components/Header";
 import YearCardList from "../components/YearCardList";
-import '../styles/YearRadioButton.css';
+
 import '../styles/DeleteButton.css'; // Import the CSS file
 import '../styles/YearCard.css'; // Import the CSS file
 

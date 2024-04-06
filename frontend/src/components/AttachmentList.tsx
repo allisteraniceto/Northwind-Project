@@ -7,7 +7,10 @@ import attachmentsData from "../dummy-attachments.json"; //attachmentsData will 
 // import config from "../../config.json";
 import "../styles/Attachments.css";
 
-interface AttachmentListProps {}
+interface AttachmentListProps {
+
+  
+}
 
 interface Attachment {
   attachment_id: number;
@@ -18,7 +21,9 @@ interface Attachment {
   uploaded_date: string;
 }
 
+
 export default function AttachmentList(props: AttachmentListProps) {
+
   const [attachmentList, setAttachmentList] = useState<Attachment[]>(
     []); //empty for now
 
@@ -82,6 +87,7 @@ export default function AttachmentList(props: AttachmentListProps) {
           onSelect={handleAttachmentSelect}
           onDelete={handleAttachmentDelete} // Pass delete function to AttachmentCard
           isSelected={attachment.attachment_id === selectedAttachment}
+
         />
       ))}
     </div>

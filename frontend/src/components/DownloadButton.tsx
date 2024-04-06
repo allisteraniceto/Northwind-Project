@@ -1,4 +1,3 @@
-import React from 'react';
 import downloadButton from '../assets/download.png'; // Import the trashcan image
 import '../styles/DownloadButton.css'; // Import the CSS file
 

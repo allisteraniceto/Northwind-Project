@@ -48,7 +48,7 @@ const AttachmentCard: React.FC<AttachmentProps> = ({
       </div>
       <div className="action-buttons right-buttons">
         <DeleteButton onClick={() => onDelete(attachNum)} />
-       
+       <DownloadButton/>
       </div>
     </div>
   );
