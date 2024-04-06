@@ -1,4 +1,7 @@
 import FormRow from "./FormRow";
+
+import UploadButton from "./UploadButton";
+
 import "../styles/FormSection.css";
 
 interface ReviewFormListProps {
@@ -33,6 +36,7 @@ export default function ReviewFormList(prop: ReviewFormListProps) {
             />
           ))}
         </div>
+        <UploadButton />
       </div>
     </>
   );

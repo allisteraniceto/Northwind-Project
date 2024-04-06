@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: scroll;
   width: 100%;
   box-sizing: border-box;
+  /* overflow: auto; */
 }
 
 .attachment-list-header {
