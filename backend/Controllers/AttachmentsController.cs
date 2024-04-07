@@ -129,5 +129,34 @@ public class AttachmentsController : ControllerBase
 
     }
 
+    [HttpPost]
+    [Route("DeleteAttachment")]
+    public async Task<IActionResult> DeleteAttachment(int year, string attachmentName)
+    {
+        var review = default(Review);
+        //find the current review for the selected employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Year == year);
+
+        // find the attachment with the given name and year
+        var attachment = _dbContext.Attachments.FirstOrDefault(attachment => attachment.ReviewID == review.ReviewID && review.Year == year && attachment.AttachmentName == attachmentName);
+
+        if(attachment == null) // if no matching file by that name
+        {
+            return NotFound("No file of that name was found for this review.");
+        }
+
+        var attachmentsFolder = Path.Combine("attachments");
+        var filePath = Path.Combine(attachmentsFolder, attachmentName);
+
+        System.IO.File.Delete(filePath);
+
+        _dbContext.Attachments.Remove(attachment);
+        await _dbContext.SaveChangesAsync();
+        
+        
+        return Ok();
+
+    }
+
 
 }

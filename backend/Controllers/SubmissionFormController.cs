@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualBasic;
-using System;
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
+using QuestPDF.Previewer;
 using System.Text.Json;
 
 
@@ -151,11 +153,11 @@ public class SubmissionFormController : ControllerBase
 
     [HttpPost]
     [Route("GetRating")]
-    public IActionResult GetRating([FromBody] Response response)
+    public IActionResult GetRating([FromBody] RatingInput ratingInput)
     {
-         //This action displays responses (null or not) associated with each question
-        var formType = response.formType;
-        var questionNum = response.questionNum;
+         //This action displays a rating (null or not) associated with each rating question
+        var formType = ratingInput.formType;
+        var questionNum = ratingInput.questionNum;
 
         var review = default(Review);
         //find the current review for the employee
@@ -231,12 +233,13 @@ public class SubmissionFormController : ControllerBase
         //find the current review for the employee
         review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
 
-        if(formType == "employee")
+        if(formType == "employee") // if it is an employee signature
         {
             review.Status = "Signed By Employee";
             review.EmployeeSignature = 1;
             _dbContext.SaveChanges();
 
+            //create a log and save it to DB
              var log = new Log
             {
                 Event = "Employee Signed Review",
@@ -247,12 +250,13 @@ public class SubmissionFormController : ControllerBase
             _dbContext.Logs.Add(log);
             _dbContext.SaveChanges();
         }
-        else
+        else // if it is a manager signature
         {
             review.Status = "Finalized";
             review.ManagerSignature = 1;
             _dbContext.SaveChanges();
 
+            //create a log and save it to DB
              var log = new Log
             {
                 Event = "Manager Signed Review",
@@ -262,6 +266,7 @@ public class SubmissionFormController : ControllerBase
 
             _dbContext.Logs.Add(log);
             _dbContext.SaveChanges();
+
         }
         return Ok();
 
@@ -271,9 +276,6 @@ public class SubmissionFormController : ControllerBase
     [Route("GetStatus")]
     public IActionResult GetStatus()
     {
-         //This action will discern whether a manager or employee hit their "submit" button. It will then change the status of the 
-        //review in the database
-        
         var review = default(Review);
         //find the current review for the employee
         review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
@@ -281,4 +283,37 @@ public class SubmissionFormController : ControllerBase
         return Ok(review.Status);
 
     }
+
+
+    [HttpGet]
+    [Route("GeneratePDF")]
+    public IActionResult GeneratePDF()
+    {
+            // now that the review is finalized, we will pull all responses into a PDF and save it to the DB in the Attachments table
+
+            // set the license type for the QuestPDF library that we are using
+            QuestPDF.Settings.License = LicenseType.Community;
+
+            var document = Document.Create(container =>
+            {
+                container.Page(page =>
+                {
+                    page.Size(PageSizes.A4);
+                    page.Header().Text("Hello from Mark")
+                    .SemiBold();
+                });
+
+
+
+            });
+
+            document.ShowInPreviewer();
+            return Ok();
+    }
+
+
+
+
+
+
 }
