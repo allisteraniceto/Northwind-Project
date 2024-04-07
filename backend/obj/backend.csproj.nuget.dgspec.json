@@ -13,8 +13,14 @@
         "packagesPath": "/Users/allisteraniceto/.nuget/packages/",
         "outputPath": "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "/Users/allisteraniceto/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -29,6 +35,9 @@
           }
         },
         "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
           "warnAsError": [
             "NU1605"
           ]
