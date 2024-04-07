@@ -1,3 +1,6 @@
+import DogeGif from "/dogedance.gif";
+
+import "../styles/EmployeeList.css";
 import "../styles/EmployeeDashboard.css";
 
 interface RatingTile {
@@ -7,7 +10,8 @@ interface RatingTile {
 export default function RatingTile({ ratingNum }: RatingTile) {
   return (
     <div className="rating-tile">
-      <h1>{ratingNum}</h1>
+      <img src={DogeGif} className="rating-tile-default" />
+      {!DogeGif && <h1>{ratingNum}</h1>}
     </div>
   );
 }
