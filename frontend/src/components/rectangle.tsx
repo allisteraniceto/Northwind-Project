@@ -1,5 +1,5 @@
 
-import OvalVignette from './vignette';
+import OvalVignette from './Vignette';
 import "../styles/Form.css"
 //import React from 'react';
 //import axios from 'axios';
@@ -10,25 +10,22 @@ interface RectangleProps {
     EmployeeId: number;
 }
 
-const Rectangle: React.FC<RectangleProps> = ({ EmployeeId }) => {
+function Rectangle ({ EmployeeId }: RectangleProps) {
     const employee = employees.employees.find(emp => emp.employee_id === EmployeeId);
     const name = employee ? `${employee.first_name} ${employee.last_name}` : '';
     const headshot = employee ? `${employee.headshot}` : '';
 
     return (
-        <div>
             <div style={{
                 width: '45vw',
                 height: '15vh',
                 backgroundColor: '#ffffff',
-                position: "relative",
                 padding: '5%',
                 borderRadius: '10px',
             }}>
                 <p>{name}</p>
                 <OvalVignette src={headshot} alt="Descriptive Alt Text" />
             </div>
-        </div>
     );
 };
 
