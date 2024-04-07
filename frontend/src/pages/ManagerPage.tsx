@@ -1,11 +1,10 @@
 //Manager Dashboard
 import { useState } from "react";
-import StatusIcon from "../components/statusicon.tsx";
 import Header from "../components/Header";
 import EmployeeList from "../components/EmployeeList";
 import AttachmentList from "../components/AttachmentList";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
-import Rectangle from "../components/rectangle";
+import SelectedEmployee from "../components/SelectedEmployee.tsx";
 
 import "../styles/InteractionsPane.css"; //.interactions-section, .elected-employee-container, .previous-years-container
 import "../styles/ManagerSection.css";
@@ -35,8 +34,7 @@ function ManagerPage() {
         />
       </div>
       <div className="selected-employee-container">
-      <Rectangle EmployeeId={1} />
-
+        <SelectedEmployee EmployeeId={selectedEmployeeID} />
         <PerformanceReviewButton
           linkTo="/ManagerReviewForm"
           reviewStatus="Finalized"
@@ -49,7 +47,6 @@ function ManagerPage() {
         </div>
         {/*conditionally render attachment list*/}
         {selectedEmployeeID && <AttachmentList />}
-            {StatusIcon("completed")}
       </div>
       <div className="previous-years-container">
         {/*PREVIOUS REVIEWS*/}

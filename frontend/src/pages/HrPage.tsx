@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import EmployeeList from "../components/EmployeeList";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import AttachmentList from "../components/AttachmentList";
+import SelectedEmployee from "../components/SelectedEmployee";
 
 import "../styles/HrDashboard.css";
 import "../styles/EmployeeList.css";
@@ -35,7 +36,7 @@ function HrPage() {
         />
       </div>
       <div className="selected-employee-container">
-        {/*SELECTED EMPLOYEE*/}
+        <SelectedEmployee EmployeeId={selectedEmployeeID}/>
         <PerformanceReviewButton
           linkTo="/ManagerReviewForm"
           reviewStatus="Finalized"
