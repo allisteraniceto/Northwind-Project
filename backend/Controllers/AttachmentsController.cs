@@ -81,10 +81,10 @@ public class AttachmentsController : ControllerBase
         //find the current review for the selected employee
         review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Year == year);
 
-        //query for all attachments in list form for the 
+        // find the attachment with the given name and year
         var attachment = _dbContext.Attachments.FirstOrDefault(attachment => attachment.ReviewID == review.ReviewID && review.Year == year && attachment.AttachmentName == attachmentName);
 
-        if(attachment == null)
+        if(attachment == null) // if no matching file by that name
         {
             return NotFound("No file of that name was found for this review.");
         }
@@ -101,6 +101,31 @@ public class AttachmentsController : ControllerBase
 
         //return file
         return File(fileBytes, contentType);
+
+    }
+
+    [HttpPost]
+    [Route("GetAllAttachments")]
+    public async Task<IActionResult> GetAllAttachments(int year)
+    {
+        var review = default(Review);
+        //find the current review for the selected employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Year == year);
+
+        //query for all attachments for the given year and convert it to a list of file names 
+        var file_names = _dbContext.Attachments
+        .Where(attachment => attachment.ReviewID == review.ReviewID && review.Year == year)
+        .Select(attachment => attachment.AttachmentName)
+        .ToList();
+
+        // if no attachments found for the given year
+        if(file_names == null)
+        {
+            return NotFound("No attachments for this year.");
+        }
+
+        //return all the attachment file names in list form
+        return Ok(file_names);
 
     }
 
