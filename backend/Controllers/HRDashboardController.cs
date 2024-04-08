@@ -31,7 +31,7 @@ public class HRDashboardController : ControllerBase
         var employees = employeesList.Employees;
 
         // Query for employees with managerId equal to 4
-        var employeesWithManager0 = employees.Where(employee => employee.ManagerID == 0).ToList();
+        var employeesWithManager0 = employees.Where(employee => employee.ManagerID == Globals.SelectedEmployeeHID).ToList();
 
         // Serialize the query result to a JSON string
         var queryResult = JsonSerializer.Serialize(employeesWithManager0);

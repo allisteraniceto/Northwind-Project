@@ -70,7 +70,7 @@
       "last_name": "Boni",
       "email": "pboni8@jalbum.net",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 2
     },
     {
       "employee_id": 10,
@@ -102,7 +102,7 @@
       "last_name": "Terbeck",
       "email": "cterbeckc@dot.gov",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 2
     },
     {
       "employee_id": 14,
@@ -142,7 +142,7 @@
       "last_name": "Etches",
       "email": "jetchesh@symantec.com",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 2
     },
     {
       "employee_id": 19,
@@ -158,7 +158,7 @@
       "last_name": "Barosch",
       "email": "cbaroschj@mozilla.com",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 2
     },
     {
       "employee_id": 21,
@@ -214,7 +214,7 @@
       "last_name": "Parnby",
       "email": "dparnbyq@mozilla.com",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 2
     },
     {
       "employee_id": 28,
@@ -230,7 +230,7 @@
       "last_name": "Brooke",
       "email": "cbrookes@amazonaws.com",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 2
     },
     {
       "employee_id": 30,

@@ -42,9 +42,8 @@ export default function EmployeeList(props: EmployeeListProps) {
       props.setEmployeeID(employeeId === selectedEmployee ? null : employeeId); //for manager page (setEmployeeID optional: use && to check for null)
   };
 
-  //will use this when api works
+  //Get request to retrieve list of employees
   useEffect(() => {
-    //Get request to retrieve list of employees
     axios
       .get(`${config.apiUrl}/${props.dashboard}/${props.listType}`, {
         params: {

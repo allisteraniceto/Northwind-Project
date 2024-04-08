@@ -1,5 +1,7 @@
 //Manager Dashboard
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import config from "../../config.json";
 import Header from "../components/Header";
 import EmployeeList from "../components/EmployeeList";
 import AttachmentList from "../components/AttachmentList";
@@ -19,6 +21,24 @@ function ManagerPage() {
   const handleSelectedEmployee = (employeeID: number | null) => {
     setSelectedEmployeeID(employeeID);
   };
+
+  //POST request after every selected employee, send employeeHID to backend to set global
+  useEffect(() => {
+    axios
+      .post(
+        `${config.apiUrl}/SubmissionForm/SetSelectedEmployeeHID`,
+        selectedEmployeeID,
+        {
+          headers: {
+            "Content-Type": "application/json", // Specify the content type here
+          },
+        }
+      )
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => console.log(error));
+  }, [selectedEmployeeID]); //when selectedEmployee, set employeeHID global in backend
 
   return (
     <>
