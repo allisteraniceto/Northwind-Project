@@ -6,7 +6,8 @@
       "last_name": "Bleything",
       "email": "rbleything0@nyu.edu",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 4,
+      "headshot": "headshots/headshot1.webp"
     },
     {
       "employee_id": 2,
@@ -14,7 +15,8 @@
       "last_name": "Brewster",
       "email": "lbrewster1@cloudflare.com",
       "job_title": "Manager",
-      "manager_id": 4
+      "manager_id": 4,
+      "headshot": "headshots/headshot2.webp"
     },
     {
       "employee_id": 3,
@@ -22,7 +24,8 @@
       "last_name": "Ackenson",
       "email": "cackenson2@yahoo.co.jp",
       "job_title": "Manager",
-      "manager_id": 3
+      "manager_id": 3,
+      "headshot": "headshots/headshot3.webp"
     },
     {
       "employee_id": 4,
@@ -30,7 +33,8 @@
       "last_name": "Korneev",
       "email": "pkorneev3@twitpic.com",
       "job_title": "Manager",
-      "manager_id": 4
+      "manager_id": 4,
+      "headshot": "headshots/headshot4.webp"
     },
     {
       "employee_id": 5,
@@ -38,7 +42,8 @@
       "last_name": "Dendle",
       "email": "kdendle4@admin.ch",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 5,
+      "headshot": "headshots/headshot5.webp"
     },
     {
       "employee_id": 6,
@@ -46,7 +51,8 @@
       "last_name": "Goggey",
       "email": "tgoggey5@google.com.hk",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 3,
+      "headshot": "headshots/headshot6.webp"
     },
     {
       "employee_id": 7,
@@ -54,7 +60,8 @@
       "last_name": "Skegg",
       "email": "eskegg6@ycombinator.com",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 5,
+      "headshot": "headshots/headshot7.webp"
     },
     {
       "employee_id": 8,
@@ -62,7 +69,8 @@
       "last_name": "Armatys",
       "email": "aarmatys7@ow.ly",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 5,
+      "headshot": "headshots/headshot8.webp"
     },
     {
       "employee_id": 9,
@@ -70,7 +78,8 @@
       "last_name": "Boni",
       "email": "pboni8@jalbum.net",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 3,
+      "headshot": "headshots/headshot9.webp"
     },
     {
       "employee_id": 10,
@@ -78,7 +87,8 @@
       "last_name": "Pittaway",
       "email": "npittaway9@fastcompany.com",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 5,
+      "headshot": "headshots/headshot10.webp"
     },
     {
       "employee_id": 11,
@@ -86,7 +96,8 @@
       "last_name": "Wibrew",
       "email": "gwibrewa@ucsd.edu",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 4,
+      "headshot": "headshots/headshot11.webp"
     },
     {
       "employee_id": 12,
@@ -94,7 +105,8 @@
       "last_name": "Collough",
       "email": "ncolloughb@macromedia.com",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 5,
+      "headshot": "headshots/headshot12.webp"
     },
     {
       "employee_id": 13,
@@ -102,7 +114,8 @@
       "last_name": "Terbeck",
       "email": "cterbeckc@dot.gov",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 5,
+      "headshot": "headshots/headshot13.webp"
     },
     {
       "employee_id": 14,
@@ -110,7 +123,8 @@
       "last_name": "Blanchard",
       "email": "fblanchardd@pen.io",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 3,
+      "headshot": "headshots/headshot14.webp"
     },
     {
       "employee_id": 15,
@@ -118,7 +132,8 @@
       "last_name": "Josofovitz",
       "email": "bjosofovitze@tripod.com",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 3,
+      "headshot": "headshots/headshot15.webp"
     },
     {
       "employee_id": 16,
@@ -126,7 +141,8 @@
       "last_name": "Jones",
       "email": "ljonesf@yellowpages.com",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 5,
+      "headshot": "headshots/headshot16.webp"
     },
     {
       "employee_id": 17,
@@ -134,7 +150,8 @@
       "last_name": "Abrahamsen",
       "email": "rabrahamseng@europa.eu",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 4,
+      "headshot": "headshots/headshot17.webp"
     },
     {
       "employee_id": 18,
@@ -142,7 +159,8 @@
       "last_name": "Etches",
       "email": "jetchesh@symantec.com",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 4,
+      "headshot": "headshots/headshot18.webp"
     },
     {
       "employee_id": 19,
@@ -150,7 +168,8 @@
       "last_name": "Chantrell",
       "email": "vchantrelli@networkadvertising.org",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 3,
+      "headshot": "headshots/headshot19.webp"
     },
     {
       "employee_id": 20,
@@ -158,7 +177,8 @@
       "last_name": "Barosch",
       "email": "cbaroschj@mozilla.com",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 3,
+      "headshot": "headshots/headshot20.webp"
     },
     {
       "employee_id": 21,
@@ -166,7 +186,8 @@
       "last_name": "Sills",
       "email": "csillsk@google.ca",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 3,
+      "headshot": "headshots/headshot21.webp"
     },
     {
       "employee_id": 22,
@@ -174,7 +195,8 @@
       "last_name": "Garlee",
       "email": "tgarleel@slideshare.net",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 5,
+      "headshot": "headshots/headshot22.webp"
     },
     {
       "employee_id": 23,
@@ -182,7 +204,8 @@
       "last_name": "Reisen",
       "email": "dreisenm@theglobeandmail.com",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 4,
+      "headshot": "headshots/headshot23.webp"
     },
     {
       "employee_id": 24,
@@ -190,7 +213,8 @@
       "last_name": "Lydon",
       "email": "clydonn@istockphoto.com",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 3,
+      "headshot": "headshots/headshot24.webp"
     },
     {
       "employee_id": 25,
@@ -198,7 +222,8 @@
       "last_name": "Fairpo",
       "email": "nfairpoo@umich.edu",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 4,
+      "headshot": "headshots/headshot25.webp"
     },
     {
       "employee_id": 26,
@@ -206,7 +231,8 @@
       "last_name": "Brownell",
       "email": "hbrownellp@blinklist.com",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 5,
+      "headshot": "headshots/headshot26.webp"
     },
     {
       "employee_id": 27,
@@ -214,7 +240,8 @@
       "last_name": "Parnby",
       "email": "dparnbyq@mozilla.com",
       "job_title": "Employee",
-      "manager_id": 5
+      "manager_id": 5,
+      "headshot": "headshots/headshot27.webp"
     },
     {
       "employee_id": 28,
@@ -222,7 +249,8 @@
       "last_name": "Caneo",
       "email": "ccaneor@wufoo.com",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 3,
+      "headshot": "headshots/headshot28.webp"
     },
     {
       "employee_id": 29,
@@ -230,7 +258,8 @@
       "last_name": "Brooke",
       "email": "cbrookes@amazonaws.com",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 4,
+      "headshot": "headshots/headshot29.webp"
     },
     {
       "employee_id": 30,
@@ -238,7 +267,8 @@
       "last_name": "Saggs",
       "email": "csaggst@rambler.ru",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 4,
+      "headshot": "headshots/headshot30.webp"
     }
   ]
 }

@@ -1,10 +1,10 @@
 //Manager Dashboard
 import { useState } from "react";
-
 import Header from "../components/Header";
 import EmployeeList from "../components/EmployeeList";
 import AttachmentList from "../components/AttachmentList";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
+import SelectedEmployee from "../components/SelectedEmployee.tsx";
 
 import "../styles/InteractionsPane.css"; //.interactions-section, .elected-employee-container, .previous-years-container
 import "../styles/ManagerSection.css";
@@ -34,7 +34,7 @@ function ManagerPage() {
         />
       </div>
       <div className="selected-employee-container">
-        {/*SELECTED EMPLOYEE*/}
+        <SelectedEmployee EmployeeId={selectedEmployeeID} />
         <PerformanceReviewButton
           linkTo="/ManagerReviewForm"
           reviewStatus="Finalized"

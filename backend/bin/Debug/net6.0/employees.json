@@ -1,12 +1,12 @@
 {
- "employees": [
+  "employees": [
     {
       "employee_id": 1,
       "first_name": "Rosanne",
       "last_name": "Bleything",
       "email": "rbleything0@nyu.edu",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 7
     },
     {
       "employee_id": 2,
@@ -30,7 +30,7 @@
       "last_name": "Korneev",
       "email": "pkorneev3@twitpic.com",
       "job_title": "Manager",
-      "manager_id": 4
+      "manager_id": 0
     },
     {
       "employee_id": 5,
@@ -86,7 +86,7 @@
       "last_name": "Wibrew",
       "email": "gwibrewa@ucsd.edu",
       "job_title": "Employee",
-      "manager_id": 4
+      "manager_id": 8
     },
     {
       "employee_id": 12,
@@ -190,7 +190,7 @@
       "last_name": "Lydon",
       "email": "clydonn@istockphoto.com",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 0
     },
     {
       "employee_id": 25,
@@ -222,7 +222,7 @@
       "last_name": "Caneo",
       "email": "ccaneor@wufoo.com",
       "job_title": "Employee",
-      "manager_id": 3
+      "manager_id": 0
     },
     {
       "employee_id": 29,

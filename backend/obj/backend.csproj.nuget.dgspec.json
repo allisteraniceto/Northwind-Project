@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj": {}
+    "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj": {
+    "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
+        "projectUniqueName": "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\allister18\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\obj\\",
+        "projectPath": "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/backend.csproj",
+        "packagesPath": "/Users/allisteraniceto/.nuget/packages/",
+        "outputPath": "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/",
         "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\allister18\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
-        "originalTargetFrameworks": ["net6.0"],
+        "configFilePaths": [
+          "/Users/allisteraniceto/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -29,7 +35,12 @@
           }
         },
         "warningProperties": {
-          "warnAsError": ["NU1605"]
+          "warnAsError": [
+            "NU1605"
+          ]
+          "warnAsError": [
+            "NU1605"
+          ]
         }
       },
       "frameworks": {
@@ -78,6 +89,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -86,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
