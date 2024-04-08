@@ -278,15 +278,3 @@ C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Docum
 C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\ref\backend.dll
 C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\dummy-attachments.json
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\dummy-attachments.json
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\HarfBuzzSharp.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\QuestPDF.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\SkiaSharp.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\SkiaSharp.HarfBuzz.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\osx\native\libHarfBuzzSharp.dylib
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\osx\native\libSkiaSharp.dylib
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win-x86\native\libSkiaSharp.dll

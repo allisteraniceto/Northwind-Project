@@ -1,8 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using QuestPDF.Fluent;
-using QuestPDF.Helpers;
-using QuestPDF.Infrastructure;
-using QuestPDF.Previewer;
 using System.Text.Json;
 
 
@@ -268,6 +264,7 @@ public class SubmissionFormController : ControllerBase
             _dbContext.SaveChanges();
 
         }
+        
         return Ok();
 
     }
@@ -283,37 +280,4 @@ public class SubmissionFormController : ControllerBase
         return Ok(review.Status);
 
     }
-
-
-    [HttpGet]
-    [Route("GeneratePDF")]
-    public IActionResult GeneratePDF()
-    {
-            // now that the review is finalized, we will pull all responses into a PDF and save it to the DB in the Attachments table
-
-            // set the license type for the QuestPDF library that we are using
-            QuestPDF.Settings.License = LicenseType.Community;
-
-            var document = Document.Create(container =>
-            {
-                container.Page(page =>
-                {
-                    page.Size(PageSizes.A4);
-                    page.Header().Text("Hello from Mark")
-                    .SemiBold();
-                });
-
-
-
-            });
-
-            document.ShowInPreviewer();
-            return Ok();
-    }
-
-
-
-
-
-
 }
