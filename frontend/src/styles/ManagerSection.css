@@ -1,7 +1,6 @@
 .manager-section {
+  grid-area: 4 / 1 / -1 / -1;
   box-sizing: border-box;
-  height: 100vh;
-  width: 100vw;
   margin: 0;
   display: flex;
   flex-direction: row;

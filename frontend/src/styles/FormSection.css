@@ -1,6 +1,6 @@
 .formSection {
+  /* position: relative; */
   height: 100vh;
-  background-color: #edeceb;
   display: flex;
 }
 
@@ -10,12 +10,38 @@
 
 /*left side contianer*/
 .question-container {
+  grid-row: 4/7;
   display: flex;
   flex-direction: column;
-  width: 65%;
-  height: 100%; /*100 percent of parent div height*/
+  min-height: 600px;
+  max-height: 100vh;
   box-sizing: border-box;
-  /* min-width: 1000px; */
+  margin: 10px;
+  margin-right: 5px;
+}
+
+/*questions pane*/
+.question-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: #ffffff91;
+  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
+  background-color: white;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.review-form-list {
+  height: 85%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  scroll-behavior: smooth;
 }
 
 .formRow {
@@ -25,6 +51,7 @@
   align-items: center; /*vertical alignment*/
   width: 100%;
   height: 265px;
+  box-sizing: border-box;
 }
 
 .question {
@@ -39,27 +66,15 @@
 .questionRow {
   width: 100%;
   height: 300px;
-}
-
-/*questions pane*/
-.question-card {
-  border-radius: 20px;
-  margin: 20px;
-  margin-right: 10px;
-  background-color: #ffffff91;
-  padding: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
-  overflow: auto;
-  background-color: white;
+  box-sizing: border-box;
 }
 
 .form-header {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  height: 60px;
 }
 
 .form-header-3 {
@@ -69,38 +84,70 @@
   margin-top: 20px;
 }
 
+.upload-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+}
+
+.upload-button {
+  /* position: absolute;
+  right: 20px; */
+  display: flex;
+  align-items: center;
+}
+
+.upload-button:hover {
+  color: green;
+}
+
 /*RIGHT SIDE*/
-.right-pane {
+
+.right-side {
   display: flex;
   width: 35%;
   flex-direction: column;
-}
-.employee-info {
   position: relative;
-  top: -75px;
-  margin: 20px;
-  margin-left: 10px;
-  margin-bottom: 10px;
+}
+.employee-info-container {
+  grid-row: 3/5;
+  grid-column: 2/3;
+  /* width: 85%; */
+  max-height: 150px;
+  margin: 10px;
+  margin-top: 0;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  height: 300px;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.comments {
-  position: relative;
-  top: -70px;
-  margin: 20px;
-  margin-left: 10px;
-  margin-top: 10px;
+.ratings-container {
+  grid-row: 5/6;
+  grid-column: 2/3;
+  margin: 10px;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  height: 400px;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signature-submit-container {
+  grid-row: 6/7;
+  grid-column: 2/3;
+  margin: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: white;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;

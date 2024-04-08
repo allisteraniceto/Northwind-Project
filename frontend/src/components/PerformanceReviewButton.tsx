@@ -46,15 +46,13 @@ export default function PerformanceReviewButton(
   }, []); // Run the effect only when component mounts for the first time
 
   return (
-    <div className="performance-review-button-container">
-      <Link to={props.linkTo}>
-        <button
-          type="button"
-          className="performance-review-button"
-          disabled={statusObject.reviewStatus === "Finalized" ? true : false}>
-          Performance Review
-        </button>
-      </Link>
-    </div>
+    <Link to={props.linkTo} className="link">
+      <button
+        type="button"
+        className="performance-review-button"
+        disabled={statusObject.reviewStatus === "Finalized" ? true : false}>
+        Review Form
+      </button>
+    </Link>
   );
 }
