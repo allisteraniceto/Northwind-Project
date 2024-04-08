@@ -9,9 +9,9 @@ import "../styles/EmployeeList.css";
 //import dummy employee json data
 // import employeeData from "../dummy-employees.json";
 
-// Define the Employee interface (because Typescript lol)
+type HandleFunction = (employeeId: number | null) => void; //define type here
 
-type HandleFunction = (employeeId: number | null) => void; //defined type here
+// Define the Employee interface (because Typescript lol)
 interface Employee {
   employee_id: number;
   first_name: string;
