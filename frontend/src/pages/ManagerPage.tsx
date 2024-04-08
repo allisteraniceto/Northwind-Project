@@ -12,7 +12,11 @@ import "../styles/InteractionsPane.css"; //.interactions-section, .elected-emplo
 import "../styles/ManagerSection.css";
 import "../styles/Attachments.css"; //.attachments-container
 
-function ManagerPage() {
+interface ManagerPageProps {
+  managerHID: number;
+}
+
+function ManagerPage(props: ManagerPageProps) {
   const [selectedEmployeeID, setSelectedEmployeeID] = useState<number | null>(
     null
   );
@@ -51,6 +55,7 @@ function ManagerPage() {
           setEmployeeID={handleSelectedEmployee}
           dashboard="ManagerDashboard"
           listType="EmployeeList"
+          managerHID={props.managerHID}
         />
       </div>
       <div className="selected-employee-container">

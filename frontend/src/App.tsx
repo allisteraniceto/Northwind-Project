@@ -11,10 +11,10 @@ import "./global.css";
 
 export default function App() {
   const [reviewFormPage, setReviewFormPage] = useState(false);
-  const [loggedInHID, setLoggedInHID] = useState<number>();
+  const [loggedInHID, setLoggedInHID] = useState<number>(2); //2 for now
 
   useEffect(() => {
-    setLoggedInHID(4); //will have to set this once login is implemented
+    setLoggedInHID(2); //will have to set this once login is implemented
     console.log(loggedInHID);
   }, []);
 
@@ -29,7 +29,10 @@ export default function App() {
           <Route index element={<EmployeePage />} />
           <Route path="/Employee" element={<EmployeePage />} />
           <Route path="/Hr" element={<HrPage />} />
-          <Route path="/Manager" element={<ManagerPage />} />
+          <Route
+            path="/Manager"
+            element={<ManagerPage managerHID={loggedInHID} />}
+          />
           <Route
             path="/EmployeeReviewForm"
             element={

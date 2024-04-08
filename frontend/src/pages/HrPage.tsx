@@ -33,10 +33,11 @@ function HrPage() {
           setEmployeeID={handleSelectedEmployee}
           dashboard="HRDashboard"
           listType="ManagerList"
+          managerHID={-1}
         />
       </div>
       <div className="selected-employee-container">
-        <SelectedEmployee EmployeeId={selectedEmployeeID}/>
+        <SelectedEmployee EmployeeId={selectedEmployeeID} />
         <PerformanceReviewButton
           linkTo="/ManagerReviewForm"
           reviewStatus="Finalized"

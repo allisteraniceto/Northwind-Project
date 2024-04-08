@@ -20,7 +20,7 @@ public class HRDashboardController : ControllerBase
 
     [HttpGet]
     [Route("ManagerList")]
-    public IActionResult GetManagerList(string parameter1, string parameter2) //filter based on requester's parameters
+    public IActionResult GetManagerList(int employee_HID = -1) //optional paramter
     {
         string jsonPath = "employees.json";
         string jsonString = System.IO.File.ReadAllText(jsonPath);
@@ -31,7 +31,7 @@ public class HRDashboardController : ControllerBase
         var employees = employeesList.Employees;
 
         // Query for employees with managerId equal to 4
-        var employeesWithManager0 = employees.Where(employee => employee.ManagerID == Globals.SelectedEmployeeHID).ToList();
+        var employeesWithManager0 = employees.Where(employee => employee.ManagerID == 0).ToList();
 
         // Serialize the query result to a JSON string
         var queryResult = JsonSerializer.Serialize(employeesWithManager0);

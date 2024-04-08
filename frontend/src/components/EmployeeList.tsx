@@ -25,6 +25,7 @@ interface EmployeeListProps {
   setEmployeeID?: HandleFunction; //can mark prop options w/ ? in typescript
   dashboard: string;
   listType: string;
+  managerHID: number;
 }
 
 export default function EmployeeList(props: EmployeeListProps) {
@@ -42,13 +43,12 @@ export default function EmployeeList(props: EmployeeListProps) {
       props.setEmployeeID(employeeId === selectedEmployee ? null : employeeId); //for manager page (setEmployeeID optional: use && to check for null)
   };
 
-  //Get request to retrieve list of employees
+  //Get request to retrieve list of employees (direct reports)
   useEffect(() => {
     axios
       .get(`${config.apiUrl}/${props.dashboard}/${props.listType}`, {
         params: {
-          parameter1: "employees",
-          parameter2: "inputObject.formType",
+          employee_HID: props.managerHID,
         },
       })
       .then((response) => {
