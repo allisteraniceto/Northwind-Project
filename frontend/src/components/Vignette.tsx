@@ -9,8 +9,8 @@ interface OvalVignetteProps {
   
   function OvalVignette ({ src, alt }: OvalVignetteProps) {
     return (
-      <div className='headshot-selected'>
-        <img src={src} alt={alt} className='headshot-selectedcard'/>
+      <div>
+        <img src={src ? src : "dogedance.gif"} alt={alt} className='headshot-selected'/>
       </div>
       );
   };

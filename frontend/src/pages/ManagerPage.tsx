@@ -1,17 +1,22 @@
 //Manager Dashboard
-import { useState } from "react";
-import StatusIcon from "../components/statusicon.tsx";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import config from "../../config.json";
 import Header from "../components/Header";
 import EmployeeList from "../components/EmployeeList";
 import AttachmentList from "../components/AttachmentList";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
-import Rectangle from "../components/rectangle";
+import SelectedEmployee from "../components/SelectedEmployee.tsx";
 
 import "../styles/InteractionsPane.css"; //.interactions-section, .elected-employee-container, .previous-years-container
 import "../styles/ManagerSection.css";
 import "../styles/Attachments.css"; //.attachments-container
 
-function ManagerPage() {
+interface ManagerPageProps {
+  managerHID: number;
+}
+
+function ManagerPage(props: ManagerPageProps) {
   const [selectedEmployeeID, setSelectedEmployeeID] = useState<number | null>(
     null
   );
@@ -21,20 +26,40 @@ function ManagerPage() {
     setSelectedEmployeeID(employeeID);
   };
 
+  //POST request after every selected employee, send employeeHID to backend to set global
+  useEffect(() => {
+    axios
+      .post(
+        `${config.apiUrl}/SubmissionForm/SetSelectedEmployeeHID`,
+        selectedEmployeeID,
+        {
+          headers: {
+            "Content-Type": "application/json", // Specify the content type here
+          },
+        }
+      )
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => console.log(error));
+  }, [selectedEmployeeID]); //when selectedEmployee, set employeeHID global in backend
+
   return (
     <>
       <Header dashboard="Manager" />
-      {/* <div className="manager-section"> */}
       <div className="employee_list-container">
         <div className="employee-list-header">
           <h3>Direct Reports</h3>
         </div>
-        <EmployeeList setEmployeeID={handleSelectedEmployee} />
+        <EmployeeList
+          setEmployeeID={handleSelectedEmployee}
+          dashboard="ManagerDashboard"
+          listType="EmployeeList"
+          managerHID={props.managerHID}
+        />
       </div>
-      {/* <div className="interactions-section"> */}
       <div className="selected-employee-container">
-      <Rectangle EmployeeId={1} />
-
+        <SelectedEmployee EmployeeId={selectedEmployeeID} />
         <PerformanceReviewButton
           linkTo="/ManagerReviewForm"
           reviewStatus="Finalized"
@@ -47,14 +72,11 @@ function ManagerPage() {
         </div>
         {/*conditionally render attachment list*/}
         {selectedEmployeeID && <AttachmentList />}
-            {StatusIcon("completed")}
       </div>
       <div className="previous-years-container">
         {/*PREVIOUS REVIEWS*/}
         <p>Previous Reviews</p>
       </div>
-      {/* </div> */}
-      {/* </div> */}
     </>
   );
 }

@@ -74,7 +74,7 @@ public class ManagerDashboardController : ControllerBase
     //GET request to retrieve employees with manager_id: 4 (testing it out)
     [HttpGet]
     [Route("EmployeeList")]
-    public IActionResult GetEmployeeList(string parameter1, string parameter2) //filter based on requester's parameters
+    public IActionResult GetEmployeeList(int employee_HID) //filter based on requester's parameters
     {
         string jsonPath = "employees.json";
         string jsonString = System.IO.File.ReadAllText(jsonPath);
@@ -85,11 +85,10 @@ public class ManagerDashboardController : ControllerBase
         var employees = employeesList.Employees;
 
         // Query for employees with managerId equal to 4
-        var employeesWithManager4 = employees.Where(employee => employee.ManagerID == 4).ToList();
+        var directReports = employees.Where(employee => employee.ManagerID == employee_HID).ToList();
 
         // Serialize the query result to a JSON string
-        var queryResult = JsonSerializer.Serialize(employeesWithManager4);
-
+        var queryResult = JsonSerializer.Serialize(directReports);
 
         return Ok(queryResult);
     }
