@@ -18,7 +18,7 @@ public class PDFGeneratorController : ControllerBase
     public IActionResult GeneratePDF()
     {
         var generator = new PDFGenerator(_dbContext);
-        var html = generator.GenerateHTML("2023");
+        var html = generator.GenerateHTML();
 
 
         System.IO.File.WriteAllText("performance_review.html", html);

@@ -9,7 +9,7 @@ public class PDFGenerator
     }
 
     //method that sends email and takes in the recipient, subject, and body
-    public string GenerateHTML(string year)
+    public string GenerateHTML()
     {
 
         var review = default(Review);
@@ -24,14 +24,18 @@ public class PDFGenerator
         // get a list of all the questions for the review
         var questions = _dbContext.Questions.ToList();
 
+        //bounds for the questions we will loop through to find responses
+        int first_response_question = 1;
+        int last_response_question = 6; 
+
         // get all the responses that the employee submitted for questions 1 through 6. order by the questionID in ascending order. These are text response questions
-        var responses_from_employee = _dbContext.Responses.Where(response => response.QuestionID >= 1 && response.QuestionID <= 6)
+        var responses_from_employee = _dbContext.Responses.Where(response => response.QuestionID >= first_response_question && response.QuestionID <= last_response_question)
         .Where(response => response.HID == Globals.SelectedEmployeeHID)
         .OrderBy(response => response.QuestionID)
         .ToList();
 
         // do the same as above but for the responses submitted by the manager. order by the questionID in ascending order
-        var responses_from_manager = _dbContext.Responses.Where(response => response.QuestionID >= 1 && response.QuestionID <= 6)
+        var responses_from_manager = _dbContext.Responses.Where(response => response.QuestionID >= first_response_question && response.QuestionID <= last_response_question)
         .Where(response => response.HID == review.ManagerHID)
         .OrderBy(response => response.QuestionID)
         .ToList();
@@ -50,38 +54,49 @@ public class PDFGenerator
             manager_responses.Add("");
         }
 
+
+        // j is used for the index in the employee_responses and manager_responses list where we will add responses
+        int j = 0; 
+
+
         // for questions 1-6 (they have text responses, not ratings)
-        foreach (var question in questions.Where(q => q.QuestionID >= 1 && q.QuestionID <= 6))
+        for (int i = first_response_question; i <= last_response_question; i++)
         {
             // Find employee response corresponding to current question
-            var employee_response = responses_from_employee.FirstOrDefault(response => response.QuestionID == question.QuestionID);
+            var employee_response = responses_from_employee.FirstOrDefault(response => response.QuestionID == i);
             
             // if there is a response associated with this question, assign it to the correct index of the employee_responses list
             if (employee_response != null)
             {
-                employee_responses[question.QuestionID - 1] = employee_response.Content;
+                employee_responses[j] = employee_response.Content;
             }
 
             // Find manager response corresponding to current question
-            var manager_response = responses_from_manager.FirstOrDefault(response => response.QuestionID == question.QuestionID);
+            var manager_response = responses_from_manager.FirstOrDefault(response => response.QuestionID == i);
             
             // if there is a response associated with this question, assign it to the correct index of the manager_responses list
             if (manager_response != null)
             {
-                manager_responses[question.QuestionID - 1] = manager_response.Content;
+                manager_responses[j] = manager_response.Content;
             }
+
+            //increment j so we can add ratings to the next index of the employee_ratings and manager_ratings lists in the next iteration
+            j++;
         }
 
 
         //the same process as above is done but with ratings below. Ratings questions are questions 7-14
 
+        //bounds for the questions we will loop through to find ratings
+        int first_rating_question = 7;
+        int last_rating_question = 14; 
 
-        var ratings_from_employee = _dbContext.Ratings.Where(rating => rating.QuestionID > 6 && rating.QuestionID <= 14)
+        var ratings_from_employee = _dbContext.Ratings.Where(rating => rating.QuestionID >= first_rating_question && rating.QuestionID <= last_rating_question)
         .Where(rating => rating.HID == Globals.SelectedEmployeeHID)
         .OrderBy(rating => rating.QuestionID)
         .ToList();
 
-        var ratings_from_manager = _dbContext.Ratings.Where(rating => rating.QuestionID >= 1 && rating.QuestionID <= 6)
+        var ratings_from_manager = _dbContext.Ratings.Where(rating => rating.QuestionID >= first_rating_question && rating.QuestionID <= last_rating_question)
         .Where(rating => rating.HID == review.ManagerHID)
         .OrderBy(rating => rating.QuestionID)
         .ToList();
@@ -101,26 +116,36 @@ public class PDFGenerator
             manager_ratings.Add(0);
         }
 
+
+        
+        
+        // k is used for the index in the employee_ratings and manager_ratings list where we will add ratings
+        int k = 0; 
+
+
         // for questions 7-14 (they have ratings, not text responses)
-        foreach (var question in questions.Where(q => q.QuestionID >= 7 && q.QuestionID <= 14))
+        for (int i = first_rating_question; i <= last_rating_question; i++)
         {
              // Find employee rating corresponding to current question
-            var employee_rating = ratings_from_employee.FirstOrDefault(rating => rating.QuestionID == question.QuestionID);
+            var employee_rating = ratings_from_employee.FirstOrDefault(rating => rating.QuestionID == i);
             
             // if there is a rating associated with this question, assign it to the correct index of the employee_ratings list
             if (employee_rating != null)
             {
-                employee_ratings[question.QuestionID - 1] = employee_rating.Value;
+                employee_ratings[k] = employee_rating.Value;
             }
 
             // Find manager rating corresponding to current question
-            var manager_rating = ratings_from_manager.FirstOrDefault(rating => rating.QuestionID == question.QuestionID);
+            var manager_rating = ratings_from_manager.FirstOrDefault(rating => rating.QuestionID == i);
             
             // if there is a rating associated with this question, assign it to the correct index of the manager_ratings list
             if (manager_rating != null)
             {
-                manager_ratings[question.QuestionID - 1] = manager_rating.Value;
+                manager_ratings[k] = manager_rating.Value;
             }
+
+            //increment j so we can add ratings to the next index of the employee_ratings and manager_ratings lists in the next iteration
+            k++;
         }
 
 
@@ -368,8 +393,8 @@ public class PDFGenerator
                     <table class='styled-table'>
                     <tr>
                         <td class='third-width'><i>{questions[13].Content}</i></td>
-                        <td class='third-width'>{employee_ratings[6]}</td>
-                        <td class='third-width'>{manager_ratings[6]}</td>
+                        <td class='third-width'>{employee_ratings[7]}</td>
+                        <td class='third-width'>{manager_ratings[7]}</td>
                     </tr>
                     </table>
                 </div>
