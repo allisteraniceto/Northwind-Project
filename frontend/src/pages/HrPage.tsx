@@ -31,6 +31,7 @@ function HrPage() {
 
   const handleBackClick = () => {
     setExpandManager(false);
+    setSelectedEmployeeID(null);
   };
 
   //track expandManager state

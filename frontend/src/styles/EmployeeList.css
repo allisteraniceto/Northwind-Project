@@ -55,8 +55,13 @@
 }
 
 .back-button {
+  color:#7e7c7c;
   position: absolute;
   left: 5px;
+}
+
+.back-button:hover{
+  color:black
 }
 
 .employee-card {
