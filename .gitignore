@@ -137,3 +137,7 @@ $RECYCLE.BIN/
 
 # .NET build artifacts
 backend/obj/
+
+#keys
+*.pem
+*.key
