@@ -23,11 +23,9 @@ export default function EmployeeReviewFormPage(props: EmployeeReviewFormProps) {
   return (
     <>
       <Header dashboard="Forms" />
-      {/* <div className="formSection"> */}
       <div className="question-container">
         <FormList isEmployee={true} />
       </div>
-      {/* <div className="right-side"> */}
       <div className="employee-info-container">
         <p>Employee Info</p>
       </div>
@@ -39,8 +37,6 @@ export default function EmployeeReviewFormPage(props: EmployeeReviewFormProps) {
         <SubmitOrSignButton formType="employee" status="" buttonType="submit" />
         <SubmitOrSignButton formType="employee" status="" buttonType="sign" />
       </div>
-      {/* </div> */}
-      {/* </div> */}
     </>
   );
 }
