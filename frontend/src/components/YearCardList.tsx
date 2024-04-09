@@ -34,7 +34,6 @@ const years: number[] = [];
   };
 
   return (
-    <div className="year-card-list-container">
       <div className="year-card-list">
         {years.map((year) => (
           <YearCard
@@ -42,10 +41,13 @@ const years: number[] = [];
             year={year}
             onClick={() => handleClick(year)}
             isSelected={year === selectedYear} // Pass isSelected prop to YearCard
-          />
+            selectedYear={selectedYear} // Pass selectedYear prop
+            setSelectedYear={setSelectedYear} // Pass setSelectedYear prop
+
+            />
         ))}
       </div>
-    </div>
+
   );
 };
 

@@ -23,7 +23,8 @@ export default function ManagerReviewFormPage(props: ManagerReviewFormProps) {
       <Header dashboard="Forms" />
       {/* <div className="formSection"> */}
       <div className="question-container">
-        <FormList isEmployee={false} />
+        
+        <FormList isEmployee={false}/>
       </div>
       {/* <div className="right-side"> */}
       <div className="employee-info-container">

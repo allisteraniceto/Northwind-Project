@@ -6,9 +6,11 @@ import "../styles/FormSection.css";
 
 interface ReviewFormListProps {
   isEmployee: boolean;
+  
+
 }
 
-export default function ReviewFormList(prop: ReviewFormListProps) {
+export default function ReviewFormList(props: ReviewFormListProps) {
   const questions = [
     //review form questions
     "Job description and/or Job highlights noting any significant changes",
@@ -22,7 +24,9 @@ export default function ReviewFormList(prop: ReviewFormListProps) {
     <>
       <div className="question-pane">
         <div className="form-header">
-          <h1>2024 REVIEW FORM</h1>
+
+       <h1>Review Form</h1>
+        
         </div>
         <div className="review-form-list">
           <div className="form-header-3">
@@ -32,7 +36,7 @@ export default function ReviewFormList(prop: ReviewFormListProps) {
             <FormRow
               questionNum={index + 1}
               formQuestion={question}
-              isEmployee={prop.isEmployee}
+              isEmployee={props.isEmployee}
             />
           ))}
         </div>
