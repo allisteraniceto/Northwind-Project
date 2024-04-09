@@ -17,6 +17,7 @@ import "../styles/InteractionsPane.css";
 //import EmployeeList from "../components/EmployeeList";
 import AttachmentList from "../components/AttachmentList";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
+import Rectangle from "../components/rectangle";
 
 import "../styles/InteractionsPane.css"; //.interactions-section, .elected-employee-container, .previous-years-container
 import "../styles/ManagerSection.css";
@@ -63,7 +64,8 @@ function ManagerPage() {
       </div>
       {/* <div className="interactions-section"> */}
       <div className="selected-employee-container">
-        {/*SELECTED EMPLOYEE*/}
+      <Rectangle EmployeeId={1} />
+
 
             {/* Display performance review year only when both an employee and a year are selected */}
           {selectedEmployeeID !== null && selectedYear !== null ? (
