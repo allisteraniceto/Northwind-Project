@@ -65,24 +65,21 @@ function ManagerPage() {
       {/* <div className="interactions-section"> */}
       <div className="selected-employee-container">
       <Rectangle EmployeeId={1} />
-
-
-            {/* Display performance review year only when both an employee and a year are selected */}
-          {selectedEmployeeID !== null && selectedYear !== null ? (
+         {/* Display performance review year only when both an employee and a year are selected */}
+         {selectedEmployeeID !== null && selectedYear !== null ? (
             <p>Performance Review Year: {selectedYear}</p>
           ) : selectedEmployeeID !== null ? (
             <p>Please select a performance review year</p>
           ) : (
             <p>Please select an employee</p>
           )}
-
-
-        <PerformanceReviewButton
+          <PerformanceReviewButton
           linkTo="/ManagerReviewForm"
           reviewStatus="Finalized"
-        />
-        <p>User ID: {selectedEmployeeID}</p>
+          />
 
+        <p>User ID: {selectedEmployeeID}</p>
+        
       </div>
       <div className="attachments-container">
         
@@ -90,9 +87,8 @@ function ManagerPage() {
           <h3>Attachments</h3>
         </div>
         {/*conditionally render attachment list*/}
-        
         {selectedEmployeeID !== null && selectedYear !== null && <AttachmentList />}
-      </div>
+        </div>
       <div className="previous-years-container">
         {/*PREVIOUS REVIEWS*/}
         <YearCardList startYear={2023} endYear={2029} onYearSelected={handleYearSelected} />
