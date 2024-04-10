@@ -20,8 +20,8 @@ export default function Form(props: FormsProps) {
     inputString: "",
   });
 
+  // Make a GET request to get response
   useEffect(() => {
-    // Make a GET request to API endpoint
     const fetchResponse = async () => {
       try {
         const response = await axios.post(

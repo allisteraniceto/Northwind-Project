@@ -5,23 +5,7 @@ using System.Text.Json;
 [Route("[controller]")]
 public class EmployeeDashboardController : ControllerBase
 {
-    // [HttpGet]
-    // public IActionResult PreviousReviewsScrollBar()
-    // {
-    //     //
-    // }
-
-    // [HttpGet]
-    // public IActionResult SubmissionFormRedirect()
-    // {
-        
-    // }
-
-    // [HttpGet]
-    // public IActionResult ReturnRatings()
-    // {
-        
-    // }
+    
 
     /* WILL MAKE LATER SINCE NO ATTACHMENT AND ATTACHMENT LIST IN DATABASE YET */
     

@@ -47,16 +47,7 @@ export default function UploadButton() {
 
   return (
     <div className="upload-row">
-      <input
-        type="file"
-        style={
-          {
-            /* display: "none" */
-          }
-        } //hide input to use react icon
-        onChange={handleOnChange}
-        // multiple
-      />
+      <input type="file" onChange={handleOnChange} />
       <div onClick={handleClick} className="upload-button">
         <IconContext.Provider value={{ size: "2em" }}>
           <MdDriveFolderUpload />

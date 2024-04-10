@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import RatingTile from "../components/RatingTile";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import AttachmentList from "../components/AttachmentList";
+import SelectedEmployee from "../components/SelectedEmployee";
 
 import "../styles/InteractionsPane.css";
 import "../styles/EmployeeDashboard.css";
@@ -35,12 +36,12 @@ export default function EmployeePage() {
   return (
     <>
       <Header dashboard="Employee" />
-      {/* <div className="employee-section"> */}
       <div className="employee-dashboard">
         <div className="employee-rating-pane">
           <RatingTile ratingNum={12} />
         </div>
         <div className="employee-criteria-pane">
+          {/* CRITERIA CONTAINER */}
           <ul>
             <li>
               Job description and/or Job highlights noting any significant
@@ -51,12 +52,10 @@ export default function EmployeePage() {
             <li>Discuss areas of development or improvement</li>
             <li>Develop future goals with set expectation</li>
           </ul>
-          {/* CRITERIA CONTAINER */}
         </div>
       </div>
-      {/* <div className="interactions-section"> */}
       <div className="selected-employee-container">
-        {/* SELECTED EMPLOYEE */}
+        <SelectedEmployee EmployeeId={1}/>
         <PerformanceReviewButton
           linkTo="/EmployeeReviewForm"
           reviewStatus="Finalized"
