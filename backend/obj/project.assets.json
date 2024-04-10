@@ -2631,19 +2631,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/allisteraniceto/.nuget/packages/": {}
+    "C:\\Users\\xxmar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/backend.csproj",
+      "projectUniqueName": "C:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/backend.csproj",
-      "packagesPath": "/Users/allisteraniceto/.nuget/packages/",
-      "outputPath": "/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/",
+      "projectPath": "C:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\xxmar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\xxmar\\OneDrive\\Desktop\\NorthWindProject1\\Northwind-Project\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/allisteraniceto/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\xxmar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2721,6 +2722,10 @@
           {
             "name": "Microsoft.NETCore.App.Ref",
             "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
           }
         ],
         "frameworkReferences": {
@@ -2731,7 +2736,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -42,3 +42,15 @@
 .attachment-card.clicked {
   background-color: #7e7c7c;
 }
+
+
+.action-buttons {
+  display: flex;
+  align-items: left;
+  justify-content: flex-end;
+  margin-right: 5px; 
+}
+
+.right-buttons {
+  margin-left: 10px; /* Adjust as needed */
+}

@@ -1,6 +1,8 @@
 import "../styles/Attachments.css";
 import "../styles/EmployeeList.css";
 
+import DeleteButton from './DeleteButton';
+import "../styles/DeleteButton.css";
 type HandleFunction = (employeeId: number) => void; //defined type here
 
 interface AttachmentProps {
@@ -9,6 +11,8 @@ interface AttachmentProps {
   attachNum: number;
   onSelect: HandleFunction;
   isSelected: boolean;
+
+  onDelete: (attachmentId: number) => void; 
 }
 
 export default function AttachmentCard({
@@ -16,21 +20,21 @@ export default function AttachmentCard({
   onSelect,
   isSelected,
   attachName,
+
+  onDelete, // Included onDelete prop
 }: AttachmentProps) {
   const handleClick = () => {
     onSelect(attachNum);
   };
 
-  //destructure AttachmentProps
   return (
-    <div
-      className={`attachment-card ${isSelected ? "clicked" : ""}`}
-      onClick={handleClick}>
+    <div className={`attachment-card ${isSelected ? "clicked" : ""}`} onClick={handleClick}>
       <div className="employee-name">
         <p>{attachName}</p>
       </div>
-      <div className="download-button">
-        {/* insert download button component here */}
+      <div className="action-buttons">
+        {/* Add the DeleteButton component here */}
+        <DeleteButton onClick={() => onDelete(attachNum)} />
       </div>
     </div>
   );

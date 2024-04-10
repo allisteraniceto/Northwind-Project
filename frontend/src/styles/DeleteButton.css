@@ -1,0 +1,16 @@
+/* DeleteButton.css */
+
+.button {
+    background-color: white;
+    border: none;
+    padding: 5px;
+  }
+  
+  .image {
+    width: 20px;
+    height: 20px;
+  }
+  /* Hover effect */
+.button:hover {
+    background-color: #ccc; /* Change to gray color when hovered over */
+  }

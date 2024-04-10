@@ -1,0 +1,25 @@
+/* YearCardList.css */
+
+.year-card-list-container {
+  display: flex; /* Use flexbox */
+  overflow-x: auto; /* Add horizontal scroll if content overflows */
+}
+
+.year-card-list 
+{
+  display: flex; /* Use flexbox */
+  flex-direction: row; /* Display cards horizontally */
+  padding: 0 10px; /* Add padding to the left and right sides of the container */
+
+  
+  overflow-x: auto;
+  width: 450px;
+  height: 110px;
+}
+  
+.year-card-container.selected .year-card.selected,
+.year-card-container.selected .year-card.selected .year-card-button {
+  /* Apply styles for selected state only when parent year-card-container is selected */
+  background-color: #2b2648; /* Dark purple-blue color for selected state */
+  color: #ffffff; /* White text color for better visibility */
+}

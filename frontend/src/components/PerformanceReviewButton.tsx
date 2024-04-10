@@ -12,6 +12,7 @@ interface PerformanceReviewButtonProps {
   linkTo: string;
 }
 
+
 export default function PerformanceReviewButton(
   props: PerformanceReviewButtonProps
 ) {
@@ -26,11 +27,13 @@ export default function PerformanceReviewButton(
         const response = await axios.get(
           `${config.apiUrl}/SubmissionForm/GetStatus`,
           {
-            headers: {
+            headers: 
+            {
               "Content-Type": "application/json",
             },
           }
         );
+  
 
         // Handle the response data
         const responseData = response.data;
@@ -39,6 +42,8 @@ export default function PerformanceReviewButton(
           reviewStatus: responseData, // Set the fetched response as the status
         }));
       } catch (error: any) {
+       
+        
         console.error("Error fetching data:", error.message);
       }
     };

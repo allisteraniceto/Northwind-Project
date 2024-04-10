@@ -12,6 +12,8 @@ import "../styles/InteractionsPane.css";
 import "../styles/EmployeeDashboard.css";
 import config from "../../config.json";
 
+
+
 export default function EmployeePage() {
   // Make a GET request to API endpoint for the EmployeeHID of the logged in employee
   useEffect(() => {
@@ -69,7 +71,6 @@ export default function EmployeePage() {
       </div>
       <div className="previous-years-container">
         {/* PREVIOUS REVIEWS */}
-        <p>Previous Reviews</p>
       </div>
       {/* </div> */}
       {/* </div> */}
