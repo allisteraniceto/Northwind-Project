@@ -7,7 +7,7 @@
       "email": "rbleything0@nyu.edu",
       "job_title": "Employee",
       "manager_id": 4,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot1.webp"
+      "headshot": "headshots/headshot1.webp"
     },
     {
       "employee_id": 2,
@@ -16,7 +16,7 @@
       "email": "lbrewster1@cloudflare.com",
       "job_title": "Manager",
       "manager_id": 4,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot2.webp"
+      "headshot": "headshots/headshot2.webp"
     },
     {
       "employee_id": 3,
@@ -25,7 +25,7 @@
       "email": "cackenson2@yahoo.co.jp",
       "job_title": "Manager",
       "manager_id": 3,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot3.webp"
+      "headshot": "headshots/headshot3.webp"
     },
     {
       "employee_id": 4,
@@ -34,7 +34,7 @@
       "email": "pkorneev3@twitpic.com",
       "job_title": "Manager",
       "manager_id": 4,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot4.webp"
+      "headshot": "headshots/headshot4.webp"
     },
     {
       "employee_id": 5,
@@ -43,7 +43,7 @@
       "email": "kdendle4@admin.ch",
       "job_title": "Employee",
       "manager_id": 5,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot5.webp"
+      "headshot": "headshots/headshot5.webp"
     },
     {
       "employee_id": 6,
@@ -52,7 +52,7 @@
       "email": "tgoggey5@google.com.hk",
       "job_title": "Employee",
       "manager_id": 3,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot6.webp"
+      "headshot": "headshots/headshot6.webp"
     },
     {
       "employee_id": 7,
@@ -61,7 +61,7 @@
       "email": "eskegg6@ycombinator.com",
       "job_title": "Employee",
       "manager_id": 5,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot7.webp"
+      "headshot": "headshots/headshot7.webp"
     },
     {
       "employee_id": 8,
@@ -70,7 +70,7 @@
       "email": "aarmatys7@ow.ly",
       "job_title": "Employee",
       "manager_id": 5,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot8.webp"
+      "headshot": "headshots/headshot8.webp"
     },
     {
       "employee_id": 9,
@@ -79,7 +79,7 @@
       "email": "pboni8@jalbum.net",
       "job_title": "Employee",
       "manager_id": 3,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot9.webp"
+      "headshot": "headshots/headshot9.webp"
     },
     {
       "employee_id": 10,
@@ -88,7 +88,7 @@
       "email": "npittaway9@fastcompany.com",
       "job_title": "Employee",
       "manager_id": 5,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot10.webp"
+      "headshot": "headshots/headshot10.webp"
     },
     {
       "employee_id": 11,
@@ -97,7 +97,7 @@
       "email": "gwibrewa@ucsd.edu",
       "job_title": "Employee",
       "manager_id": 4,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot11.webp"
+      "headshot": "headshots/headshot11.webp"
     },
     {
       "employee_id": 12,
@@ -106,7 +106,7 @@
       "email": "ncolloughb@macromedia.com",
       "job_title": "Employee",
       "manager_id": 5,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot12.webp"
+      "headshot": "headshots/headshot12.webp"
     },
     {
       "employee_id": 13,
@@ -115,7 +115,7 @@
       "email": "cterbeckc@dot.gov",
       "job_title": "Employee",
       "manager_id": 5,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot13.webp"
+      "headshot": "headshots/headshot13.webp"
     },
     {
       "employee_id": 14,
@@ -124,7 +124,7 @@
       "email": "fblanchardd@pen.io",
       "job_title": "Employee",
       "manager_id": 3,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot14.webp"
+      "headshot": "headshots/headshot14.webp"
     },
     {
       "employee_id": 15,
@@ -133,7 +133,7 @@
       "email": "bjosofovitze@tripod.com",
       "job_title": "Employee",
       "manager_id": 3,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot15.webp"
+      "headshot": "headshots/headshot15.webp"
     },
     {
       "employee_id": 16,
@@ -142,7 +142,7 @@
       "email": "ljonesf@yellowpages.com",
       "job_title": "Employee",
       "manager_id": 5,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot16.webp"
+      "headshot": "headshots/headshot16.webp"
     },
     {
       "employee_id": 17,
@@ -151,7 +151,7 @@
       "email": "rabrahamseng@europa.eu",
       "job_title": "Employee",
       "manager_id": 4,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot17.webp"
+      "headshot": "headshots/headshot17.webp"
     },
     {
       "employee_id": 18,
@@ -160,7 +160,7 @@
       "email": "jetchesh@symantec.com",
       "job_title": "Employee",
       "manager_id": 4,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot18.webp"
+      "headshot": "headshots/headshot18.webp"
     },
     {
       "employee_id": 19,
@@ -169,7 +169,7 @@
       "email": "vchantrelli@networkadvertising.org",
       "job_title": "Employee",
       "manager_id": 3,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot19.webp"
+      "headshot": "headshots/headshot19.webp"
     },
     {
       "employee_id": 20,
@@ -178,7 +178,7 @@
       "email": "cbaroschj@mozilla.com",
       "job_title": "Employee",
       "manager_id": 3,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot20.webp"
+      "headshot": "headshots/headshot20.webp"
     },
     {
       "employee_id": 21,
@@ -187,7 +187,7 @@
       "email": "csillsk@google.ca",
       "job_title": "Employee",
       "manager_id": 3,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot21.webp"
+      "headshot": "headshots/headshot21.webp"
     },
     {
       "employee_id": 22,
@@ -196,7 +196,7 @@
       "email": "tgarleel@slideshare.net",
       "job_title": "Employee",
       "manager_id": 5,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot22.webp"
+      "headshot": "headshots/headshot22.webp"
     },
     {
       "employee_id": 23,
@@ -205,7 +205,7 @@
       "email": "dreisenm@theglobeandmail.com",
       "job_title": "Employee",
       "manager_id": 4,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot23.webp"
+      "headshot": "headshots/headshot23.webp"
     },
     {
       "employee_id": 24,
@@ -214,7 +214,7 @@
       "email": "clydonn@istockphoto.com",
       "job_title": "Employee",
       "manager_id": 3,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot24.webp"
+      "headshot": "headshots/headshot24.webp"
     },
     {
       "employee_id": 25,
@@ -223,7 +223,7 @@
       "email": "nfairpoo@umich.edu",
       "job_title": "Employee",
       "manager_id": 4,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot25.webp"
+      "headshot": "headshots/headshot25.webp"
     },
     {
       "employee_id": 26,
@@ -232,7 +232,7 @@
       "email": "hbrownellp@blinklist.com",
       "job_title": "Employee",
       "manager_id": 5,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot26.webp"
+      "headshot": "headshots/headshot26.webp"
     },
     {
       "employee_id": 27,
@@ -241,7 +241,7 @@
       "email": "dparnbyq@mozilla.com",
       "job_title": "Employee",
       "manager_id": 5,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot27.webp"
+      "headshot": "headshots/headshot27.webp"
     },
     {
       "employee_id": 28,
@@ -250,7 +250,7 @@
       "email": "ccaneor@wufoo.com",
       "job_title": "Employee",
       "manager_id": 3,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot28.webp"
+      "headshot": "headshots/headshot28.webp"
     },
     {
       "employee_id": 29,
@@ -259,7 +259,7 @@
       "email": "cbrookes@amazonaws.com",
       "job_title": "Employee",
       "manager_id": 4,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot29.webp"
+      "headshot": "headshots/headshot29.webp"
     },
     {
       "employee_id": 30,
@@ -268,7 +268,7 @@
       "email": "csaggst@rambler.ru",
       "job_title": "Employee",
       "manager_id": 4,
-      "headshot": "Northwind-Project/frontend/src/headshots/headshot30.webp"
+      "headshot": "headshots/headshot30.webp"
     }
   ]
 }

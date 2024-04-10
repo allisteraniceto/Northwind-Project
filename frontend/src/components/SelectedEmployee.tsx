@@ -1,20 +1,25 @@
-import "../styles/Form.css"
 
-import Rectangle from './rectangle';
+import OvalVignette from './Vignette';
 
+import "../styles/Form.css";
+import employees from '../dummy-employees.json';
+import "../styles/InteractionsPane.css"
 
-const SelectedEmployee = () => (
-    <div style={{ position: 'relative', 
-    transform: 'translate(-10%, 2%)',
-    justifyContent: 'flex-end', 
-    margin: '0',
-    padding: '0'
-    }}>
-        <div style={{ position: 'relative', top: 0, left: 0 }}>
-            <Rectangle EmployeeId={1} />
-            
-        </div>
-    </div>
-);
+interface SelectedEmployeeProps {
+    EmployeeId: number | null;
+}
+
+function SelectedEmployee ({ EmployeeId }: SelectedEmployeeProps) {
+    const employee = employees.employees.find(emp => emp.employee_id === EmployeeId);
+    const name = employee ? `${employee.first_name} ${employee.last_name}` : '';
+    const headshot = employee ? `${employee.headshot}` : '';
+
+    return (
+            <div className="selected-employee">
+                <p>{name}</p>
+                <OvalVignette src={headshot} alt="Descriptive Alt Text" />
+            </div>
+    );
+};
 
 export default SelectedEmployee;
