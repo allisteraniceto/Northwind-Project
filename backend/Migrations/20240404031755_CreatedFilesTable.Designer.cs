@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace backend.Migrations
 {
     [DbContext(typeof(APIDbContext))]
-    partial class APIDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240404031755_CreatedFilesTable")]
+    partial class CreatedFilesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +23,7 @@ namespace backend.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Attachment", b =>
+            modelBuilder.Entity("File", b =>
                 {
                     b.Property<int>("FileID")
                         .ValueGeneratedOnAdd()
@@ -29,11 +31,11 @@ namespace backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FileID"), 1L, 1);
 
-                    b.Property<string>("AttachmentName")
+                    b.Property<string>("Caption")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Caption")
+                    b.Property<string>("FileName")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
 
@@ -42,7 +44,7 @@ namespace backend.Migrations
 
                     b.HasKey("FileID");
 
-                    b.ToTable("Attachments");
+                    b.ToTable("Files");
                 });
 
             modelBuilder.Entity("Log", b =>
