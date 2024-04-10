@@ -35,8 +35,8 @@ export default function ManagerReviewFormPage(props: ManagerReviewFormProps) {
       </div>
       <div className="signature-submit-container">
         <p>Signature and Submit</p>
-        <SubmitOrSignButton formType="employee" status="" buttonType="submit" />
-        <SubmitOrSignButton formType="employee" status="" buttonType="sign" />
+        <SubmitOrSignButton formType="manager" status="" buttonType="submit" />
+        <SubmitOrSignButton formType="manager" status="" buttonType="sign" />
       </div>
       {/* </div> */}
       {/* </div> */}

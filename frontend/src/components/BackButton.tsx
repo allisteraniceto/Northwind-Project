@@ -1,16 +1,18 @@
+import { IoArrowBackCircleOutline } from "react-icons/io5";
+import { IconContext } from "react-icons";
 
+type HandleBackClick = () => void;
 
-function BackButton ()  
+interface BackButtonProps {
+  handleBackClick: HandleBackClick;
+}
 
-{
-  const goBack = () => {
-    window.history.back();
-  };
-
-  return 
-  ( <button onClick={goBack}>Back</button>
+export default function BackButton({ handleBackClick }: BackButtonProps) {
+  return (
+    <div onClick={handleBackClick} className="back-button">
+      <IconContext.Provider value={{ size: "2em" }}>
+        <IoArrowBackCircleOutline />
+      </IconContext.Provider>
+    </div>
   );
-
-};
-
-export default BackButton;
+}
