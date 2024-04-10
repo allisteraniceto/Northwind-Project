@@ -26,7 +26,7 @@ interface EmployeeListProps {
   setEmployeeID?: HandleFunction; //can mark prop options w/ ? in typescript
   dashboard: string;
   listType: string;
-  managerHID: number | null;
+  managerHID?: number;
   handleSelectedManager?: HandleSelectedManager;
   expandManager?: boolean;
 }
@@ -51,7 +51,7 @@ export default function EmployeeList(props: EmployeeListProps) {
     }
   };
 
-  //Get request to retrieve list of employees (direct reports)
+  //GET request to retrieve list of employees (direct reports)
   useEffect(() => {
     axios
       .get(`${config.apiUrl}/${props.dashboard}/${props.listType}`, {
@@ -77,10 +77,12 @@ export default function EmployeeList(props: EmployeeListProps) {
           <EmployeeCard
             key={index}
             employee={employee.first_name + " " + employee.last_name}
-            employeeNum={employee.employee_id}
+            employeeHID={employee.employee_id}
             status={true}
             onSelect={handleEmployeeSelect}
             isSelected={employee.employee_id === selectedEmployee} //if selected employee matches the employee id, returns true
+            cardType={props.listType}
+            managerHID={props.managerHID}
           />
         )
       )}

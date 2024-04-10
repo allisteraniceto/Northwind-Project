@@ -23,6 +23,7 @@ export default function UploadButton() {
     const formData = new FormData();
     formData.append("file", file);
 
+    //POST request to send uploaded to file to backend
     axios
       .post(`${config.apiUrl}/Attachments/UploadAttachment`, formData, {
         onUploadProgress: (progressEvent) => {

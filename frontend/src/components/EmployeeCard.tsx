@@ -1,25 +1,31 @@
+import StatusIcon from "./StatusIcon";
 import CorgiGif from "/cool-corgi.gif";
+import CompleteCount from "./CompleteCount";
 
 import "../styles/EmployeeList.css";
 
-interface EmployeeProps {
+interface EmployeeCardProps {
   employee: String;
-  employeeNum: number;
+  employeeHID: number;
   key: number;
   status: Boolean;
   onSelect: any;
   isSelected: any;
+  cardType: string;
+  managerHID?: number;
 }
 
 export default function EmployeeCard({
   employee,
   onSelect,
   isSelected,
-  employeeNum,
-}: EmployeeProps) {
+  employeeHID,
+  cardType,
+  managerHID,
+}: EmployeeCardProps) {
   //handle click state
   const handleClick = () => {
-    onSelect(employeeNum);
+    onSelect(employeeHID);
   };
 
   return (
@@ -33,14 +39,11 @@ export default function EmployeeCard({
         <p>{employee}</p>
       </div>
       <div className="status">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="green">
-          <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
-        </svg>
+        {cardType === "EmployeeList" ? (
+          <StatusIcon employeeHID={employeeHID} />
+        ) : (
+          <CompleteCount managerHID={managerHID} />
+        )}
       </div>
     </div>
   );
