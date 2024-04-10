@@ -12,6 +12,8 @@ import "../styles/InteractionsPane.css"; //.interactions-section, .elected-emplo
 import "../styles/ManagerSection.css";
 import "../styles/Attachments.css"; //.attachments-container
 
+//hello I added a comment ! I will add the year stuff here as soon as I know the merge will work.!
+
 interface ManagerPageProps {
   managerHID: number;
 }

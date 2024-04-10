@@ -2631,24 +2631,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mark\\.nuget\\packages\\": {}
+    "C:\\Users\\xxmar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\VSCodeProjects\\Northwind-Project\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\xxmar\\NorthW2\\Northwind-Project\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\VSCodeProjects\\Northwind-Project\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
-      "outputPath": "C:\\VSCodeProjects\\Northwind-Project\\backend\\obj\\",
+      "projectPath": "C:\\Users\\xxmar\\NorthW2\\Northwind-Project\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\xxmar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\xxmar\\NorthW2\\Northwind-Project\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\xxmar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2709,6 +2711,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2717,17 +2737,11 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\VSCodeProjects\\Northwind-Project\\backend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1603",
       "level": "Warning",
