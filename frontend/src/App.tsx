@@ -23,7 +23,7 @@ export default function App() {
     setReviewFormPage(isReviewForm);
   };
   return (
-    <div className={reviewFormPage ? "page-review-form" : "page"}>
+    <div>
       <Router>
         <Routes>
           <Route index element={<EmployeePage employeeHID={loggedInHID} />} />

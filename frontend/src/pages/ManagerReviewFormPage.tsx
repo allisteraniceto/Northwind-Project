@@ -19,26 +19,28 @@ export default function ManagerReviewFormPage(props: ManagerReviewFormProps) {
     };
   }, []);
   return (
-    <>
+    <div>
       <Header dashboard="Forms" />
-      {/* <div className="formSection"> */}
-      <div className="question-container">
-        <FormList isEmployee={false} />
+      <div className="page-review-form">
+        <div className="question-container">
+          <FormList isEmployee={false} />
+        </div>
+        <div className="employee-info-container">
+          <p>Employee Info</p>
+        </div>
+        <div className="ratings-container">
+          <p>Ratings</p>
+        </div>
+        <div className="signature-submit-container">
+          <p>Signature and Submit</p>
+          <SubmitOrSignButton
+            formType="manager"
+            status=""
+            buttonType="submit"
+          />
+          <SubmitOrSignButton formType="manager" status="" buttonType="sign" />
+        </div>
       </div>
-      {/* <div className="right-side"> */}
-      <div className="employee-info-container">
-        <p>Employee Info</p>
-      </div>
-      <div className="ratings-container">
-        <p>Ratings</p>
-      </div>
-      <div className="signature-submit-container">
-        <p>Signature and Submit</p>
-        <SubmitOrSignButton formType="manager" status="" buttonType="submit" />
-        <SubmitOrSignButton formType="manager" status="" buttonType="sign" />
-      </div>
-      {/* </div> */}
-      {/* </div> */}
-    </>
+    </div>
   );
 }

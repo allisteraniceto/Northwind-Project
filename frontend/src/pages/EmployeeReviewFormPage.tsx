@@ -21,22 +21,28 @@ export default function EmployeeReviewFormPage(props: EmployeeReviewFormProps) {
 
   // props.setReviewForm(true); //set reviewForm prop to true
   return (
-    <>
+    <div>
       <Header dashboard="Forms" />
-      <div className="question-container">
-        <FormList isEmployee={true} />
+      <div className="page-review-form">
+        <div className="question-container">
+          <FormList isEmployee={true} />
+        </div>
+        <div className="employee-info-container">
+          <p>Employee Info</p>
+        </div>
+        <div className="ratings-container">
+          <p>Ratings</p>
+        </div>
+        <div className="signature-submit-container">
+          <p>Signature and Submit</p>
+          <SubmitOrSignButton
+            formType="employee"
+            status=""
+            buttonType="submit"
+          />
+          <SubmitOrSignButton formType="employee" status="" buttonType="sign" />
+        </div>
       </div>
-      <div className="employee-info-container">
-        <p>Employee Info</p>
-      </div>
-      <div className="ratings-container">
-        <p>Ratings</p>
-      </div>
-      <div className="signature-submit-container">
-        <p>Signature and Submit</p>
-        <SubmitOrSignButton formType="employee" status="" buttonType="submit" />
-        <SubmitOrSignButton formType="employee" status="" buttonType="sign" />
-      </div>
-    </>
+    </div>
   );
 }

@@ -62,54 +62,56 @@ function ManagerPage(props: ManagerPageProps) {
   }, [selectedEmployeeID]); //when selectedEmployee, set employeeHID global in backend
 
   return (
-    <>
+    <div>
       <Header dashboard="Manager" />
-      <div className="employee_list-container">
-        <div className="employee-list-header">
-          <h3>Direct Reports</h3>
+      <div className={"page"}>
+        <div className="employee_list-container">
+          <div className="employee-list-header">
+            <h3>Direct Reports</h3>
+          </div>
+          <EmployeeList
+            setEmployeeID={handleSelectedEmployee}
+            dashboard="ManagerDashboard"
+            listType="EmployeeList"
+            managerHID={props.managerHID}
+          />
         </div>
-        <EmployeeList
-          setEmployeeID={handleSelectedEmployee}
-          dashboard="ManagerDashboard"
-          listType="EmployeeList"
-          managerHID={props.managerHID}
-        />
-      </div>
-      <div className="selected-employee-container">
-        <SelectedEmployee EmployeeId={selectedEmployeeID} />
+        <div className="selected-employee-container">
+          <SelectedEmployee EmployeeId={selectedEmployeeID} />
 
-        <PerformanceReviewButton
-          linkTo="/ManagerReviewForm"
-          reviewStatus="Finalized"
-        />
+          <PerformanceReviewButton
+            linkTo="/ManagerReviewForm"
+            reviewStatus="Finalized"
+          />
 
-        {/* Display performance review year only when both an employee and a year are selected */}
-        {selectedEmployeeID !== null && selectedYear !== null ? (
-          <p>Performance Review Year: {selectedYear}</p>
-        ) : selectedEmployeeID !== null ? (
-          <p>Please select a performance review year</p>
-        ) : (
-          <p>Please select an employee</p>
-        )}
+          {/* Display performance review year only when both an employee and a year are selected */}
+          {selectedEmployeeID !== null && selectedYear !== null ? (
+            <p>Performance Review Year: {selectedYear}</p>
+          ) : selectedEmployeeID !== null ? (
+            <p>Please select a performance review year</p>
+          ) : (
+            <p>Please select an employee</p>
+          )}
 
-        <p>User ID: {selectedEmployeeID}</p>
-      </div>
-      <div className="attachments-container">
-        <div className="attachment-list-header">
-          <h3>Attachments</h3>
+          <p>User ID: {selectedEmployeeID}</p>
         </div>
-        {/*conditionally render attachment list*/}
-        {selectedEmployeeID && <AttachmentList />}
+        <div className="attachments-container">
+          <div className="attachment-list-header">
+            <h3>Attachments</h3>
+          </div>
+          {/*conditionally render attachment list*/}
+          {selectedEmployeeID && <AttachmentList />}
+        </div>
+        <div className="previous-years-container">
+          {/*PREVIOUS REVIEWS*/}
+          <YearCardList
+            startYear={2023}
+            endYear={2029}
+            onYearSelected={handleYearSelected}
+          />
+        </div>
       </div>
-      <div className="previous-years-container">
-        {/*PREVIOUS REVIEWS*/}
-        <YearCardList
-          startYear={2023}
-          endYear={2029}
-          onYearSelected={handleYearSelected}
-        />
-      </div>
-    </>
+    </div>
   );
 }
 

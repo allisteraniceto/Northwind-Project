@@ -18,14 +18,13 @@ export default function Header(props: HeaderProps): JSX.Element {
             alt="northwind logo"
           />
         </div>
+        <div>
+          <Nav />
+        </div>
         <div className="profile-side">
           <Profile />
         </div>
       </div>
-      <div className="dashboard">
-        <h3>{props.dashboard} Dashboard</h3>
-      </div>
-      <Nav />
     </>
   );
 }

@@ -38,45 +38,45 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
   }, []); // Run the effect only when component mounts for the first time
 
   return (
-    <>
+    <div>
       <Header dashboard="Employee" />
-      <div className="employee-dashboard">
-        <div className="employee-rating-pane">
-          <RatingTile ratingNum={12} />
+      <div className={"page"}>
+        <div className="employee-dashboard">
+          <div className="employee-rating-pane">
+            <RatingTile ratingNum={12} />
+          </div>
+          <div className="employee-criteria-pane">
+            {/* CRITERIA CONTAINER */}
+            <ul>
+              <li>
+                Job description and/or Job highlights noting any significant
+                changes
+              </li>
+              <li>Evaluate performance and achieved goals</li>
+              <li>Discuss areas of excellence within performance</li>
+              <li>Discuss areas of development or improvement</li>
+              <li>Develop future goals with set expectation</li>
+            </ul>
+          </div>
         </div>
-        <div className="employee-criteria-pane">
-          {/* CRITERIA CONTAINER */}
-          <ul>
-            <li>
-              Job description and/or Job highlights noting any significant
-              changes
-            </li>
-            <li>Evaluate performance and achieved goals</li>
-            <li>Discuss areas of excellence within performance</li>
-            <li>Discuss areas of development or improvement</li>
-            <li>Develop future goals with set expectation</li>
-          </ul>
+        <div className="selected-employee-container">
+          <SelectedEmployee EmployeeId={employeeHID} />
+          <PerformanceReviewButton
+            linkTo="/EmployeeReviewForm"
+            reviewStatus="Finalized"
+          />
+        </div>
+        <div className="attachments-container">
+          <div className="attachment-list-header">
+            <h3>Attachments</h3>
+          </div>
+          <AttachmentList />
+        </div>
+        <div className="previous-years-container">
+          {/* PREVIOUS REVIEWS */}
+          <p>Previous Reviews</p>
         </div>
       </div>
-      <div className="selected-employee-container">
-        <SelectedEmployee EmployeeId={employeeHID} />
-        <PerformanceReviewButton
-          linkTo="/EmployeeReviewForm"
-          reviewStatus="Finalized"
-        />
-      </div>
-      <div className="attachments-container">
-        <div className="attachment-list-header">
-          <h3>Attachments</h3>
-        </div>
-        <AttachmentList />
-      </div>
-      <div className="previous-years-container">
-        {/* PREVIOUS REVIEWS */}
-        <p>Previous Reviews</p>
-      </div>
-      {/* </div> */}
-      {/* </div> */}
-    </>
+    </div>
   );
 }
