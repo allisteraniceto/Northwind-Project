@@ -10,7 +10,6 @@ import ManagerReviewFormPage from "./pages/ManagerReviewFormPage";
 import "./global.css";
 
 export default function App() {
-  const [reviewFormPage, setReviewFormPage] = useState(false);
   const [loggedInHID, setLoggedInHID] = useState<number>(4); //2 for now
 
   useEffect(() => {
@@ -18,10 +17,6 @@ export default function App() {
     console.log(loggedInHID);
   }, []);
 
-  // to see if routed to a review form page
-  const handleReviewFormPage = (isReviewForm: boolean) => {
-    setReviewFormPage(isReviewForm);
-  };
   return (
     <div>
       <Router>

@@ -3,11 +3,8 @@ import Profile from "../components/Profile";
 import NorthwindLogo from "/northwind-logo.png";
 
 import "../styles/Topbar.css";
-interface HeaderProps {
-  dashboard: string;
-}
 
-export default function Header(props: HeaderProps): JSX.Element {
+export default function Header() {
   return (
     <>
       <div className="topbar">
