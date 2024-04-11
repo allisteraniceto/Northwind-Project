@@ -11,7 +11,7 @@ import "./global.css";
 
 export default function App() {
   const [reviewFormPage, setReviewFormPage] = useState(false);
-  const [loggedInHID, setLoggedInHID] = useState<number>(2); //2 for now
+  const [loggedInHID, setLoggedInHID] = useState<number>(4); //2 for now
 
   useEffect(() => {
     setLoggedInHID(1); //will have to set this once login is implemented
@@ -26,8 +26,11 @@ export default function App() {
     <div className={reviewFormPage ? "page-review-form" : "page"}>
       <Router>
         <Routes>
-          <Route index element={<EmployeePage />} />
-          <Route path="/Employee" element={<EmployeePage />} />
+          <Route index element={<EmployeePage employeeHID={loggedInHID} />} />
+          <Route
+            path="/Employee"
+            element={<EmployeePage employeeHID={loggedInHID} />}
+          />
           <Route path="/Hr" element={<HrPage />} />
           <Route
             path="/Manager"
