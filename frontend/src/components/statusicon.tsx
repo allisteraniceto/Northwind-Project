@@ -11,12 +11,15 @@ interface StatusIconProps {
 function StatusIcon({ employeeHID }: StatusIconProps) {
   const [status, setStatus] = useState("");
 
+  const year = new Date().getFullYear();
+
   //GET request to get status of specific employee
   useEffect(() => {
     axios
       .get(`${config.apiUrl}/ManagerDashboard/GetEmployeeStatus`, {
         params: {
           employee_HID: employeeHID,
+          year: year,
         },
       })
       .then((response) => {
