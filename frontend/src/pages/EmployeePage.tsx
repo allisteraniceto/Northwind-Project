@@ -12,7 +12,11 @@ import "../styles/InteractionsPane.css";
 import "../styles/EmployeeDashboard.css";
 import config from "../../config.json";
 
-export default function EmployeePage() {
+interface EmployeePageProps {
+  employeeHID: number;
+}
+
+export default function EmployeePage({ employeeHID }: EmployeePageProps) {
   // Make a GET request to API endpoint for the EmployeeHID of the logged in employee
   useEffect(() => {
     const fetchEmployeeHID = async () => {
@@ -55,7 +59,7 @@ export default function EmployeePage() {
         </div>
       </div>
       <div className="selected-employee-container">
-        <SelectedEmployee EmployeeId={1}/>
+        <SelectedEmployee EmployeeId={employeeHID} />
         <PerformanceReviewButton
           linkTo="/EmployeeReviewForm"
           reviewStatus="Finalized"
