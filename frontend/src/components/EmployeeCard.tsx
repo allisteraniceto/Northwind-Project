@@ -1,4 +1,4 @@
-import StatusIcon from "./StatusIcon";
+import StatusIcon from "./statusicon";
 import CorgiGif from "/cool-corgi.gif";
 import CompleteCount from "./CompleteCount";
 
