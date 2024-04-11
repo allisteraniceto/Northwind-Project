@@ -4,15 +4,17 @@ import CompleteCount from "./CompleteCount";
 
 import "../styles/EmployeeList.css";
 
+type HandleEmployeeSelect = (employeeID: number) => void;
+// type HandleSelectedManagerHID = (HID: number) => void;
+
 interface EmployeeCardProps {
   employee: String;
   employeeHID: number;
   key: number;
-  status: Boolean;
-  onSelect: any;
-  isSelected: any;
+  status: boolean;
+  isSelected: boolean;
   cardType: string;
-  managerHID?: number;
+  onSelect: HandleEmployeeSelect;
 }
 
 export default function EmployeeCard({
@@ -21,8 +23,8 @@ export default function EmployeeCard({
   isSelected,
   employeeHID,
   cardType,
-  managerHID,
-}: EmployeeCardProps) {
+}: // handleSelectedManagerHID,
+EmployeeCardProps) {
   //handle click state
   const handleClick = () => {
     onSelect(employeeHID);
@@ -42,7 +44,7 @@ export default function EmployeeCard({
         {cardType === "EmployeeList" ? (
           <StatusIcon employeeHID={employeeHID} />
         ) : (
-          <CompleteCount managerHID={managerHID} />
+          <CompleteCount managerHID={employeeHID} />
         )}
       </div>
     </div>

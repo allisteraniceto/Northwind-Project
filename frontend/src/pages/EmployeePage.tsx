@@ -1,5 +1,5 @@
 //Employee Dashboard
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 import Header from "../components/Header";
@@ -13,6 +13,8 @@ import "../styles/EmployeeDashboard.css";
 import config from "../../config.json";
 
 export default function EmployeePage() {
+  const [loggedInHID /*insert setter function here*/] = useState<number>(21);
+
   // Make a GET request to API endpoint for the EmployeeHID of the logged in employee
   useEffect(() => {
     const fetchEmployeeHID = async () => {
@@ -38,7 +40,7 @@ export default function EmployeePage() {
       <Header dashboard="Employee" />
       <div className="employee-dashboard">
         <div className="employee-rating-pane">
-          <RatingTile ratingNum={12} />
+          <RatingTile ratingNum={loggedInHID} />
         </div>
         <div className="employee-criteria-pane">
           {/* CRITERIA CONTAINER */}
@@ -55,7 +57,7 @@ export default function EmployeePage() {
         </div>
       </div>
       <div className="selected-employee-container">
-        <SelectedEmployee EmployeeId={1}/>
+        <SelectedEmployee EmployeeId={loggedInHID} />
         <PerformanceReviewButton
           linkTo="/EmployeeReviewForm"
           reviewStatus="Finalized"

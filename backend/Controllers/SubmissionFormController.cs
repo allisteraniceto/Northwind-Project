@@ -277,7 +277,10 @@ public class SubmissionFormController : ControllerBase
         //find the current review for the employee
         review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
 
-        return Ok(review.Status);
-
+        if (review != null){
+            return Ok(review.Status);
+        }else{
+            return NotFound("NO review was found for the selected employee");
+        }
     }
 }

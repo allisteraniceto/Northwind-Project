@@ -122,7 +122,13 @@ public class ManagerDashboardController : ControllerBase
         //find the current review for the employee
         review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == employee_HID);
 
-        return Ok(review.Status);
+        //handle empty review
+        if (review != null){
+            return Ok(review.Status);
+        } else{
+            return NotFound("No review was found for the employee");
+        }
+        
 
     }
 }

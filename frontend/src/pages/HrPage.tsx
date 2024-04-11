@@ -25,6 +25,7 @@ function HrPage() {
     setSelectedEmployeeID(employeeID);
   };
 
+  //handle when manager is selected, to then output manager's direct reports
   const handleSelectedManager = (expand: boolean) => {
     setExpandManager(expand);
   };
@@ -48,12 +49,12 @@ function HrPage() {
           <h3>{expandManager ? "Direct Reports" : "Managers"}</h3>
         </div>
         <EmployeeList
-          setEmployeeID={handleSelectedEmployee}
           dashboard={expandManager ? "ManagerDashboard" : "HRDashboard"}
           listType={expandManager ? "EmployeeList" : "ManagerList"}
-          managerHID={expandManager ? 3 : -1}
-          handleSelectedManager={handleSelectedManager}
+          managerHID={selectedEmployeeID}
           expandManager={expandManager}
+          setEmployeeID={handleSelectedEmployee}
+          handleSelectedManager={handleSelectedManager}
         />
       </div>
       <div className="selected-employee-container">

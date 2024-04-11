@@ -14,7 +14,7 @@ export default function App() {
   const [loggedInHID, setLoggedInHID] = useState<number>(2); //2 for now
 
   useEffect(() => {
-    setLoggedInHID(2); //will have to set this once login is implemented
+    setLoggedInHID(1); //will have to set this once login is implemented
     console.log(loggedInHID);
   }, []);
 

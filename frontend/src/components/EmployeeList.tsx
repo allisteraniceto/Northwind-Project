@@ -23,12 +23,12 @@ interface Employee {
 }
 
 interface EmployeeListProps {
-  setEmployeeID?: HandleFunction; //can mark prop options w/ ? in typescript
   dashboard: string;
   listType: string;
-  managerHID?: number;
-  handleSelectedManager?: HandleSelectedManager;
+  managerHID?: number | null;
   expandManager?: boolean;
+  setEmployeeID?: HandleFunction; //can mark prop options w/ ? in typescript
+  handleSelectedManager?: HandleSelectedManager;
 }
 
 export default function EmployeeList(props: EmployeeListProps) {
@@ -46,7 +46,7 @@ export default function EmployeeList(props: EmployeeListProps) {
     setSelectedEmployee(employeeId === selectedEmployee ? null : employeeId);
     props.setEmployeeID &&
       props.setEmployeeID(employeeId === selectedEmployee ? null : employeeId); //for manager page (setEmployeeID optional: use && to check for null)
-    if (props.handleSelectedManager) {
+    if (props.handleSelectedManager && props.listType == "ManagerList") {
       props.handleSelectedManager(true);
     }
   };
@@ -61,7 +61,7 @@ export default function EmployeeList(props: EmployeeListProps) {
       })
       .then((response) => {
         setEmployeeList(response.data);
-        console.log(`EmployeeList: ${employeeList}`);
+        console.log("manager id prop:", props.managerHID);
       })
       .catch((error) => {
         //handle errors
@@ -76,13 +76,12 @@ export default function EmployeeList(props: EmployeeListProps) {
         (employee, index) => (
           <EmployeeCard
             key={index}
+            status={true}
+            cardType={props.listType}
             employee={employee.first_name + " " + employee.last_name}
             employeeHID={employee.employee_id}
-            status={true}
             onSelect={handleEmployeeSelect}
             isSelected={employee.employee_id === selectedEmployee} //if selected employee matches the employee id, returns true
-            cardType={props.listType}
-            managerHID={props.managerHID}
           />
         )
       )}

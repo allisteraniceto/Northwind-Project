@@ -22,7 +22,7 @@ export default function CompleteCount({ managerHID }: CompleteCountProps) {
 
   useEffect(() => {
     axios
-      .get(`${config.apiUrl}/HRDashboard/GetManagerList`, {
+      .get(`${config.apiUrl}/ManagerDashboard/EmployeeList`, {
         params: {
           employee_HID: managerHID,
         },
@@ -35,7 +35,7 @@ export default function CompleteCount({ managerHID }: CompleteCountProps) {
         //handle errors
         console.error("Error making Get request:", error.message);
       });
-  }, []);
+  }, [managerHID]); //make GET request again when back button is clicked
 
   return (
     <div>
