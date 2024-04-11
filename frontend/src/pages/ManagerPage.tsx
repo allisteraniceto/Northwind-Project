@@ -63,7 +63,7 @@ function ManagerPage(props: ManagerPageProps) {
 
   return (
     <div>
-      <Header dashboard="Manager" />
+      <Header />
       <div className={"page"}>
         <div className="employee_list-container">
           <div className="employee-list-header">

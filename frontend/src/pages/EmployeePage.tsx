@@ -39,7 +39,7 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
 
   return (
     <div>
-      <Header dashboard="Employee" />
+      <Header />
       <div className={"page"}>
         <div className="employee-dashboard">
           <div className="employee-rating-pane">

@@ -33,15 +33,11 @@ export default function App() {
           />
           <Route
             path="/EmployeeReviewForm"
-            element={
-              <EmployeeReviewFormPage setReviewForm={handleReviewFormPage} />
-            }
+            element={<EmployeeReviewFormPage />}
           />
           <Route
             path="/ManagerReviewForm"
-            element={
-              <ManagerReviewFormPage setReviewForm={handleReviewFormPage} />
-            }
+            element={<ManagerReviewFormPage />}
           />
           <Route path="*" element={<NoPage />} />{" "}
           {/* *: anything else another the other routes */}

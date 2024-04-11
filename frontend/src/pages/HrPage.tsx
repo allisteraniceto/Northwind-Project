@@ -42,7 +42,7 @@ function HrPage() {
 
   return (
     <div>
-      <Header dashboard="HR" />
+      <Header />
       <div className="page">
         <div className="employee_list-container">
           <div className="employee-list-header">

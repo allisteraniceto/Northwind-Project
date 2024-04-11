@@ -1,28 +1,12 @@
-import { useEffect } from "react";
-
 import Header from "../components/Header";
 import FormList from "../components/FormList";
 import SubmitOrSignButton from "../components/SubmitOrSignButton";
 
-type HandleFunction = (isReviewForm: boolean) => void;
-interface EmployeeReviewFormProps {
-  setReviewForm: HandleFunction;
-}
-
-export default function EmployeeReviewFormPage(props: EmployeeReviewFormProps) {
-  useEffect(() => {
-    //set ReviewForm to true when component mounts
-    props.setReviewForm(true);
-    return () => {
-      // Set reviewFormPage to false when unmounting the component
-      props.setReviewForm(false);
-    };
-  }, []);
-
+export default function EmployeeReviewFormPage() {
   // props.setReviewForm(true); //set reviewForm prop to true
   return (
     <div>
-      <Header dashboard="Forms" />
+      <Header />
       <div className="page-review-form">
         <div className="question-container">
           <FormList isEmployee={true} />
