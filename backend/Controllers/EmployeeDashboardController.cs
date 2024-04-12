@@ -33,7 +33,7 @@ public class EmployeeDashboardController : ControllerBase
     [Route("EmulateEmployee")]
     public IActionResult EmulateEmployee()
     {
-        var jsonString = "{\"FirstName\":\"Cordi\",\"LastName\":\"Brooke\",\"Email\":\"cbrookes@amazonaws.com\",\"HID\": 29, \"ManagerHID\": 2, \"Role\":\"Employee\"}";
+        var jsonString = "{\"FirstName\":\"Terry\",\"LastName\":\"Goggey\",\"Email\":\"tgoggey5@google.com.hk\",\"HID\": 6, \"ManagerHID\": 1, \"Role\":\"Employee\"}";
 
         Globals.IdentityJsonString = jsonString;
         Globals.UserIdentity = JsonSerializer.Deserialize<Identity>(jsonString);

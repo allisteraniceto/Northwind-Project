@@ -137,7 +137,7 @@ public class ManagerDashboardController : ControllerBase
     [Route("EmulateManager")]
     public IActionResult EmulateManager()
     {
-        var jsonString = "{\"FirstName\":\"Lyndell\",\"LastName\":\"Brewster\",\"Email\":\"lbrewster1@cloudflare.com\",\"HID\": 2, \"ManagerHID\": 4, \"Role\":\"Manager\"}";
+        var jsonString = "{\"FirstName\":\"Rosanne\",\"LastName\":\"Bleything\",\"Email\":\"rbleything0@nyu.edu\",\"HID\": 1, \"ManagerHID\": 28, \"Role\":\"Manager\"}";
 
         Globals.IdentityJsonString = jsonString;
         Globals.UserIdentity = JsonSerializer.Deserialize<Identity>(jsonString);

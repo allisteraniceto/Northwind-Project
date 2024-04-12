@@ -248,6 +248,9 @@ public class SubmissionFormController : ControllerBase
         }
         else // if it is a manager signature
         {
+            review.ManagerSignature = 1;
+            _dbContext.SaveChanges();
+            
              // before changing status, we create the PDF
              //create instance of PDFGenerator class, pass in session with our database
             var generator = new PDFGenerator(_dbContext);
@@ -265,11 +268,6 @@ public class SubmissionFormController : ControllerBase
 
             // save file to attachments folder
             System.IO.File.WriteAllText(filePath, html);
-
-
-            review.Status = "Finalized";
-            review.ManagerSignature = 1;
-            _dbContext.SaveChanges();
 
             //create a log and save it to DB
              var log = new Log
@@ -291,6 +289,9 @@ public class SubmissionFormController : ControllerBase
             };
 
             _dbContext.Attachments.Add(pdf);
+            _dbContext.SaveChanges();
+
+            review.Status = "Finalized";
             _dbContext.SaveChanges();
 
         }
