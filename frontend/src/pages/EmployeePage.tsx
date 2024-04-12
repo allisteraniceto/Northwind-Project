@@ -18,7 +18,11 @@ import YearCardList from "../components/YearCardList";
 import '../styles/YearCard.css'; // Import the CSS file
 import '../styles/YearCardList.css'; // Import the CSS file
 
-export default function EmployeePage() {
+interface EmployeePageProps {
+  employeeHID: number;
+}
+
+export default function EmployeePage({ employeeHID }: EmployeePageProps) {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
 
   // Make a GET request to API endpoint for the EmployeeHID of the logged in employee
@@ -50,52 +54,47 @@ export default function EmployeePage() {
 
 
   return (
-    <>
-      <Header dashboard="Employee" />
-      <div className="employee-dashboard">
-        <div className="employee-rating-pane">
-          <RatingTile ratingNum={12} />
+    <div>
+      <Header />
+      <div className={"page"}>
+        <div className="employee-dashboard">
+          <div className="employee-rating-pane">
+            <RatingTile ratingNum={12} />
+          </div>
+          <div className="employee-criteria-pane">
+            {/* CRITERIA CONTAINER */}
+            <ul>
+              <li>
+                Job description and/or Job highlights noting any significant
+                changes
+              </li>
+              <li>Evaluate performance and achieved goals</li>
+              <li>Discuss areas of excellence within performance</li>
+              <li>Discuss areas of development or improvement</li>
+              <li>Develop future goals with set expectation</li>
+            </ul>
+          </div>
         </div>
-        <div className="employee-criteria-pane">
-          {/* CRITERIA CONTAINER */}
-          <ul>
-            <li>
-              Job description and/or Job highlights noting any significant
-              changes
-            </li>
-            <li>Evaluate performance and achieved goals</li>
-            <li>Discuss areas of excellence within performance</li>
-            <li>Discuss areas of development or improvement</li>
-            <li>Develop future goals with set expectation</li>
-          </ul>
+        <div className="selected-employee-container">
+        <p>Performance Review Year: {selectedYear}</p>
+          <SelectedEmployee EmployeeId={employeeHID} />
+          <PerformanceReviewButton
+            linkTo="/EmployeeReviewForm"
+            reviewStatus="Finalized"
+          />
+        </div>
+        <div className="attachments-container">
+          <div className="attachment-list-header">
+            <h3>Attachments</h3>
+          </div>
+          <AttachmentList />
+        </div>
+        <div className="previous-years-container">
+          {/* PREVIOUS REVIEWS */}
+          <YearCardList startYear={2023} endYear={2029} onYearSelected={handleYearSelected} />
+
         </div>
       </div>
-      <div className="selected-employee-container">
-
-             
-           {/* Display performance review year only when both an employee and a year are selected */}
-  
-            <p>Performance Review Year: {selectedYear}</p>
-
-        <SelectedEmployee EmployeeId={1}/>
-        <PerformanceReviewButton
-          linkTo="/EmployeeReviewForm"
-          reviewStatus="Finalized"
-        />
-      </div>
-      <div className="attachments-container">
-        <div className="attachment-list-header">
-          <h3>Attachments</h3>
-        </div>
-        <AttachmentList />
-      </div>
-      <div className="previous-years-container">
-        {/* PREVIOUS REVIEWS */}
-        <YearCardList startYear={2023} endYear={2029} onYearSelected={handleYearSelected} />
-
-      </div>
-      {/* </div> */}
-      {/* </div> */}
-    </>
+    </div>
   );
 }

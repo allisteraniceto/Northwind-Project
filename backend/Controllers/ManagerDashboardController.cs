@@ -112,4 +112,23 @@ public class ManagerDashboardController : ControllerBase
 
         return Ok(queryResult);
     }
+
+    //GET request to get specific status of employee
+    [HttpGet]
+    [Route("GetEmployeeStatus")]
+    public IActionResult GetEmployeeStatus(int employee_HID, int year)
+    {
+        var review = default(Review);
+        //find the current review for the employee
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == employee_HID && review.Year == year);
+
+        //handle empty review
+        if (review != null){
+            return Ok(review.Status);
+        } else{
+            return NotFound("No review was found for the employee");
+        }
+        
+
+    }
 }
