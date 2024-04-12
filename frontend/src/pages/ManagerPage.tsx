@@ -2,8 +2,18 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import config from "../../config.json";
+
 import Header from "../components/Header";
+import YearCardList from "../components/YearCardList";
+
+import "../styles/YearCard.css"; // Import the CSS file
+import "../styles/YearCardList.css"; // Import the CSS file
+
+import "../styles/InteractionsPane.css";
 import EmployeeList from "../components/EmployeeList";
+
+import "../styles/InteractionsPane.css";
+//import EmployeeList from "../components/EmployeeList";
 import AttachmentList from "../components/AttachmentList";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import SelectedEmployee from "../components/SelectedEmployee.tsx";
@@ -17,9 +27,16 @@ interface ManagerPageProps {
 }
 
 function ManagerPage(props: ManagerPageProps) {
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+
   const [selectedEmployeeID, setSelectedEmployeeID] = useState<number | null>(
     null
   );
+
+  const handleYearSelected = (year: number | null) => {
+    console.log(`Year ${year} selected`);
+    setSelectedYear(year);
+  };
 
   //pass down handler function to set selected employee id
   const handleSelectedEmployee = (employeeID: number | null) => {
@@ -60,10 +77,21 @@ function ManagerPage(props: ManagerPageProps) {
       </div>
       <div className="selected-employee-container">
         <SelectedEmployee EmployeeId={selectedEmployeeID} />
+
         <PerformanceReviewButton
           linkTo="/ManagerReviewForm"
           reviewStatus="Finalized"
         />
+
+        {/* Display performance review year only when both an employee and a year are selected */}
+        {selectedEmployeeID !== null && selectedYear !== null ? (
+          <p>Performance Review Year: {selectedYear}</p>
+        ) : selectedEmployeeID !== null ? (
+          <p>Please select a performance review year</p>
+        ) : (
+          <p>Please select an employee</p>
+        )}
+
         <p>User ID: {selectedEmployeeID}</p>
       </div>
       <div className="attachments-container">
@@ -75,7 +103,11 @@ function ManagerPage(props: ManagerPageProps) {
       </div>
       <div className="previous-years-container">
         {/*PREVIOUS REVIEWS*/}
-        <p>Previous Reviews</p>
+        <YearCardList
+          startYear={2023}
+          endYear={2029}
+          onYearSelected={handleYearSelected}
+        />
       </div>
     </>
   );

@@ -1,0 +1,78 @@
+/* YearCard.css */
+
+.year-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .year-card {
+    width: 50px; /* Adjust the width */
+    height: 70px; /* Adjust the height */
+    background-color: #f0f0f0;
+    border: 2px solid #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* Adjust font size */
+    font-family: 'Bubble', sans-serif; /* Custom bubble font */
+    margin-right: 10px; /* Increase the right margin */
+    border-width: 2px; /* Increase the border width */
+    cursor: pointer; /* Add pointer cursor to indicate clickable */
+    transition: background-color 0.3s ease;
+  }
+
+  .year-card-button {
+    
+    width: 10px;
+    height: 30px;
+    background-color: white;
+    border: 2px solid #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+   position: relative;/* Set position to relative */
+    border-width: 3px; /* Increase the border width */
+
+    margin-top: 1px; /* Adjust margin as needed */
+  }
+  .year-card-button::before {
+    content: ''; /* Add content to the pseudo-element */
+    display: none; /* Hide the circle by default */
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+   /* Apply styles when selected */
+   .year-card.selected {
+    background-color: #2b2648; /* Dark purple-blue color for selected state */
+    color: #ffffff; /* White text color for better visibility */
+  }
+  
+  .year-card.selected .year-card-button {
+    background-color: transparent; /* Reset button background color */
+    border-color: #555; /* Reset button border color */
+  }
+  
+  .year-card.selected .year-card-button:hover {
+    background-color: transparent; /* Reset button background color on hover */
+  }
+  .year-card-container.selected .year-card-button { /* Apply styles to the button when selected */
+    background-color: #2b2648; /* Dark purple-blue color for selected state */
+    color: #ffffff; /* White text color for better visibility */
+  }
+  
+  .year-card-button:hover {
+    background-color: #ccc;
+  }
+ 
