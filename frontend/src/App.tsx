@@ -10,7 +10,6 @@ import ManagerReviewFormPage from "./pages/ManagerReviewFormPage";
 import "./global.css";
 
 export default function App() {
-  const [reviewFormPage, setReviewFormPage] = useState(false);
   const [loggedInHID, setLoggedInHID] = useState<number>(4); //2 for now
 
   useEffect(() => {
@@ -18,12 +17,8 @@ export default function App() {
     console.log(loggedInHID);
   }, []);
 
-  // to see if routed to a review form page
-  const handleReviewFormPage = (isReviewForm: boolean) => {
-    setReviewFormPage(isReviewForm);
-  };
   return (
-    <div className={reviewFormPage ? "page-review-form" : "page"}>
+    <div>
       <Router>
         <Routes>
           <Route index element={<EmployeePage employeeHID={loggedInHID} />} />
@@ -38,15 +33,11 @@ export default function App() {
           />
           <Route
             path="/EmployeeReviewForm"
-            element={
-              <EmployeeReviewFormPage setReviewForm={handleReviewFormPage} />
-            }
+            element={<EmployeeReviewFormPage />}
           />
           <Route
             path="/ManagerReviewForm"
-            element={
-              <ManagerReviewFormPage setReviewForm={handleReviewFormPage} />
-            }
+            element={<ManagerReviewFormPage />}
           />
           <Route path="*" element={<NoPage />} />{" "}
           {/* *: anything else another the other routes */}

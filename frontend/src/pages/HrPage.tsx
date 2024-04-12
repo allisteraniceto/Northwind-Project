@@ -41,42 +41,44 @@ function HrPage() {
   }, [expandManager]);
 
   return (
-    <>
-      <Header dashboard="HR" />
-      <div className="employee_list-container">
-        <div className="employee-list-header">
-          {expandManager && <BackButton handleBackClick={handleBackClick} />}
-          <h3>{expandManager ? "Direct Reports" : "Managers"}</h3>
+    <div>
+      <Header />
+      <div className="page">
+        <div className="employee_list-container">
+          <div className="employee-list-header">
+            {expandManager && <BackButton handleBackClick={handleBackClick} />}
+            <h3>{expandManager ? "Direct Reports" : "Managers"}</h3>
+          </div>
+          <EmployeeList
+            dashboard={expandManager ? "ManagerDashboard" : "HRDashboard"}
+            listType={expandManager ? "EmployeeList" : "ManagerList"}
+            managerHID={selectedEmployeeID}
+            expandManager={expandManager}
+            setEmployeeID={handleSelectedEmployee}
+            handleSelectedManager={handleSelectedManager}
+          />
         </div>
-        <EmployeeList
-          dashboard={expandManager ? "ManagerDashboard" : "HRDashboard"}
-          listType={expandManager ? "EmployeeList" : "ManagerList"}
-          managerHID={selectedEmployeeID}
-          expandManager={expandManager}
-          setEmployeeID={handleSelectedEmployee}
-          handleSelectedManager={handleSelectedManager}
-        />
-      </div>
-      <div className="selected-employee-container">
-        <SelectedEmployee EmployeeId={selectedEmployeeID} />
-        <PerformanceReviewButton
-          linkTo="/ManagerReviewForm"
-          reviewStatus="Finalized"
-        />
-        <p>User ID: {selectedEmployeeID}</p>
-      </div>
-      <div className="attachments-container">
-        <div className="attachment-list-header">
-          <h3>Attachments</h3>
+        <div className="selected-employee-container">
+          <SelectedEmployee EmployeeId={selectedEmployeeID} />
+          <PerformanceReviewButton
+            linkTo="/ManagerReviewForm"
+            reviewStatus="Finalized"
+          />
+          <p>User ID: {selectedEmployeeID}</p>
         </div>
-        {/*conditionally render attachment list*/}
-        {selectedEmployeeID && <AttachmentList />}
+        <div className="attachments-container">
+          <div className="attachment-list-header">
+            <h3>Attachments</h3>
+          </div>
+          {/*conditionally render attachment list*/}
+          {selectedEmployeeID && <AttachmentList />}
+        </div>
+        <div className="previous-years-container">
+          {/*PREVIOUS REVIEWS*/}
+          <p>Previous Reviews</p>
+        </div>
       </div>
-      <div className="previous-years-container">
-        {/*PREVIOUS REVIEWS*/}
-        <p>Previous Reviews</p>
-      </div>
-    </>
+    </div>
   );
 }
 
