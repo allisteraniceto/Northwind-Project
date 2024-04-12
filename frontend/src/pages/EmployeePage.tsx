@@ -1,5 +1,5 @@
 //Employee Dashboard
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 import Header from "../components/Header";
@@ -12,20 +12,26 @@ import "../styles/InteractionsPane.css";
 import "../styles/EmployeeDashboard.css";
 import config from "../../config.json";
 
+
 export default function EmployeePage() {
+
+  const [EmployeeHID, setEmployeeHID] = useState(null);
+
   // Make a GET request to API endpoint for the EmployeeHID of the logged in employee
   useEffect(() => {
     const fetchEmployeeHID = async () => {
       try {
-        await axios.post(
-          `${config.apiUrl}/SubmissionForm/SetSelectedEmployeeHID`,
-          -1,
+         const response = await axios.get(
+          `${config.apiUrl}/SubmissionForm/GetEmployeeHID`,
           {
             headers: {
               "Content-Type": "application/json",
             },
           }
         );
+
+        setEmployeeHID(response.data);
+
       } catch (error: any) {
         console.error("Error fetching data:", error.message);
       }
@@ -55,7 +61,7 @@ export default function EmployeePage() {
         </div>
       </div>
       <div className="selected-employee-container">
-        <SelectedEmployee EmployeeId={1}/>
+        <SelectedEmployee EmployeeId={EmployeeHID}/>
         <PerformanceReviewButton
           linkTo="/EmployeeReviewForm"
           reviewStatus="Finalized"

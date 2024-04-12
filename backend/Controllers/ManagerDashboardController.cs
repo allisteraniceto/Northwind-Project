@@ -112,4 +112,18 @@ public class ManagerDashboardController : ControllerBase
 
         return Ok(queryResult);
     }
+
+
+    [HttpGet]
+    [Route("EmulateManager")]
+    public IActionResult EmulateManager()
+    {
+        var jsonString = "{\"FirstName\":\"Lyndell\",\"LastName\":\"Brewster\",\"Email\":\"lbrewster1@cloudflare.com\",\"HID\": 2, \"ManagerHID\": 4, \"Role\":\"Manager\"}";
+
+        Globals.IdentityJsonString = jsonString;
+        Globals.UserIdentity = JsonSerializer.Deserialize<Identity>(jsonString);
+        Globals.SelectedEmployeeHID = Globals.UserIdentity.HID;
+
+        return Ok();
+    }
 }

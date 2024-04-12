@@ -28,4 +28,17 @@ public class EmployeeDashboardController : ControllerBase
 
     //     return Ok(queryResult);
     // }
+
+    [HttpGet]
+    [Route("EmulateEmployee")]
+    public IActionResult EmulateEmployee()
+    {
+        var jsonString = "{\"FirstName\":\"Cordi\",\"LastName\":\"Brooke\",\"Email\":\"cbrookes@amazonaws.com\",\"HID\": 29, \"ManagerHID\": 2, \"Role\":\"Employee\"}";
+
+        Globals.IdentityJsonString = jsonString;
+        Globals.UserIdentity = JsonSerializer.Deserialize<Identity>(jsonString);
+        Globals.SelectedEmployeeHID = Globals.UserIdentity.HID;
+
+        return Ok();
+    }
 }
