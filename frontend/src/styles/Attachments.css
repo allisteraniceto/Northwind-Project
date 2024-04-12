@@ -1,30 +1,16 @@
-.attachments-container {
-  position: relative;
-  top: -30px;
-  box-sizing: border-box;
+.attachment-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 60%;
-  border-radius: 15px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
-  background-color: white;
-  /* margin-bottom: 15px;
-  margin-top: 15px; */
-  padding: 10px;
-}
-
-.attachment-list {
-  overflow: auto;
-  justify-content: center;
   box-sizing: border-box;
+  /* overflow: auto; */
 }
 
 .attachment-list-header {
   width: 100%;
   padding-left: 10%;
-  margin: 15px;
+  margin: 10px;
 }
 
 .attachment-list-header h3 {
@@ -32,19 +18,20 @@
 }
 
 .attachment-card {
-  box-sizing: content-box;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 5px;
-  border: 1px solid #e0e0e0;
-  border-radius: 15px;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.12);
-  height: 80px;
-  width: 550px;
+  border: 1px solid #9e9b9b;
+  border-radius: 7px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.12);
+  height: 60px;
+  width: 80%;
   background-color: #ffffff;
   padding: 10px;
-  box-sizing: border-box;
+  max-width: 800px;
+  cursor: pointer;
 }
 
 .attachment-card:hover {

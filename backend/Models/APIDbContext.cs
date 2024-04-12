@@ -15,7 +15,7 @@ public class APIDbContext : DbContext
 
     public DbSet<Log> Logs {get; set;}
 
-    public DbSet<Appointment> Appointments {get; set;}
+    public DbSet<Attachment> Attachments {get; set;}
 
     public DbSet<Review> Reviews {get; set;}
 }

@@ -1,24 +1,30 @@
 .employee_list-container {
-  margin: 20px;
-  margin-right: 10px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
+  grid-row: 4/7;
+  grid-column: 1;
   align-items: center;
-  box-sizing: border-box;
   background-color: #ffffff;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
   border-radius: 15px;
   box-sizing: border-box;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
+  margin: 10px;
+  padding: 10px;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  max-height: 100vh;
 }
 
 .employee-list {
-  padding: 20px;
-  padding-top: 0px;
-  border-radius: 10px;
-  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: auto;
+  width: 100%;
   box-sizing: border-box;
+  margin-bottom: 20px;
+  padding-top: 0px;
+  scroll-behavior: smooth;
 }
 
 .employee-list::-webkit-scrollbar {
@@ -36,13 +42,26 @@
 }
 
 .employee-list-header {
+  position: relative;
+  display: flex;
   width: 100%;
   padding-left: 10%;
-  margin: 20px;
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 .employee-list-header h3 {
   font-weight: bold;
+}
+
+.back-button {
+  color:#7e7c7c;
+  position: absolute;
+  left: 5px;
+}
+
+.back-button:hover{
+  color:black
 }
 
 .employee-card {
@@ -51,12 +70,14 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 5px;
-  border: 1px solid #e0e0e0;
-  border-radius: 15px;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.12);
-  height: 75px;
-  width: 550px;
+  border: 1px solid #9e9b9b;
+  border-radius: 7px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.12);
+  height: 60px;
+  width: 80%; /* of employee-list */
+  max-width: 1000px;
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 /*on hover, grey out*/
@@ -93,4 +114,11 @@
   height: 40px;
   border-radius: 50%;
   object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.headshot-selected {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
 }

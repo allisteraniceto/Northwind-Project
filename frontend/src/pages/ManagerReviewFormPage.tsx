@@ -1,61 +1,50 @@
-import Header from "../components/Header";
-import ManagerFormRow from "../components/ManagerFormRow";
-import SubmitOrSignButton from "../components/SubmitOrSignButton";
+import { useEffect } from "react";
 
-export default function EmployeeReviewFormPage() {
-  let questionNum: number = 1;
+import Header from "../components/Header";
+import FormList from "../components/FormList";
+import SubmitOrSignButton from "../components/SubmitOrSignButton";
+import StarRanking from "../components/StarRanking";
+import StatusPane from "../components/StatusPane";
+
+import "../styles/FormPage.css";
+
+type HandleFunction = (isReviewForm: boolean) => void;
+interface ManagerReviewFormProps {
+  setReviewForm: HandleFunction;
+}
+
+export default function ManagerReviewFormPage(props: ManagerReviewFormProps) {
+  useEffect(() => {
+    //set ReviewForm to true when component mounts
+    props.setReviewForm(true);
+    return () => {
+      // Set reviewFormPage to false when unmounting the component
+      props.setReviewForm(false);
+    };
+  }, []);
   return (
     <>
       <Header dashboard="Forms" />
-      <div className="formSection">
-        <div className="question-container">
-          <div className="question-card">
-            <div className="form-header">
-              <h1>2024 REVIEW FORM</h1>
-            </div>
-            <div className="form-header-3">
-              <h3>Current Responsibilites</h3>
-            </div>
-            <ManagerFormRow
-              questionNum={questionNum}
-              formQuestion="Job description and/or Job highlights noting any significant changes"
-            />
-            <div className="form-header-3">
-              <h3>Performance Review</h3>
-            </div>
-            <ManagerFormRow
-              questionNum={++questionNum}
-              formQuestion="Evaluate performance and achieved goals"
-            />
-            <ManagerFormRow
-              questionNum={++questionNum}
-              formQuestion="Discuss Areas of excellance or improvement"
-            />
-            <ManagerFormRow
-              questionNum={++questionNum}
-              formQuestion="Discuss areas of development or improvement"
-            />
-            <ManagerFormRow
-              questionNum={++questionNum}
-              formQuestion="Develop future goals with set expectation"
-            />
-
-
-            <SubmitOrSignButton formType="manager" status="" buttonType="submit"/>  
-            <SubmitOrSignButton formType="manager" status="" buttonType="sign"/>  
-            
-          </div>
-        </div>
-
-        <div className="right-pane">
-          <div className="employee-info">
-            <p>Employee Info</p>
-          </div>
-          <div className="comments">
-            <p>Ratings</p>
-          </div>
-        </div>
+      {/* <div className="formSection"> */}props: 
+      <div className="question-container">
+        <FormList isEmployee={false} />
       </div>
+      {/* <div className="right-side"> */}
+      <div className="employee-info-container">
+        <p>Employee Info</p>
+        <StatusPane status="Opened" email="john.doe@gmail.com" />
+      </div>
+      <div className="ratings-container">
+        <p>Ratings</p>
+        {<StarRanking formType="employee"></StarRanking>}
+      </div>
+      <div className="signature-submit-container">
+        <p>Signature and Submit</p>
+        <SubmitOrSignButton formType="manager" status="" buttonType="submit" />
+        <SubmitOrSignButton formType="manager" status="" buttonType="sign" />
+      </div>
+      {/* </div> */}
+      {/* </div> */}
     </>
   );
 }

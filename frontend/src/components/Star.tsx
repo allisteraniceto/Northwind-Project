@@ -68,34 +68,46 @@ interface Props {
 
 interface StarProps {
   formType: String;
+  questionNum: number;
   category: String;
 }
 
-export default function Star({ formType, category }: StarProps) {
-  let globalrating;
-  const [inputObject, setInputObject] = useState({
-    formType,
-    category,
+export default function Star(props: StarProps) {
+
+  const [getRatingInputObject, setInputObject] = useState({
+    formType: props.formType,
+    inputValue: 0,
+    questionNum: props.questionNum,
   });
 
-  let rating2;
+  const [setRatingInputObject, setOutputRating] = useState({
+    formType: props.formType,
+    inputValue: 0,
+    questionNum: props.questionNum,
+  });
+
+  //initialize changing the rating with the received rating
+  const [selectedRating, setSelectedRating] = useState<number>(getRatingInputObject.inputValue);
+
+  // get the current ratings
+  let responseContent;
   useEffect(() => {
-    // Make a GET request to API endpoint to get the status of this review
+    // Make a GET request to API endpoint to get rating
     const getRating = async () => {
       try {
         const response = await axios.post(
           `${config.apiUrl}/SubmissionForm/GetRating`,
-          inputObject,
+          getRatingInputObject,
           {
             headers: {
               "Content-Type": "application/json",
             },
           }
         );
-
         // Handle the response data
-        rating2 = response.data.Content;
-        globalrating = rating2;
+        responseContent = response.data.Content;
+        setSelectedRating(responseContent.Rating);
+        //getRatingInputObject.firstRating = responseContent.Rating;
       } catch (error: any) {
         console.error("Error fetching data:", error.message);
       }
@@ -103,17 +115,52 @@ export default function Star({ formType, category }: StarProps) {
     getRating();
   }, []); // Run the effect only when component mounts for the first time
 
-  const [rating, setRating] = useState(0); // Initial value
+
+  //const [displayRating, setRating] = useState(0); // Initial value
+  // save the inputed rating
+  useEffect(() => {
+  const saveRating = async () => {
+    try {
+      setRatingInputObject.inputValue = selectedRating;
+      //axios.post(api endpoint, data, headers)
+      const response = await axios.post(
+        `${config.apiUrl}/SubmissionForm/SaveRating`,
+        setRatingInputObject,
+        {
+          headers: {
+            //metadata for server
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      console.log("Response data: ", response.data);
+    } catch (error: any) {
+      //post request error handling
+      console.error("Error making Post request:", error.message);
+    
+    }
+  };
+  }, [selectedRating]); //run each time the rating is changed
+
+
+  
+
+  //runs each time display Rating is changed
+ // useEffect(() => {
+  //  setRatingInputObject.inputValue = 1;
+  //  saveRating();
+  //}, [displayRating]);
+  
   return (
     <>
       <nav className="text">
-        {globalrating.Value}
-        {String(category).padEnd(30, "_")}
+        {String(props.category).padEnd(0, "_")}
         <nav className="rating">
           <Rating
             style={{ maxWidth: 250 }}
-            value={rating}
-            onChange={setRating}
+            value={selectedRating}
+            onChange={setSelectedRating}
           />
         </nav>
       </nav>

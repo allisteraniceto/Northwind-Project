@@ -20,7 +20,8 @@
   
   .text{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 10px;
   } 
 
   .rating{

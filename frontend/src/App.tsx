@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; //import react-router-dom
+import { useState, useEffect } from "react";
 import NoPage from "./pages/NoPage";
 import EmployeePage from "./pages/EmployeePage";
 import HrPage from "./pages/HrPage";
@@ -9,21 +10,40 @@ import ManagerReviewFormPage from "./pages/ManagerReviewFormPage";
 import "./global.css";
 
 export default function App() {
+  const [reviewFormPage, setReviewFormPage] = useState(false);
+  const [loggedInHID, setLoggedInHID] = useState<number>(2); //2 for now
+
+  useEffect(() => {
+    setLoggedInHID(2); //will have to set this once login is implemented
+    console.log(loggedInHID);
+  }, []);
+
+  // to see if routed to a review form page
+  const handleReviewFormPage = (isReviewForm: boolean) => {
+    setReviewFormPage(isReviewForm);
+  };
   return (
-    <div className="page">
+    <div className={reviewFormPage ? "page-review-form" : "page"}>
       <Router>
         <Routes>
           <Route index element={<EmployeePage />} />
           <Route path="/Employee" element={<EmployeePage />} />
           <Route path="/Hr" element={<HrPage />} />
-          <Route path="/Manager" element={<ManagerPage />} />
+          <Route
+            path="/Manager"
+            element={<ManagerPage managerHID={loggedInHID} />}
+          />
           <Route
             path="/EmployeeReviewForm"
-            element={<EmployeeReviewFormPage />}
+            element={
+              <EmployeeReviewFormPage setReviewForm={handleReviewFormPage} />
+            }
           />
           <Route
             path="/ManagerReviewForm"
-            element={<ManagerReviewFormPage />}
+            element={
+              <ManagerReviewFormPage setReviewForm={handleReviewFormPage} />
+            }
           />
           <Route path="*" element={<NoPage />} />{" "}
           {/* *: anything else another the other routes */}

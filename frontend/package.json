@@ -10,16 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.15.14",
-    "@mui/material": "^5.15.14",
     "@smastrom/react-rating": "^1.5.0",
     "axios": "^1.6.7",
-    "classnames": "^2.5.1",
-    "prop-types": "^15.8.1",
+    "flat-color-icons": "^1.1.0",
+    "i": "^0.3.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-rating": "^2.0.5",
     "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
@@ -32,6 +30,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^5.2.8"
   }
 }
