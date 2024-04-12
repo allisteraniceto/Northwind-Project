@@ -602,7 +602,9 @@
             "related": ".pdb;.xml"
           }
         },
-        "frameworkReferences": ["Microsoft.AspNetCore.App"]
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Swashbuckle.AspNetCore.SwaggerGen/6.5.0": {
         "type": "package",
@@ -632,7 +634,9 @@
             "related": ".pdb;.xml"
           }
         },
-        "frameworkReferences": ["Microsoft.AspNetCore.App"]
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "System.Collections.Immutable/6.0.0": {
         "type": "package",
@@ -2627,24 +2631,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\allister18\\.nuget\\packages\\": {}
+    "C:\\Users\\xxmar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\xxmar\\NWProject2\\Northwind-Project-1\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\allister18\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\obj\\",
+      "projectPath": "C:\\Users\\xxmar\\NWProject2\\Northwind-Project-1\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\xxmar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\xxmar\\NWProject2\\Northwind-Project-1\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\allister18\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\xxmar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
-      "originalTargetFrameworks": ["net6.0"],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -2655,7 +2660,9 @@
         }
       },
       "warningProperties": {
-        "warnAsError": ["NU1605"]
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
@@ -2704,6 +2711,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2712,7 +2737,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -2723,7 +2748,9 @@
       "warningLevel": 1,
       "message": "backend depends on Newtonsoft.Json (>= 6.0.0) but Newtonsoft.Json 6.0.0 was not found. An approximate best match of Newtonsoft.Json 6.0.1 was resolved.",
       "libraryId": "Newtonsoft.Json",
-      "targetGraphs": ["net6.0"]
+      "targetGraphs": [
+        "net6.0"
+      ]
     },
     {
       "code": "NU1701",
@@ -2731,7 +2758,9 @@
       "warningLevel": 1,
       "message": "Package 'EntityFramework 6.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "EntityFramework",
-      "targetGraphs": ["net6.0"]
+      "targetGraphs": [
+        "net6.0"
+      ]
     },
     {
       "code": "NU1701",
@@ -2739,7 +2768,9 @@
       "warningLevel": 1,
       "message": "Package 'Newtonsoft.Json 6.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "Newtonsoft.Json",
-      "targetGraphs": ["net6.0"]
+      "targetGraphs": [
+        "net6.0"
+      ]
     }
   ]
 }
