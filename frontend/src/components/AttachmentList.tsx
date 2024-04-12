@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-
+import axios from "axios";
+import config from "../../config.json";
 import AttachmentCard from "./AttachmentCard";
 import attachmentsData from "../dummy-attachments.json"; //attachmentsData will be an aray
 
@@ -15,6 +16,7 @@ interface Attachment {
   uploaded_by: string;
   uploaded_date: string;
 }
+const currentYear = new Date().getFullYear();
 
 export default function AttachmentList() {
   const [attachmentList, setAttachmentList] = useState<Attachment[]>(
@@ -33,6 +35,22 @@ export default function AttachmentList() {
     );
   };
 
+  const handleAttachmentDelete = async (attachmentId: number) => {
+    try {
+      
+      await axios.post(`${config.apiUrl}/Attachments/DeleteAttachment`, {
+        attachmentId: attachmentId  ,
+        year: currentYear    });
+     
+      setAttachmentList((prevList) =>
+        prevList.filter((attachment) => attachment.attachment_id !== attachmentId)
+      );
+
+    } catch (error) {
+      console.error("Error deleting attachment:", error);
+    }
+  };
+  
   // //GET request to retreive list of attachments from employee
   // useEffect(() => {
   //   axios
@@ -63,6 +81,8 @@ export default function AttachmentList() {
             attachNum={attachment.attachment_id}
             attachPath="./path"
             onSelect={handleAttachmentSelect} //pass click handle function to get selected ID
+            onDelete={() => handleAttachmentDelete(attachment.attachment_id)}
+
             isSelected={attachment.attachment_id === selectedAttachment}
           />
         )

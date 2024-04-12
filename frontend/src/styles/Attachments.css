@@ -42,3 +42,14 @@
 .attachment-card.clicked {
   background-color: #7e7c7c;
 }
+.button-group {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+}
+
+/* Or, if you prefer using grid layout */
+.button-group {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, auto); /* Two columns */
+  column-gap: 8px; /* Adjust the gap between buttons */
+}

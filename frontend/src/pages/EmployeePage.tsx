@@ -1,6 +1,7 @@
 //Employee Dashboard
-import { useEffect } from "react";
+import { useEffect, useState} from "react";
 import axios from "axios";
+
 
 import Header from "../components/Header";
 import RatingTile from "../components/RatingTile";
@@ -12,7 +13,14 @@ import "../styles/InteractionsPane.css";
 import "../styles/EmployeeDashboard.css";
 import config from "../../config.json";
 
+import YearCardList from "../components/YearCardList";
+
+import '../styles/YearCard.css'; // Import the CSS file
+import '../styles/YearCardList.css'; // Import the CSS file
+
 export default function EmployeePage() {
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+
   // Make a GET request to API endpoint for the EmployeeHID of the logged in employee
   useEffect(() => {
     const fetchEmployeeHID = async () => {
@@ -32,6 +40,14 @@ export default function EmployeePage() {
     };
     fetchEmployeeHID(); // Call the fetchData function
   }, []); // Run the effect only when component mounts for the first time
+
+    
+  const handleYearSelected = (year: number | null) => {
+    console.log(`Year ${year} selected`);
+    setSelectedYear(year);
+  };
+
+
 
   return (
     <>
@@ -55,6 +71,12 @@ export default function EmployeePage() {
         </div>
       </div>
       <div className="selected-employee-container">
+
+             
+           {/* Display performance review year only when both an employee and a year are selected */}
+  
+            <p>Performance Review Year: {selectedYear}</p>
+
         <SelectedEmployee EmployeeId={1}/>
         <PerformanceReviewButton
           linkTo="/EmployeeReviewForm"
@@ -69,7 +91,8 @@ export default function EmployeePage() {
       </div>
       <div className="previous-years-container">
         {/* PREVIOUS REVIEWS */}
-        <p>Previous Reviews</p>
+        <YearCardList startYear={2023} endYear={2029} onYearSelected={handleYearSelected} />
+
       </div>
       {/* </div> */}
       {/* </div> */}

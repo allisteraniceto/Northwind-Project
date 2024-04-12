@@ -13,7 +13,14 @@ import "../styles/EmployeeList.css";
 import "../styles/Attachments.css"; //.attachments-container
 import "../styles/InteractionsPane.css"; //.interactions-section, .elected-employee-container, .previous-years-container
 
+import YearCardList from "../components/YearCardList";
+
+import '../styles/YearCard.css'; // Import the CSS file
+import '../styles/YearCardList.css'; // Import the CSS file
+
 function HrPage() {
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+
   const [selectedEmployeeID, setSelectedEmployeeID] = useState<number | null>(
     null
   );
@@ -33,6 +40,14 @@ function HrPage() {
     setExpandManager(false);
     setSelectedEmployeeID(null);
   };
+
+    
+  const handleYearSelected = (year: number | null) => {
+    console.log(`Year ${year} selected`);
+    setSelectedYear(year);
+  };
+
+
 
   //track expandManager state
   useEffect(() => {
@@ -57,6 +72,16 @@ function HrPage() {
         />
       </div>
       <div className="selected-employee-container">
+             
+          {/* Display performance review year only when both an employee and a year are selected */}
+          {selectedEmployeeID !== null && selectedYear !== null ? (
+          <p>Performance Review Year: {selectedYear}</p>
+        ) : selectedEmployeeID !== null ? (
+          <p>Please select a performance review year</p>
+        ) : (
+          <p>Please select an employee</p>
+        )}
+
         <SelectedEmployee EmployeeId={selectedEmployeeID} />
         <PerformanceReviewButton
           linkTo="/ManagerReviewForm"
@@ -73,7 +98,8 @@ function HrPage() {
       </div>
       <div className="previous-years-container">
         {/*PREVIOUS REVIEWS*/}
-        <p>Previous Reviews</p>
+        <YearCardList startYear={2023} endYear={2029} onYearSelected={handleYearSelected} />
+
       </div>
     </>
   );

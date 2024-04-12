@@ -82,13 +82,8 @@ function ManagerPage(props: ManagerPageProps) {
         />
       </div>
       <div className="selected-employee-container">
-        <SelectedEmployee EmployeeId={selectedEmployeeID} />
 
-        <PerformanceReviewButton
-          linkTo="/ManagerReviewForm"
-          reviewStatus="Finalized"
-          />
-
+        
            {/* Display performance review year only when both an employee and a year are selected */}
            {selectedEmployeeID !== null && selectedYear !== null ? (
             <p>Performance Review Year: {selectedYear}</p>
@@ -97,6 +92,14 @@ function ManagerPage(props: ManagerPageProps) {
           ) : (
             <p>Please select an employee</p>
           )}
+
+        <SelectedEmployee EmployeeId={selectedEmployeeID} />
+
+        <PerformanceReviewButton
+          linkTo="/ManagerReviewForm"
+          reviewStatus="Finalized"
+          />
+
 
         <p>User ID: {selectedEmployeeID}</p>
         
