@@ -30,6 +30,7 @@ html {
   grid-template-areas: "top-bar";
   max-width: 1200px;
   margin: 20px auto; /*top/bottom left-right */
+  min-height: 100vh;
 }
 
 .page-review-form {
