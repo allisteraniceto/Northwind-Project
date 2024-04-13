@@ -2,12 +2,12 @@ import Nav from "./Nav";
 import Profile from "../components/Profile";
 import NorthwindLogo from "/northwind-logo.png";
 
-import "../styles/Topbar.css";
+import "../styles/Header.css";
 
 export default function Header() {
   return (
     <>
-      <div className="topbar">
+      <div className="header">
         <div className="northwind-logo-container">
           <img
             className="northwind-logo"
