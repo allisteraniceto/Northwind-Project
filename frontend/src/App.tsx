@@ -65,7 +65,7 @@ export default function App() {
     setReviewFormPage(isReviewForm);
   };
   return (
-    <div className={reviewFormPage ? "page-review-form" : "page"}>
+    <div>
       <Router>
         <Routes>
           <Route index element={<EmployeePage employeeHID={EmployeeHID} />} />
@@ -80,15 +80,11 @@ export default function App() {
           />
           <Route
             path="/EmployeeReviewForm"
-            element={
-              <EmployeeReviewFormPage setReviewForm={handleReviewFormPage} />
-            }
+            element={<EmployeeReviewFormPage />}
           />
           <Route
             path="/ManagerReviewForm"
-            element={
-              <ManagerReviewFormPage setReviewForm={handleReviewFormPage} />
-            }
+            element={<ManagerReviewFormPage />}
           />
           <Route path="*" element={<NoPage />} />{" "}
           {/* *: anything else another the other routes */}
