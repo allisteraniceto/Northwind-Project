@@ -37,6 +37,15 @@ public class SubmissionFormController : ControllerBase
 
     }
 
+    [HttpGet]
+    [Route("GetManagerHID")]
+    public IActionResult GetManagerHID()
+    {
+       return Ok(Globals.UserIdentity.ManagerHID);
+
+    }
+
+
     [HttpPost]
     [Route("SaveResponse")] 
     public IActionResult SaveResponse([FromBody] Response response)
