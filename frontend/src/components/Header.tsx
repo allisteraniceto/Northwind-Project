@@ -1,4 +1,4 @@
-import Nav from "../components/NavBar";
+import Nav from "./Nav";
 import Profile from "../components/Profile";
 import NorthwindLogo from "/northwind-logo.png";
 
