@@ -29,7 +29,7 @@ html {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "top-bar";
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto; /*top/bottom left-right */
 }
 
 .page-review-form {
