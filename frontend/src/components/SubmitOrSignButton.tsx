@@ -19,13 +19,14 @@ export default function SubmitButton(props: SubmitButtonProps) {
 
   useEffect(() => {
     // Make a GET request to API endpoint to get the status of this review
-    const fetchStatus = async () => {
-      try {
-          const response = await axios.get(`${config.apiUrl}/SubmissionForm/GetStatus`, {
-              headers: { 
-                  'Content-Type': 'application/json'
-              }
-          });
+    const fetchStatus = async () => 
+      {
+        try {
+            const response = await axios.get(`${config.apiUrl}/SubmissionForm/GetStatus`, {
+                headers: { 
+                    'Content-Type': 'application/json'
+                }
+      });
   
           // Handle the response data
           const responseData = response.data;
