@@ -14,7 +14,6 @@ import YearCardList from "../components/YearCardList";
 
 import "../styles/YearCard.css"; // Import the CSS file
 import "../styles/YearCardList.css"; // Import the CSS file
-
 interface EmployeePageProps {
   employeeHID: number;
 }
