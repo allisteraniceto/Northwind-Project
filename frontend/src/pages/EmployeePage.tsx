@@ -1,13 +1,11 @@
 //Employee Dashboard
-import { useEffect } from "react";
-import axios from "axios";
-
 import Header from "../components/Header";
+import {useEffect} from 'react';
+import axios from "axios";
 import RatingTile from "../components/RatingTile";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import AttachmentList from "../components/AttachmentList";
 import SelectedEmployee from "../components/SelectedEmployee";
-
 import "../styles/InteractionsPane.css";
 import "../styles/EmployeeDashboard.css";
 import config from "../../config.json";
@@ -17,26 +15,22 @@ interface EmployeePageProps {
 }
 
 export default function EmployeePage({ employeeHID }: EmployeePageProps) {
-  // Make a GET request to API endpoint for the EmployeeHID of the logged in employee
-  useEffect(() => {
-    const fetchEmployeeHID = async () => {
-      try {
-        await axios.post(
-          `${config.apiUrl}/SubmissionForm/SetSelectedEmployeeHID`,
-          -1,
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
-      } catch (error: any) {
-        console.error("Error fetching data:", error.message);
-      }
-    };
-    fetchEmployeeHID(); // Call the fetchData function
-  }, []); // Run the effect only when component mounts for the first time
-
+    // call EmulateEmployee on backend to change the Global Identity information to that of a logged in employee. THIS IS FOR DEMO PURPOSES ONLY.
+    useEffect(() => {
+      // Make a GET request to API endpoint to get the status of this review
+      const emulateEmployee = async () => {
+        try {
+            await axios.get(`${config.apiUrl}/EmployeeDashboard/EmulateEmployee`, {
+                headers: { 
+                    'Content-Type': 'application/json'
+                }
+            });
+        } catch (error: any) {
+            console.error('Error fetching data:', error.message);
+        }
+      };
+      emulateEmployee(); 
+    }, []); // Run the effect only when component mounts for the first time
   return (
     <div>
       <Header />
