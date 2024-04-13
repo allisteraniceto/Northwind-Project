@@ -10,11 +10,11 @@ interface DownloadButtonProps {
   year: number;
 }
 
-const DownloadButton: React.FC<DownloadButtonProps> = ({
+function DownloadButton({
   attachmentId,
   attachmentName,
   year,
-}) => {
+}: DownloadButtonProps) {
   const downloadAttachment = async () => {
     try {
       const response = await axios.post(
@@ -41,10 +41,10 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
   return (
     <div className="download-button" onClick={downloadAttachment}>
       <IconContext.Provider value={{ size: "1.5em" }}>
-        <AiOutlineDownload />
+        <AiOutlineDownload className="download-logo" />
       </IconContext.Provider>
     </div>
   );
-};
+}
 
 export default DownloadButton;

@@ -35,35 +35,50 @@ export default function AttachmentList() {
     );
   };
 
-  const handleAttachmentDelete = async (attachmentId: number) => {
+  const handleAttachmentDelete = async (
+    attachmentId: number,
+    filename: string
+  ) => {
     try {
-      
-      await axios.post(`${config.apiUrl}/Attachments/DeleteAttachment`, {
-        attachmentId: attachmentId  ,
-        year: currentYear    });
-     
-      setAttachmentList((prevList) =>
-        prevList.filter((attachment) => attachment.attachment_id !== attachmentId)
+      const updatedAttachmentList = attachmentList.filter(
+        (attachment) => attachment.attachment_id !== attachmentId
       );
+      setAttachmentList(updatedAttachmentList);
+      console.log(attachmentList);
+      // If the selected attachment is deleted, clear the selection
+      if (attachmentId === selectedAttachment) {
+        setSelectedAttachment(null);
+      }
 
+      //DELETE attachment in backend later (for now)
+      await axios.post(`${config.apiUrl}/Attachments/DeleteAttachment`, {
+        params: {
+          year: currentYear,
+          attachmentName: filename,
+        },
+      });
     } catch (error) {
       console.error("Error deleting attachment:", error);
     }
   };
-  
-  // //GET request to retreive list of attachments from employee
-  // useEffect(() => {
-  //   axios
-  //     .get(`${config.apiUrl}/EmployeeDashboard/AttachmentListAll`) //no endpoint yet for attachments
-  //     .then((response) => {
-  //       setAttachmentList(response.data);
-  //       console.log(`AttachmentList: ${attachmentList}`);
-  //     })
-  //     .catch((error) => {
-  //       //handle errors
-  //       console.error("Errore making GET request", error.message);
-  //     });
-  // });
+
+  //GET request to retreive list of attachments from employee
+  useEffect(() => {
+    const getAllAttachments = async () => {
+      try {
+        const response = await axios.get(
+          `${config.apiUrl}/Attachments/GetAllAttachments`,
+          {}
+        ); //no endpoint yet for attachments
+        setAttachmentList(response.data);
+        console.log(`AttachmentList: ${attachmentList}`);
+        getAllAttachments();
+      } catch (error) {
+        //handle errors
+        console.error("Errore making GET request", error);
+      }
+    };
+  }, []);
 
   //hardcoded for now
   useEffect(() => {
@@ -81,8 +96,9 @@ export default function AttachmentList() {
             attachNum={attachment.attachment_id}
             attachPath="./path"
             onSelect={handleAttachmentSelect} //pass click handle function to get selected ID
-            onDelete={() => handleAttachmentDelete(attachment.attachment_id)}
-
+            onDelete={() =>
+              handleAttachmentDelete(attachment.attachment_id, attachment.name)
+            }
             isSelected={attachment.attachment_id === selectedAttachment}
           />
         )

@@ -53,20 +53,25 @@ export default function EmployeeList(props: EmployeeListProps) {
 
   //GET request to retrieve list of employees (direct reports)
   useEffect(() => {
-    axios
-      .get(`${config.apiUrl}/${props.dashboard}/${props.listType}`, {
-        params: {
-          employee_HID: props.managerHID,
-        },
-      })
-      .then((response) => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `${config.apiUrl}/${props.dashboard}/${props.listType}`,
+          {
+            params: {
+              employee_HID: props.managerHID,
+            },
+          }
+        );
         setEmployeeList(response.data);
         console.log("manager id prop:", props.managerHID);
-      })
-      .catch((error) => {
+      } catch (error) {
         //handle errors
-        console.error("Error making Get request:", error.message);
-      });
+        console.error("Error making Get request:", error);
+      }
+    };
+
+    fetchData();
   }, [props.expandManager]); //updates employeeList after component mounts and when expandManager changes
 
   return (

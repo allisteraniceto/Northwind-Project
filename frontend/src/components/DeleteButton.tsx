@@ -1,23 +1,29 @@
 import { IconContext } from "react-icons";
 import { CiTrash } from "react-icons/ci";
-<CiTrash />
+<CiTrash />;
 
 interface DeleteButtonProps {
-  onDelete: () => void; // Callback function to handle the delete action
+  onDelete: (attachmentNum: number, filename: string) => void; // Callback function to handle the delete action
+  attachmentNum: number;
+  attachmentName: string;
 }
 
-const DeleteButton = ({ onDelete }: DeleteButtonProps) => {
+function DeleteButton({
+  onDelete,
+  attachmentNum,
+  attachmentName,
+}: DeleteButtonProps) {
   const handleClick = () => {
-    onDelete();
+    onDelete(attachmentNum, attachmentName);
   };
 
   return (
     <div className="delete-button" onClick={handleClick}>
       <IconContext.Provider value={{ size: "1.5em" }}>
-        <CiTrash />
+        <CiTrash className="trash-logo" />
       </IconContext.Provider>
     </div>
   );
-};
+}
 
 export default DeleteButton;

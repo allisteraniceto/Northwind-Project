@@ -15,7 +15,6 @@ interface AttachmentProps {
   onSelect: HandleFunction;
   isSelected: boolean;
   onDelete: () => void; // Callback function to handle the delete action
-
 }
 
 export default function AttachmentCard({
@@ -23,12 +22,11 @@ export default function AttachmentCard({
   onSelect,
   isSelected,
   attachName,
-  onDelete
-
+  onDelete,
 }: AttachmentProps) {
   const handleClick = () => {
     onSelect(attachNum);
-};
+  };
 
   //destructure AttachmentProps
   return (
@@ -39,9 +37,16 @@ export default function AttachmentCard({
         <p>{attachName}</p>
       </div>
       <div className="button-group">
-        <DeleteButton onDelete={onDelete} />
-        <DownloadButton attachmentId={attachNum} attachmentName={attachName} year={currentYear} />
-
+        <DeleteButton
+          onDelete={onDelete}
+          attachmentNum={attachNum}
+          attachmentName={attachName}
+        />
+        <DownloadButton
+          attachmentId={attachNum}
+          attachmentName={attachName}
+          year={currentYear}
+        />
       </div>
     </div>
   );
