@@ -15,9 +15,6 @@ function NavBar() {
           <li>
             <Link to="/Hr">HR</Link>
           </li>
-          <li>
-            <Link to="/ReviewForm">Review Form</Link>
-          </li>
         </ul>
       </nav>
     </>

@@ -21,27 +21,28 @@ namespace backend.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Appointment", b =>
+            modelBuilder.Entity("Attachment", b =>
                 {
-                    b.Property<int>("AppointmentID")
+                    b.Property<int>("FileID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AppointmentID"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FileID"), 1L, 1);
 
-                    b.Property<DateTime>("DateAndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Event")
+                    b.Property<string>("AttachmentName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Caption")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("ReviewID")
                         .HasColumnType("int");
 
-                    b.HasKey("AppointmentID");
+                    b.HasKey("FileID");
 
-                    b.ToTable("Appointments");
+                    b.ToTable("Attachments");
                 });
 
             modelBuilder.Entity("Log", b =>
@@ -92,6 +93,9 @@ namespace backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RatingID"), 1L, 1);
 
+                    b.Property<int>("HID")
+                        .HasColumnType("int");
+
                     b.Property<int>("QuestionID")
                         .HasColumnType("int");
 
@@ -136,7 +140,10 @@ namespace backend.Migrations
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("nvarchar(15)");
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
 
                     b.HasKey("ReviewID");
 

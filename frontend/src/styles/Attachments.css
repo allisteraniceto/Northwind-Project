@@ -1,0 +1,44 @@
+.attachment-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.attachment-list-header {
+  width: 100%;
+  padding-left: 10%;
+  margin: 10px;
+}
+
+.attachment-list-header h3 {
+  font-weight: bold;
+}
+
+.attachment-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+  border: 1px solid #9e9b9b;
+  border-radius: 7px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.12);
+  height: 60px;
+  width: 80%;
+  background-color: #ffffff;
+  padding: 10px;
+  max-width: 800px;
+  cursor: pointer;
+}
+
+.attachment-card:hover {
+  background-color: #b5b3b3;
+  transition-delay: 5ms;
+}
+
+.attachment-card.clicked {
+  background-color: #7e7c7c;
+}

@@ -1,0 +1,14 @@
+.manager-section {
+  grid-area: 4 / 1 / -1 / -1;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+/*go button container*/
+.go-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

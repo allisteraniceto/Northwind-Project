@@ -13,8 +13,22 @@ builder.Services.AddSwaggerGen();
 
 //Dependency injection of DbContext Class
 builder.Services.AddDbContext<APIDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-IdentityService.ObtainIdentity();
+IdentityService.ObtainIdentity(); //Obtain the identity of the user
 
+var provider = builder.Services.BuildServiceProvider();
+var configuration = provider.GetRequiredService<IConfiguration>();
+var frontendURL = configuration.GetValue<string>("frontend_url");
+//dependency injection for EmailSender
+builder.Services.AddTransient<EmailSender>();
+
+
+// builder.Services.AddCors(options => 
+// {
+//     options.AddDefaultPolicy(policy => 
+//     {
+//         policy.WithOrigins(frontendURL).AllowAnyMethod().AllowAnyHeader();
+//     });
+// });
 
 var app = builder.Build();
 
@@ -25,7 +39,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
+
+app.UseCors(options => {
+    options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+});
 
 app.UseAuthorization();
 

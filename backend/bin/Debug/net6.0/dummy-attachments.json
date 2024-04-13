@@ -1,0 +1,32 @@
+{
+  "attachments": [
+    {
+      "name": "Performance_Report_Q1.pdf",
+      "type": "PDF",
+      "size": "2.5MB",
+      "uploaded_by": "John Doe",
+      "uploaded_date": "2024-03-15"
+    },
+    {
+      "name": "Excel_Sheet_KPIs.xlsx",
+      "type": "Excel",
+      "size": "1.8MB",
+      "uploaded_by": "Jane Smith",
+      "uploaded_date": "2024-03-16"
+    },
+    {
+      "name": "Feedback_Survey_Results.docx",
+      "type": "Word",
+      "size": "1.2MB",
+      "uploaded_by": "Emily Johnson",
+      "uploaded_date": "2024-03-17"
+    },
+    {
+      "name": "Presentation_Slides.pptx",
+      "type": "PowerPoint",
+      "size": "3.0MB",
+      "uploaded_by": "Michael Brown",
+      "uploaded_date": "2024-03-18"
+    }
+  ]
+}

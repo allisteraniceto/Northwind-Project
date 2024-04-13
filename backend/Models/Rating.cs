@@ -14,4 +14,7 @@ public class Rating
 
     [Required]
     public int QuestionID {get; set;}
+
+    [Required]
+    public int HID { get; set; }
 }

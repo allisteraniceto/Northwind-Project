@@ -1,3 +1,146 @@
+<<<<<<< HEAD
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/appsettings.Development.json
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/appsettings.json
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/employees.json
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/backend.exe
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/backend.deps.json
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/backend.runtimeconfig.json
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/backend.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/backend.pdb
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/CsvHelper.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/EntityFramework.SqlServer.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/EntityFramework.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Humanizer.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.Data.SqlClient.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.Identity.Client.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.OpenApi.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Newtonsoft.Json.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/System.Configuration.ConfigurationManager.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/System.Drawing.Common.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/System.Runtime.Caching.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/System.Security.Permissions.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/System.Windows.Extensions.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.csproj.AssemblyReference.cache
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.AssemblyInfoInputs.cache
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.AssemblyInfo.cs
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.csproj.CoreCompileInputs.cache
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.sourcelink.json
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/staticwebassets.build.json
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/staticwebassets.development.json
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/staticwebassets/msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/staticwebassets/msbuild.build.backend.props
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.backend.props
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.backend.props
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/staticwebassets.pack.json
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/scopedcss/bundle/backend.styles.css
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.csproj.CopyComplete
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/refint/backend.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.pdb
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/backend.genruntimeconfig.cache
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/obj/Debug/net6.0/ref/backend.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/appsettings.Development.json
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/appsettings.json
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/employees.json
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/backend
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/backend.deps.json
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/backend.runtimeconfig.json
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/backend.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/backend.pdb
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/CsvHelper.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/EntityFramework.SqlServer.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/EntityFramework.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Humanizer.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.Data.SqlClient.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.Identity.Client.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.OpenApi.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/System.Configuration.ConfigurationManager.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/System.Drawing.Common.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/System.Runtime.Caching.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/System.Security.Permissions.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/System.Windows.Extensions.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.csproj.AssemblyReference.cache
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.GeneratedMSBuildEditorConfig.editorconfig
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.AssemblyInfoInputs.cache
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.AssemblyInfo.cs
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.csproj.CoreCompileInputs.cache
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.MvcApplicationPartsAssemblyInfo.cs
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.MvcApplicationPartsAssemblyInfo.cache
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.sourcelink.json
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/staticwebassets.build.json
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/staticwebassets.development.json
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/staticwebassets/msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/staticwebassets/msbuild.build.backend.props
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.backend.props
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.backend.props
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/staticwebassets.pack.json
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/scopedcss/bundle/backend.styles.css
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.csproj.CopyComplete
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/refint/backend.dll
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.pdb
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/backend.genruntimeconfig.cache
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/obj/Debug/net6.0/ref/backend.dll
 C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.csproj.AssemblyReference.cache
 C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.GeneratedMSBuildEditorConfig.editorconfig
 C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.AssemblyInfoInputs.cache
@@ -5,30 +148,24 @@ C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.AssemblyInf
 C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.csproj.CoreCompileInputs.cache
 C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.MvcApplicationPartsAssemblyInfo.cs
 C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.dll
+C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\refint\backend.dll
+C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.pdb
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\appsettings.Development.json
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\appsettings.json
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\employees.json
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\backend.exe
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\backend.deps.json
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\backend.runtimeconfig.json
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\backend.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\backend.pdb
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets.build.json
-C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets.development.json
-C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\scopedcss\bundle\backend.styles.css
-C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.csproj.CopyComplete
-C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.dll
-C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\refint\backend.dll
-C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.pdb
-C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.genruntimeconfig.cache
-C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\ref\backend.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\CsvHelper.dll
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\EntityFramework.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Humanizer.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
@@ -38,7 +175,12 @@ C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.IdentityM
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
@@ -58,8 +200,150 @@ C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win\lib\ne
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\employees.json
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\CsvHelper.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\EntityFramework.SqlServer.dll
-C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\EntityFramework.dll
+C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets.build.json
+C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets.development.json
+C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\scopedcss\bundle\backend.styles.css
+C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.csproj.CopyComplete
+C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\backend.genruntimeconfig.cache
+C:\VSCodeProjects\Northwind-Project\backend\obj\Debug\net6.0\ref\backend.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\appsettings.json
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\employees.json
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\backend.exe
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\backend.deps.json
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\backend.runtimeconfig.json
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\backend.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\backend.pdb
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\CsvHelper.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\EntityFramework.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Humanizer.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.csproj.AssemblyReference.cache
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.AssemblyInfoInputs.cache
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.AssemblyInfo.cs
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.csproj.CoreCompileInputs.cache
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.sourcelink.json
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets\msbuild.build.backend.props
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.backend.props
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.backend.props
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\scopedcss\bundle\backend.styles.css
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.csproj.CopyComplete
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\refint\backend.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.pdb
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\backend.genruntimeconfig.cache
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\obj\Debug\net6.0\ref\backend.dll
+C:\Users\allister18\OneDrive - Washington State University (email.wsu.edu)\Documents\Senior Project\Northwind-Project\backend\bin\Debug\net6.0\dummy-attachments.json
+C:\VSCodeProjects\Northwind-Project\backend\bin\Debug\net6.0\dummy-attachments.json
+=======
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.csproj.AssemblyReference.cache
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.GeneratedMSBuildEditorConfig.editorconfig
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.AssemblyInfoInputs.cache
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.AssemblyInfo.cs
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.csproj.CoreCompileInputs.cache
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.MvcApplicationPartsAssemblyInfo.cs
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.MvcApplicationPartsAssemblyInfo.cache
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.dll
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/refint/backend.dll
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.pdb
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/appsettings.Development.json
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/appsettings.json
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/employees.json
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/backend.exe
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/backend.deps.json
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/backend.runtimeconfig.json
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/backend.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/backend.pdb
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/CsvHelper.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/EntityFramework.SqlServer.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/EntityFramework.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Humanizer.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.Data.SqlClient.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.Identity.Client.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.OpenApi.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Newtonsoft.Json.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/System.Configuration.ConfigurationManager.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/System.Drawing.Common.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/System.Runtime.Caching.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/System.Security.Permissions.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/System.Windows.Extensions.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+C:/VSCodeProjects/Northwind-Project/backend/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/staticwebassets.build.json
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/staticwebassets.development.json
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/scopedcss/bundle/backend.styles.css
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.csproj.CopyComplete
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/backend.genruntimeconfig.cache
+C:/VSCodeProjects/Northwind-Project/backend/obj/Debug/net6.0/ref/backend.dll
+C:/Users/allister18/OneDrive - Washington State University (email.wsu.edu)/Documents/Senior Project/Northwind-Project/backend/bin/Debug/net6.0/dummy-attachments.json
+/Users/allisteraniceto/Documents/Senior Project/northwind-project/backend/bin/Debug/net6.0/dummy-attachments.json
