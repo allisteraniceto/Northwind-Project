@@ -4,7 +4,7 @@ public static class IdentityService
 {
     public static void ObtainIdentity()
     {
-        var jsonString = "{\"FirstName\":\"Mark\",\"LastName\":\"Kneblik\",\"Email\":\"markkneblik@gmail.com\",\"HID\": 25, \"ManagerHID\": 3, \"Role\":\"Employee\"}";
+        var jsonString = "{\"FirstName\":\"Terry\",\"LastName\":\"Goggey\",\"Email\":\"tgoggey5@google.com.hk\",\"HID\": 6, \"ManagerHID\": 1, \"Role\":\"Employee\"}";
 
         Globals.IdentityJsonString = jsonString;
         Globals.UserIdentity = JsonSerializer.Deserialize<Identity>(jsonString);

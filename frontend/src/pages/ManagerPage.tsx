@@ -61,6 +61,24 @@ function ManagerPage(props: ManagerPageProps) {
       .catch((error) => console.log(error));
   }, [selectedEmployeeID]); //when selectedEmployee, set employeeHID global in backend
 
+
+  // call EmulateManager on backend to change the Global Identity information to that of a logged in manager. THIS IS FOR DEMO PURPOSES ONLY.
+  useEffect(() => {
+    // Make a GET request to API endpoint to get the status of this review
+    const emulateManager = async () => {
+      try {
+          await axios.get(`${config.apiUrl}/ManagerDashboard/EmulateManager`, {
+              headers: { 
+                  'Content-Type': 'application/json'
+              }
+          });
+      } catch (error: any) {
+          console.error('Error fetching data:', error.message);
+      }
+    };
+    emulateManager(); 
+  }, []); // Run the effect only when component mounts for the first time
+
   return (
     <div>
       <Header />
