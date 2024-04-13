@@ -17,9 +17,10 @@
           "C:\\Users\\allister18\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
-        "originalTargetFrameworks": ["net6.0"],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -30,7 +31,9 @@
           }
         },
         "warningProperties": {
-          "warnAsError": ["NU1605"]
+          "warnAsError": [
+            "NU1605"
+          ]
         }
       },
       "frameworks": {
@@ -60,6 +63,10 @@
               "version": "[6.0.0, )"
             },
             "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "PDFsharp": {
               "target": "Package",
               "version": "[6.0.0, )"
             },

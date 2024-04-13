@@ -131,4 +131,18 @@ public class ManagerDashboardController : ControllerBase
         
 
     }
+
+
+    [HttpGet]
+    [Route("EmulateManager")]
+    public IActionResult EmulateManager()
+    {
+        var jsonString = "{\"FirstName\":\"Rosanne\",\"LastName\":\"Bleything\",\"Email\":\"rbleything0@nyu.edu\",\"HID\": 1, \"ManagerHID\": 28, \"Role\":\"Manager\"}";
+
+        Globals.IdentityJsonString = jsonString;
+        Globals.UserIdentity = JsonSerializer.Deserialize<Identity>(jsonString);
+        Globals.SelectedEmployeeHID = Globals.UserIdentity.HID;
+
+        return Ok();
+    }
 }
