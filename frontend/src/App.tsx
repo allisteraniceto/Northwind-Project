@@ -11,7 +11,6 @@ import config from "../config.json";
 import "./global.css";
 
 export default function App() {
-  const [reviewFormPage, setReviewFormPage] = useState(false);
   const [EmployeeHID, setEmployeeHID] = useState<number>(0);
   const [ManagerHID, setManagerHID] = useState<number>(0);
 
@@ -60,10 +59,7 @@ export default function App() {
     fetchManagerHID(); // Call the fetchData function
   }, []); // Run the effect only when component mounts for the first time
 
-  // to see if routed to a review form page
-  const handleReviewFormPage = (isReviewForm: boolean) => {
-    setReviewFormPage(isReviewForm);
-  };
+
   return (
     <div>
       <Router>
