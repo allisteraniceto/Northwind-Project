@@ -14,13 +14,11 @@ export default function App() {
   const [EmployeeHID, setEmployeeHID] = useState<number>(0);
   const [ManagerHID, setManagerHID] = useState<number>(0);
 
-
-
   // Make a GET request to API endpoint for the EmployeeHID of the logged in employee
   useEffect(() => {
     const fetchEmployeeHID = async () => {
       try {
-         const response = await axios.get(
+        const response = await axios.get(
           `${config.apiUrl}/SubmissionForm/GetEmployeeHID`,
           {
             headers: {
@@ -30,7 +28,6 @@ export default function App() {
         );
 
         setEmployeeHID(response.data);
-
       } catch (error: any) {
         console.error("Error fetching data:", error.message);
       }
@@ -41,7 +38,7 @@ export default function App() {
   useEffect(() => {
     const fetchManagerHID = async () => {
       try {
-         const response = await axios.get(
+        const response = await axios.get(
           `${config.apiUrl}/SubmissionForm/GetManagerHID`,
           {
             headers: {
@@ -51,14 +48,12 @@ export default function App() {
         );
 
         setManagerHID(response.data);
-
       } catch (error: any) {
         console.error("Error fetching data:", error.message);
       }
     };
     fetchManagerHID(); // Call the fetchData function
   }, []); // Run the effect only when component mounts for the first time
-
 
   return (
     <div>

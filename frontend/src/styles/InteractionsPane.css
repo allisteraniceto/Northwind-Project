@@ -33,6 +33,11 @@
   align-items: center;
 }
 
+.link {
+  width: 10rem;
+  height: 100%;
+}
+
 .attachments-container {
   grid-column: 2/3;
   grid-row: 2/3;
@@ -62,9 +67,15 @@
   margin: 10px;
 }
 
-.performance-review-button {
+.link {
+  display: inline-block;
+  width: 9.2rem;
+}
+
+.link .performance-review-button {
   grid-column: 1/2;
   grid-row: 1/2;
+  display: inline-block;
   background-color: #4caf50;
   color: white;
   padding: 5px 15px;
@@ -73,6 +84,12 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 100%;
+  width: 8rem;
+}
+
+.link button:disabled {
+  color: #000;
+  background-color: rgb(69, 69, 69);
 }
 
 /* Hover effect on the button */
@@ -80,6 +97,7 @@
   background-color: #45a049;
 }
 
+/*
 .readonly-performance-review-button {
   position: absolute;
   top: 180px;
@@ -94,7 +112,7 @@
   font-size: 25px;
 }
 
-/* Hover effect on the button */
+/* Hover effect on the button
 .readonly-performance-review-button:hover {
   background-color: #4f5050;
 }
@@ -103,3 +121,4 @@
   height: 100%;
   align-items: center;
 }
+*/

@@ -17,7 +17,6 @@ import "../styles/EmployeeDashboard.css";
 import "../styles/Footer.css";
 import "../styles/YearCard.css"; // Import the CSS file
 import "../styles/YearCardList.css"; // Import the CSS file
-
 interface EmployeePageProps {
   employeeHID: number;
 }
@@ -53,7 +52,7 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
       <div className={"page"}>
         <div className="employee-dashboard">
           <div className="employee-rating-pane">
-            <RatingTile ratingNum={12} />
+            <RatingTile ratingNum={48} />
           </div>
           <div className="employee-criteria-pane">
             {/* CRITERIA CONTAINER */}
