@@ -57,6 +57,7 @@ import "../styles/StarRanking.css";
 
 interface Props {
   formType: String;
+  readOnlyStarRanking: number;
 }
 
 /*
@@ -70,28 +71,37 @@ interface Props {
         <Star category="Adaptability"></Star>
 */
 
-export default function StarRanking({ formType }: Props) {
+export default function StarRanking({ formType, readOnlyStarRanking}: Props) {
+  let ratingHeader;
+  if (formType == "manager")
+    ratingHeader= "Manager Ratings";
+  else if(formType == "employee")
+    ratingHeader= "Employee Ratings";
+
   return (
     <>
       <nav className="starRanking">
-        <Star formType={String(formType)} questionNum = {1} category="Growth Mindset" key="id1"></Star>
-        <Star formType={String(formType)} questionNum = {2} category="Technical Acumen" key="id2"></Star>
-        <Star formType={String(formType)} questionNum = {3} category="Work Quality" key="id3"></Star>
+      <>&nbsp; </>{ratingHeader}
+        <Star formType={String(formType)} questionNum = {1} category="Growth Mindset" readOnlyStar={readOnlyStarRanking} key="id1"></Star>
+        <Star formType={String(formType)} questionNum = {2} category="Technical Acumen" readOnlyStar={readOnlyStarRanking} key="id2"></Star>
+        <Star formType={String(formType)} questionNum = {3} category="Work Quality" readOnlyStar={readOnlyStarRanking} key="id3"></Star>
         <Star
           formType={String(formType)}
           questionNum = {4}
           category="Collaboration/Teamwork"
+          readOnlyStar={readOnlyStarRanking}
           key="id4"
         ></Star>
-        <Star formType={String(formType)} questionNum = {5} category="Creativity" key="id5"></Star>
-        <Star formType={String(formType)} questionNum = {6} category="Initiative" key="id6"></Star>
+        <Star formType={String(formType)} questionNum = {5} category="Creativity" readOnlyStar={readOnlyStarRanking} key="id5"></Star>
+        <Star formType={String(formType)} questionNum = {6} category="Initiative" readOnlyStar={readOnlyStarRanking} key="id6"></Star>
         <Star
           formType={String(formType)}
           questionNum = {7}
           category="Customer Orientation"
+          readOnlyStar={readOnlyStarRanking}
           key="id7"
         ></Star>
-        <Star formType={String(formType)} questionNum = {8} category="Adaptability" key="id8"></Star>
+        <Star formType={String(formType)} questionNum = {8} category="Adaptability" readOnlyStar={readOnlyStarRanking} key="id8"></Star>
       </nav>
     </>
   );

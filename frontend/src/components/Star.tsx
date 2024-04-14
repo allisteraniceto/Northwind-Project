@@ -70,6 +70,7 @@ interface StarProps {
   formType: String;
   questionNum: number;
   category: String;
+  readOnlyStar: number;
 }
 
 export default function Star(props: StarProps) {
@@ -151,17 +152,32 @@ export default function Star(props: StarProps) {
   //  setRatingInputObject.inputValue = 1;
   //  saveRating();
   //}, [displayRating]);
+  let readOnly;
+  if(props.readOnlyStar == 0)
+  {
+    readOnly = true;
+  }
+  else
+  {
+    readOnly = false;
+  }
   
   return (
     <>
       <nav className="text">
         {String(props.category).padEnd(0, "_")}
         <nav className="rating">
-          <Rating
+          {!readOnly &&
+          (<Rating
             style={{ maxWidth: 250 }}
             value={selectedRating}
-            onChange={setSelectedRating}
-          />
+            onChange= {setSelectedRating}
+          />)}
+          {readOnly &&
+          (<Rating
+            style={{ maxWidth: 250 }}
+            value={selectedRating}
+          />)}
         </nav>
       </nav>
     </>

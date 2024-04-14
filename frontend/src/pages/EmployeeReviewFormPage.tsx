@@ -35,8 +35,10 @@ export default function EmployeeReviewFormPage(props: EmployeeReviewFormProps) {
         <StatusPane status="Opened" email="john.doe@gmail.com" />
       </div>
       <div className="ratings-container">
-        <p>Ratings</p>
-        {<StarRanking formType="employee"></StarRanking>}
+      <div className="ratings">
+          {<StarRanking formType="employee" readOnlyStarRanking={1}></StarRanking>}
+          {<StarRanking formType="manager" readOnlyStarRanking={0}></StarRanking>}
+        </div>
       </div>
       <div className="signature-submit-container">
         <p>Signature and Submit</p>

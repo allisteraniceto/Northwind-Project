@@ -25,7 +25,7 @@ export default function ManagerReviewFormPage(props: ManagerReviewFormProps) {
   return (
     <>
       <Header dashboard="Forms" />
-      {/* <div className="formSection"> */}props: 
+      {/* <div className="formSection"> */}
       <div className="question-container">
         <FormList isEmployee={false} />
       </div>
@@ -35,8 +35,10 @@ export default function ManagerReviewFormPage(props: ManagerReviewFormProps) {
         <StatusPane status="Opened" email="john.doe@gmail.com" />
       </div>
       <div className="ratings-container">
-        <p>Ratings</p>
-        {<StarRanking formType="employee"></StarRanking>}
+        <div className="ratings">
+          {<StarRanking formType="employee" readOnlyStarRanking={0}></StarRanking>}
+          {<StarRanking formType="manager" readOnlyStarRanking={1}></StarRanking>}
+        </div>
       </div>
       <div className="signature-submit-container">
         <p>Signature and Submit</p>
