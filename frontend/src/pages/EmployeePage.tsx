@@ -90,11 +90,6 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
             endYear={2029}
             onYearSelected={handleYearSelected}
           />
-          <YearCardList
-            startYear={2023}
-            endYear={2029}
-            onYearSelected={handleYearSelected}
-          />
         </div>
       </div>
       <Footer />
