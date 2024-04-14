@@ -15,10 +15,8 @@ export default function Header() {
             alt="northwind logo"
           />
         </div>
-        <div>
-          <Nav />
-        </div>
-        <div className="profile-side">
+        <Nav />
+        <div className="profile-container">
           <Profile />
         </div>
       </div>

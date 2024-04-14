@@ -37,6 +37,7 @@ export default function Profile() {
       }
     };
     emulateEmployee();
+    return;
   }, []); // Run the effect only when component mounts for the first time
 
   const employeeDemo = Employees.employees.find(
