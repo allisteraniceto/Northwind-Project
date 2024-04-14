@@ -16,6 +16,7 @@
   box-sizing: border-box;
   margin: 10px;
   margin-right: 5px;
+  min-height: 40rem;
 }
 
 /*questions pane*/
@@ -30,7 +31,7 @@
   padding-bottom: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*30 percent transparency*/
   background-color: white;
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
 }
 
