@@ -25,24 +25,21 @@ interface EmployeePageProps {
 export default function EmployeePage({ employeeHID }: EmployeePageProps) {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
 
-  // Make a GET request to API endpoint for the EmployeeHID of the logged in employee
+  // call EmulateEmployee on backend to change the Global Identity information to that of a logged in employee. THIS IS FOR DEMO PURPOSES ONLY.
   useEffect(() => {
-    const fetchEmployeeHID = async () => {
+    // Make a GET request to API endpoint to get the status of this review
+    const emulateEmployee = async () => {
       try {
-        await axios.post(
-          `${config.apiUrl}/SubmissionForm/SetSelectedEmployeeHID`,
-          -1,
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        await axios.get(`${config.apiUrl}/EmployeeDashboard/EmulateEmployee`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
       } catch (error: any) {
         console.error("Error fetching data:", error.message);
       }
     };
-    fetchEmployeeHID(); // Call the fetchData function
+    emulateEmployee();
   }, []); // Run the effect only when component mounts for the first time
 
   const handleYearSelected = (year: number | null) => {
@@ -88,6 +85,11 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
         </div>
         <div className="previous-years-container">
           {/* PREVIOUS REVIEWS */}
+          <YearCardList
+            startYear={2023}
+            endYear={2029}
+            onYearSelected={handleYearSelected}
+          />
           <YearCardList
             startYear={2023}
             endYear={2029}

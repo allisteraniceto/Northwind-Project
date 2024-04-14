@@ -62,23 +62,23 @@ export default function AttachmentList() {
     }
   };
 
-  //GET request to retreive list of attachments from employee
-  useEffect(() => {
-    const getAllAttachments = async () => {
-      try {
-        const response = await axios.get(
-          `${config.apiUrl}/Attachments/GetAllAttachments`,
-          {}
-        ); //no endpoint yet for attachments
-        setAttachmentList(response.data);
-        console.log(`AttachmentList: ${attachmentList}`);
-        getAllAttachments();
-      } catch (error) {
-        //handle errors
-        console.error("Errore making GET request", error);
-      }
-    };
-  }, []);
+  // //GET request to retreive list of attachments from employee
+  // useEffect(() => {
+  //   const getAllAttachments = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `${config.apiUrl}/Attachments/GetAllAttachments`,
+  //         {}
+  //       ); //no endpoint yet for attachments
+  //       setAttachmentList(response.data);
+  //       console.log(`AttachmentList: ${attachmentList}`);
+  //       getAllAttachments();
+  //     } catch (error) {
+  //       //handle errors
+  //       console.error("Errore making GET request", error);
+  //     }
+  //   };
+  // }, []);
 
   //hardcoded for now
   useEffect(() => {
