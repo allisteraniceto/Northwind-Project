@@ -23,12 +23,12 @@ interface Employee {
 }
 
 interface EmployeeListProps {
-  setEmployeeID?: HandleFunction; //can mark prop options w/ ? in typescript
   dashboard: string;
   listType: string;
-  managerHID: number | null;
-  handleSelectedManager?: HandleSelectedManager;
+  managerHID?: number | null;
   expandManager?: boolean;
+  setEmployeeID?: HandleFunction; //can mark prop options w/ ? in typescript
+  handleSelectedManager?: HandleSelectedManager;
 }
 
 export default function EmployeeList(props: EmployeeListProps) {
@@ -46,27 +46,32 @@ export default function EmployeeList(props: EmployeeListProps) {
     setSelectedEmployee(employeeId === selectedEmployee ? null : employeeId);
     props.setEmployeeID &&
       props.setEmployeeID(employeeId === selectedEmployee ? null : employeeId); //for manager page (setEmployeeID optional: use && to check for null)
-    if (props.handleSelectedManager) {
+    if (props.handleSelectedManager && props.listType == "ManagerList") {
       props.handleSelectedManager(true);
     }
   };
 
-  //Get request to retrieve list of employees (direct reports)
+  //GET request to retrieve list of employees (direct reports)
   useEffect(() => {
-    axios
-      .get(`${config.apiUrl}/${props.dashboard}/${props.listType}`, {
-        params: {
-          employee_HID: props.managerHID,
-        },
-      })
-      .then((response) => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `${config.apiUrl}/${props.dashboard}/${props.listType}`,
+          {
+            params: {
+              employee_HID: props.managerHID,
+            },
+          }
+        );
         setEmployeeList(response.data);
-        console.log(`EmployeeList: ${employeeList}`);
-      })
-      .catch((error) => {
+        console.log("manager id prop:", props.managerHID);
+      } catch (error) {
         //handle errors
-        console.error("Error making Get request:", error.message);
-      });
+        console.error("Error making Get request:", error);
+      }
+    };
+
+    fetchData();
   }, [props.expandManager]); //updates employeeList after component mounts and when expandManager changes
 
   return (
@@ -76,9 +81,10 @@ export default function EmployeeList(props: EmployeeListProps) {
         (employee, index) => (
           <EmployeeCard
             key={index}
-            employee={employee.first_name + " " + employee.last_name}
-            employeeNum={employee.employee_id}
             status={true}
+            cardType={props.listType}
+            employee={employee.first_name + " " + employee.last_name}
+            employeeHID={employee.employee_id}
             onSelect={handleEmployeeSelect}
             isSelected={employee.employee_id === selectedEmployee} //if selected employee matches the employee id, returns true
           />

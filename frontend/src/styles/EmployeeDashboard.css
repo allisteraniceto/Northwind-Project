@@ -8,7 +8,7 @@
 }
 
 .employee-dashboard {
-  grid-row: 4/7;
+  grid-row: 1/4;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -27,7 +27,6 @@
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   background-color: white;
   margin: 10px;
-  margin-top: 20px;
 }
 
 .rating-tile {

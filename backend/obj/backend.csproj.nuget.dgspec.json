@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/Northwind-Project/backend/backend.csproj": {}
+    "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj": {}
   },
   "projects": {
-    "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/Northwind-Project/backend/backend.csproj": {
+    "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/Northwind-Project/backend/backend.csproj",
+        "projectUniqueName": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj",
         "projectName": "backend",
-        "projectPath": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/Northwind-Project/backend/backend.csproj",
+        "projectPath": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj",
         "packagesPath": "/home/deck/.nuget/packages/",
-        "outputPath": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/Northwind-Project/backend/obj/",
+        "outputPath": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/deck/.nuget/NuGet/NuGet.Config"
@@ -61,6 +61,10 @@
               "version": "[6.0.0, )"
             },
             "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "PDFsharp": {
               "target": "Package",
               "version": "[6.0.0, )"
             },

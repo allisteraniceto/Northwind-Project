@@ -13,7 +13,14 @@ import "../styles/EmployeeList.css";
 import "../styles/Attachments.css"; //.attachments-container
 import "../styles/InteractionsPane.css"; //.interactions-section, .elected-employee-container, .previous-years-container
 
+import YearCardList from "../components/YearCardList";
+
+import '../styles/YearCard.css'; // Import the CSS file
+import '../styles/YearCardList.css'; // Import the CSS file
+
 function HrPage() {
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+
   const [selectedEmployeeID, setSelectedEmployeeID] = useState<number | null>(
     null
   );
@@ -25,6 +32,7 @@ function HrPage() {
     setSelectedEmployeeID(employeeID);
   };
 
+  //handle when manager is selected, to then output manager's direct reports
   const handleSelectedManager = (expand: boolean) => {
     setExpandManager(expand);
   };
@@ -34,48 +42,69 @@ function HrPage() {
     setSelectedEmployeeID(null);
   };
 
+    
+  const handleYearSelected = (year: number | null) => {
+    console.log(`Year ${year} selected`);
+    setSelectedYear(year);
+  };
+
+
+
   //track expandManager state
   useEffect(() => {
     console.log("expandManager state:", expandManager);
   }, [expandManager]);
 
   return (
-    <>
-      <Header dashboard="HR" />
-      <div className="employee_list-container">
-        <div className="employee-list-header">
-          {expandManager && <BackButton handleBackClick={handleBackClick} />}
-          <h3>{expandManager ? "Direct Reports" : "Managers"}</h3>
+    <div>
+      <Header />
+      <div className="page">
+        <div className="employee_list-container">
+          <div className="employee-list-header">
+            {expandManager && <BackButton handleBackClick={handleBackClick} />}
+            <h3>{expandManager ? "Direct Reports" : "Managers"}</h3>
+          </div>
+          <EmployeeList
+            dashboard={expandManager ? "ManagerDashboard" : "HRDashboard"}
+            listType={expandManager ? "EmployeeList" : "ManagerList"}
+            managerHID={selectedEmployeeID}
+            expandManager={expandManager}
+            setEmployeeID={handleSelectedEmployee}
+            handleSelectedManager={handleSelectedManager}
+          />
         </div>
-        <EmployeeList
-          setEmployeeID={handleSelectedEmployee}
-          dashboard={expandManager ? "ManagerDashboard" : "HRDashboard"}
-          listType={expandManager ? "EmployeeList" : "ManagerList"}
-          managerHID={expandManager ? 3 : -1}
-          handleSelectedManager={handleSelectedManager}
-          expandManager={expandManager}
-        />
-      </div>
-      <div className="selected-employee-container">
+        <div className="selected-employee-container">
+               
+          {/* Display performance review year only when both an employee and a year are selected */}
+          {selectedEmployeeID !== null && selectedYear !== null ? (
+          <p>Performance Review Year: {selectedYear}</p>
+        ) : selectedEmployeeID !== null ? (
+          <p>Please select a performance review year</p>
+        ) : (
+          <p>Please select an employee</p>
+        )}
+
         <SelectedEmployee EmployeeId={selectedEmployeeID} />
-        <PerformanceReviewButton
-          linkTo="/ManagerReviewForm"
-          reviewStatus="Finalized"
-        />
-        <p>User ID: {selectedEmployeeID}</p>
-      </div>
-      <div className="attachments-container">
-        <div className="attachment-list-header">
-          <h3>Attachments</h3>
+          <PerformanceReviewButton
+            linkTo="/ManagerReviewForm"
+            reviewStatus="Finalized"
+          />
+          <p>User ID: {selectedEmployeeID}</p>
         </div>
-        {/*conditionally render attachment list*/}
-        {selectedEmployeeID && <AttachmentList />}
+        <div className="attachments-container">
+          <div className="attachment-list-header">
+            <h3>Attachments</h3>
+          </div>
+          {/*conditionally render attachment list*/}
+          {selectedEmployeeID && <AttachmentList />}
+        </div>
+        <div className="previous-years-container">
+          {/*PREVIOUS REVIEWS*/}
+          <YearCardList startYear={2023} endYear={2029} onYearSelected={handleYearSelected} />
+
+        </div>
       </div>
-      <div className="previous-years-container">
-        {/*PREVIOUS REVIEWS*/}
-        <p>Previous Reviews</p>
-      </div>
-    </>
+    </div>
   );
 }
 

@@ -10,7 +10,7 @@
 
 /*left side contianer*/
 .question-container {
-  grid-row: 4/7;
+  grid-row: 1/4;
   display: flex;
   flex-direction: column;
   min-height: 600px;
@@ -113,12 +113,11 @@
   position: relative;
 }
 .employee-info-container {
-  grid-row: 3/5;
   grid-column: 2/3;
+  grid-row: 1/2;
   /* width: 85%; */
   max-height: 150px;
   margin: 10px;
-  margin-top: 0;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -128,8 +127,8 @@
   align-items: center;
 }
 .ratings-container {
-  grid-row: 5/6;
   grid-column: 2/3;
+  grid-row: 2/5;
   margin: 10px;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -141,8 +140,8 @@
 }
 
 .signature-submit-container {
-  grid-row: 6/7;
   grid-column: 2/3;
+  grid-row: 5/5;
   margin: 10px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;

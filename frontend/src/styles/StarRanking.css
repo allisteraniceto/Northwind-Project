@@ -1,6 +1,5 @@
 .starRanking {
     background-color: #fff;
-    height: px;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -10,7 +9,6 @@
   
   .category{
     background-color: #fff;
-    height: px;
     margin: 0;
     padding-left: 20px;
     display: flex;

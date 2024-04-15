@@ -37,6 +37,15 @@ public class SubmissionFormController : ControllerBase
 
     }
 
+    [HttpGet]
+    [Route("GetManagerHID")]
+    public IActionResult GetManagerHID()
+    {
+       return Ok(Globals.UserIdentity.ManagerHID);
+
+    }
+
+
     [HttpPost]
     [Route("SaveResponse")] 
     public IActionResult SaveResponse([FromBody] Response response)
@@ -248,19 +257,50 @@ public class SubmissionFormController : ControllerBase
         }
         else // if it is a manager signature
         {
-            review.Status = "Finalized";
             review.ManagerSignature = 1;
             _dbContext.SaveChanges();
+            
+             // before changing status, we create the PDF
+             //create instance of PDFGenerator class, pass in session with our database
+            var generator = new PDFGenerator(_dbContext);
+
+            // generate the HTML containing all of the performance review responses
+            var html = generator.GenerateHTML();
+
+            long now = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+
+            // creating unique file name
+            string fileName = "performance_review_" + Globals.SelectedEmployeeHID + "_" + now + ".html";
+
+            var attachmentsFolder = Path.Combine("attachments");
+            var filePath = Path.Combine(attachmentsFolder, fileName);
+
+            // save file to attachments folder
+            System.IO.File.WriteAllText(filePath, html);
 
             //create a log and save it to DB
              var log = new Log
             {
-                Event = "Manager Signed Review",
+                Event = "Manager Signed Review, PDF created.",
                 DateAndTime = DateTime.Now,
                 ReviewID = review.ReviewID
             };
 
             _dbContext.Logs.Add(log);
+            _dbContext.SaveChanges();
+
+            // make entry in Attachments table
+             var pdf = new Attachment
+            {
+                ReviewID = review.ReviewID,
+                AttachmentName = fileName,
+                Caption = "Performance Review PDF"
+            };
+
+            _dbContext.Attachments.Add(pdf);
+            _dbContext.SaveChanges();
+
+            review.Status = "Finalized";
             _dbContext.SaveChanges();
 
         }
@@ -277,7 +317,10 @@ public class SubmissionFormController : ControllerBase
         //find the current review for the employee
         review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == Globals.SelectedEmployeeHID && review.Status != "Finalized");
 
-        return Ok(review.Status);
-
+        if (review != null){
+            return Ok(review.Status);
+        }else{
+            return NotFound("NO review was found for the selected employee");
+        }
     }
 }
