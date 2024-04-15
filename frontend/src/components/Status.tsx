@@ -15,20 +15,23 @@ function StatusIcon({ employeeHID }: StatusIconProps) {
 
   //GET request to get status of specific employee
   useEffect(() => {
-    axios
-      .get(`${config.apiUrl}/ManagerDashboard/GetEmployeeStatus`, {
-        params: {
-          employee_HID: employeeHID,
-          year: year,
-        },
-      })
-      .then((response) => {
+    const emulateGetEmployee = async () => {
+      try {
+        const response = await axios.get(
+          `${config.apiUrl}/ManagerDashboard/GetEmployeeStatus`,
+          {
+            params: {
+              employee_HID: employeeHID,
+              year: year,
+            },
+          }
+        );
         setStatus(response.data);
-      })
-      .catch((error) => {
-        //handle errors
+      } catch (error: any) {
         console.error("Error making Get request:", error.message);
-      });
+      }
+      emulateGetEmployee();
+    };
   }, []);
 
   const [icon, setIcon] = useState<JSX.Element>(

@@ -2,10 +2,11 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+
+import config from "../../config.json";
+
 import "../styles/InteractionsPane.css";
 import "../styles/EmployeeDashboard.css";
-import config from "../../config.json";
-import "../styles/InteractionsPane.css";
 
 interface PerformanceReviewButtonProps {
   reviewStatus: string;
@@ -45,12 +46,14 @@ export default function PerformanceReviewButton(
     fetchStatus(); // Call the fetchStatus function
   }, []); // Run the effect only when component mounts for the first time
 
+  console.log("reviewStatus", statusObject.reviewStatus);
+
   return (
     <Link to={props.linkTo} className="link">
       <button
         type="button"
         className="performance-review-button"
-        disabled={statusObject.reviewStatus === "Finalized" ? true : false}>
+        disabled={statusObject.reviewStatus === "Finalized"}>
         Review Form
       </button>
     </Link>

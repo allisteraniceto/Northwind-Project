@@ -1,4 +1,4 @@
-import StatusIcon from "./statusicon";
+import Status from "./Status";
 import CorgiGif from "/cool-corgi.gif";
 import CompleteCount from "./CompleteCount";
 
@@ -40,7 +40,7 @@ export default function EmployeeCard({
       </div>
       <div className="status">
         {cardType === "EmployeeList" ? (
-          <StatusIcon employeeHID={employeeHID} />
+          <Status employeeHID={employeeHID} />
         ) : (
           <CompleteCount managerHID={employeeHID} />
         )}

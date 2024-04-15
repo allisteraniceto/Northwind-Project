@@ -41,4 +41,11 @@ public class EmployeeDashboardController : ControllerBase
 
         return Ok();
     }
+
+    [HttpGet]
+    [Route("EmulateGetEmployee")]
+    public IActionResult EmulateGetEmployee(){
+        var employee = JsonSerializer.Serialize<Identity>(Globals.UserIdentity); //serialize before sending
+        return Ok(employee);
+    }
 }
