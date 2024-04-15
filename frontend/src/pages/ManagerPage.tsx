@@ -61,22 +61,21 @@ function ManagerPage(props: ManagerPageProps) {
       .catch((error) => console.log(error));
   }, [selectedEmployeeID]); //when selectedEmployee, set employeeHID global in backend
 
-
   // call EmulateManager on backend to change the Global Identity information to that of a logged in manager. THIS IS FOR DEMO PURPOSES ONLY.
   useEffect(() => {
     // Make a GET request to API endpoint to get the status of this review
     const emulateManager = async () => {
       try {
-          await axios.get(`${config.apiUrl}/ManagerDashboard/EmulateManager`, {
-              headers: { 
-                  'Content-Type': 'application/json'
-              }
-          });
+        await axios.get(`${config.apiUrl}/ManagerDashboard/EmulateManager`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
       } catch (error: any) {
-          console.error('Error fetching data:', error.message);
+        console.error("Error fetching data:", error.message);
       }
     };
-    emulateManager(); 
+    emulateManager();
   }, []); // Run the effect only when component mounts for the first time
 
   return (
@@ -96,29 +95,28 @@ function ManagerPage(props: ManagerPageProps) {
         </div>
         <div className="selected-employee-container">
           <SelectedEmployee EmployeeId={selectedEmployeeID} />
-
-          <PerformanceReviewButton
-            linkTo="/ManagerReviewForm"
-            reviewStatus="Finalized"
-          />
-
-          {/* Display performance review year only when both an employee and a year are selected */}
-          {selectedEmployeeID !== null && selectedYear !== null ? (
-            <p>Performance Review Year: {selectedYear}</p>
-          ) : selectedEmployeeID !== null ? (
-            <p>Please select a performance review year</p>
-          ) : (
-            <p>Please select an employee</p>
-          )}
-
-          <p>User ID: {selectedEmployeeID}</p>
+          <div className="performance-review-button-container">
+            <PerformanceReviewButton
+              linkTo="/ManagerReviewForm"
+              reviewStatus="Finalized"
+            />
+          </div>
         </div>
         <div className="attachments-container">
           <div className="attachment-list-header">
             <h3>Attachments</h3>
+            {/* Display performance review year only when both an employee and a year are selected */}
+            {selectedEmployeeID !== null && selectedYear !== null ? (
+              <p>Performance Review Year: {selectedYear}</p>
+            ) : selectedEmployeeID !== null ? (
+              <p>Please select a performance review year</p>
+            ) : (
+              <p>Please select an employee</p>
+            )}
           </div>
+
           {/*conditionally render attachment list*/}
-          {selectedEmployeeID && <AttachmentList />}
+          {selectedEmployeeID && selectedYear && <AttachmentList />}
         </div>
         <div className="previous-years-container">
           {/*PREVIOUS REVIEWS*/}

@@ -29,7 +29,7 @@ html {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "top-bar";
   max-width: 1200px;
-  margin: 20px auto; /*top/bottom left-right */
+  margin: 1rem auto; /*top/bottom left-right */
   min-height: 100vh;
 }
 
@@ -38,7 +38,7 @@ html {
   grid-template-rows: 10rem 25rem 10rem;
   grid-template-columns: 2.2fr 1fr;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 /* Bank Gothic Medium for headers*/

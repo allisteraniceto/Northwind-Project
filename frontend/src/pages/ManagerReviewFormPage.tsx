@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import FormList from "../components/FormList";
 import SubmitOrSignButton from "../components/SubmitOrSignButton";
+import SelectedEmployee from "../components/SelectedEmployee";
 
 export default function ManagerReviewFormPage() {
   return (
@@ -11,7 +12,7 @@ export default function ManagerReviewFormPage() {
           <FormList isEmployee={false} />
         </div>
         <div className="employee-info-container">
-          <p>Employee Info</p>
+          <SelectedEmployee EmployeeId={6} />
         </div>
         <div className="ratings-container">
           <p>Ratings</p>

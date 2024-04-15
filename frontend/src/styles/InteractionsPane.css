@@ -13,8 +13,8 @@
   grid-column: 2/3;
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1.3fr;
+  grid-template-rows: 1fr 1fr 1fr;
   max-height: 350px;
   border-radius: 15px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
@@ -25,17 +25,54 @@
 }
 
 .selected-employee {
-  grid-column: 2/3;
-  grid-row: 1/3;
+  grid-column: 3/4;
+  grid-row: 1/4;
   display: flex;
-  flex: column;
-  justify-content: space-around;
+  flex-direction: column-reverse;
   align-items: center;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+
+.vignette {
+  margin-bottom: 0.1rem;
 }
 
 .link {
   width: 10rem;
   height: 100%;
+}
+
+.performance-review-button-container {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.link {
+  display: inline-block;
+  width: 9.2rem;
+}
+
+.link .performance-review-button {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 100%;
+  width: 8rem;
+}
+
+.link button:disabled {
+  /* background-color: rgb(69, 69, 69); */
+}
+
+/* Hover effect on the button */
+.performance-review-button:hover {
+  background-color: #45a049;
 }
 
 .attachments-container {
@@ -66,59 +103,3 @@
   box-sizing: border-box;
   margin: 10px;
 }
-
-.link {
-  display: inline-block;
-  width: 9.2rem;
-}
-
-.link .performance-review-button {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  display: inline-block;
-  background-color: #4caf50;
-  color: white;
-  padding: 5px 15px;
-  margin: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 100%;
-  width: 8rem;
-}
-
-.link button:disabled {
-  color: #000;
-  background-color: rgb(69, 69, 69);
-}
-
-/* Hover effect on the button */
-.performance-review-button:hover {
-  background-color: #45a049;
-}
-
-/*
-.readonly-performance-review-button {
-  position: absolute;
-  top: 180px;
-  transform: translate(0, -50%);
-  background-color: #4f5050;
-  color: white;
-  padding: 5px 15px;
-  margin: 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 25px;
-}
-
-/* Hover effect on the button
-.readonly-performance-review-button:hover {
-  background-color: #4f5050;
-}
-
-.performance-review-button-container {
-  height: 100%;
-  align-items: center;
-}
-*/

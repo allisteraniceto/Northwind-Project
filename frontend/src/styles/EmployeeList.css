@@ -120,3 +120,8 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+.headshot-selected.pane {
+  width: 5rem;
+  height: 5rem;
+}

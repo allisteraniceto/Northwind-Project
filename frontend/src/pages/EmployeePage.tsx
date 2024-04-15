@@ -15,8 +15,8 @@ import config from "../../config.json";
 import "../styles/InteractionsPane.css";
 import "../styles/EmployeeDashboard.css";
 import "../styles/Footer.css";
-import "../styles/YearCard.css"; // Import the CSS file
-import "../styles/YearCardList.css"; // Import the CSS file
+import "../styles/YearCard.css";
+import "../styles/YearCardList.css";
 interface EmployeePageProps {
   employeeHID: number;
 }
@@ -49,13 +49,12 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
   return (
     <div>
       <Header />
-      <div className={"page"}>
+      <div className="page">
         <div className="employee-dashboard">
           <div className="employee-rating-pane">
             <RatingTile ratingNum={48} />
           </div>
           <div className="employee-criteria-pane">
-            {/* CRITERIA CONTAINER */}
             <ul>
               <li>
                 Job description and/or Job highlights noting any significant
@@ -69,18 +68,25 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
           </div>
         </div>
         <div className="selected-employee-container">
-          <p>Performance Review Year: {selectedYear}</p>
           <SelectedEmployee EmployeeId={employeeHID} />
-          <PerformanceReviewButton
-            linkTo="/EmployeeReviewForm"
-            reviewStatus="Finalized"
-          />
+          <div className="performance-review-button-container">
+            <PerformanceReviewButton
+              linkTo="/EmployeeReviewForm"
+              reviewStatus="Finalized"
+            />
+          </div>
         </div>
         <div className="attachments-container">
           <div className="attachment-list-header">
             <h3>Attachments</h3>
+            {/* Display performance review year only when a year are selected */}
+            {selectedYear === null ? (
+              <p>Please select a performance review year</p>
+            ) : (
+              <p>Performance Review Year: {selectedYear}</p>
+            )}
           </div>
-          <AttachmentList />
+          {selectedYear && <AttachmentList />}
         </div>
         <div className="previous-years-container">
           {/* PREVIOUS REVIEWS */}
