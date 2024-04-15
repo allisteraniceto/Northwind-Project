@@ -1,19 +1,21 @@
-import '../styles/EmployeeList.css';
-//import PropTypes from 'prop-types';
-
+import "../styles/EmployeeList.css";
+import "../styles/InteractionsPane.css";
 
 interface OvalVignetteProps {
-    src: string;
-    alt: string;
-  }
-  
-  function OvalVignette ({ src, alt }: OvalVignetteProps) {
-    return (
-      <div>
-        <img src={src ? src : "dogedance.gif"} alt={alt} className='headshot-selected'/>
-      </div>
-      );
-  };
-  
-  export default OvalVignette;
-  
+  src: string;
+  alt: string;
+}
+
+function OvalVignette({ src, alt }: OvalVignetteProps) {
+  return (
+    <div className="vignette">
+      <img
+        src={src ? src : "dogedance.gif"}
+        alt={alt}
+        className="headshot-selected pane"
+      />
+    </div>
+  );
+}
+
+export default OvalVignette;

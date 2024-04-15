@@ -8,6 +8,9 @@
 }
 
 .attachment-list-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
   padding-left: 10%;
   margin: 10px;
@@ -15,6 +18,10 @@
 
 .attachment-list-header h3 {
   font-weight: bold;
+}
+
+.attachment-list-header p {
+  margin-left: 1rem;
 }
 
 .attachment-card {

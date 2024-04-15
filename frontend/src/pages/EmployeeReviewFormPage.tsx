@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import FormList from "../components/FormList";
 import SubmitOrSignButton from "../components/SubmitOrSignButton";
+import SelectedEmployee from "../components/SelectedEmployee";
 
 export default function EmployeeReviewFormPage() {
   // props.setReviewForm(true); //set reviewForm prop to true
@@ -12,7 +13,7 @@ export default function EmployeeReviewFormPage() {
           <FormList isEmployee={true} />
         </div>
         <div className="employee-info-container">
-          <p>Employee Info</p>
+          <SelectedEmployee EmployeeId={6} />
         </div>
         <div className="ratings-container">
           <p>Ratings</p>
