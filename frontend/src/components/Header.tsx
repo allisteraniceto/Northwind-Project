@@ -1,13 +1,13 @@
-import Nav from "../components/NavBar";
+import Nav from "./Nav";
 import Profile from "../components/Profile";
 import NorthwindLogo from "/northwind-logo.png";
 
-import "../styles/Topbar.css";
+import "../styles/Header.css";
 
 export default function Header() {
   return (
     <>
-      <div className="topbar">
+      <div className="header">
         <div className="northwind-logo-container">
           <img
             className="northwind-logo"
@@ -15,10 +15,8 @@ export default function Header() {
             alt="northwind logo"
           />
         </div>
-        <div>
-          <Nav />
-        </div>
-        <div className="profile-side">
+        <Nav />
+        <div className="profile-container">
           <Profile />
         </div>
       </div>
