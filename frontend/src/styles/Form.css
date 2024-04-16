@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: flex-start;
   position: relative; /* parent container */
-  width: 45%;
+  width: 22rem;
   max-width: 400px;
   height: 90%;
   padding: 20px;
@@ -35,15 +35,15 @@
 
 .expand-button {
   position: absolute; /* child container */
-  top: 3%;
-  right: 3%;
-  height: 25px;
-  width: 25px;
+  top: .7rem;
+  right: .7rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .expand-button img {
-  height: 25px;
-  width: 25px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 20%;
 }
 
@@ -53,14 +53,15 @@
 }
 
 /* Style labels */
-label {
+.centered-form label {
   display: block;
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 15px;
 }
 /* Style input fields */
-textarea {
+.centered-form textarea {
   width: 100%;
+  height: 8.5rem;
   padding: 8px;
   margin-bottom: 12px;
   box-sizing: border-box;

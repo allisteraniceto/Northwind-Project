@@ -9,6 +9,7 @@ import "../styles/FormSection.css";
 
 export default function UploadButton() {
   const [file, setFile] = useState<string | File | undefined>();
+  const [fileAlias, setFileAlias] = useState<string | undefined>()
 
   const handleClick = (e: React.SyntheticEvent) => {
     e.preventDefault(); //prevent default behavior
@@ -36,6 +37,12 @@ export default function UploadButton() {
       });
   };
 
+  const handleAlias = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newInput = event.target.value;
+    setFileAlias(newInput);
+    console.log(fileAlias);
+  }
+
   //handle when file(s) are uploaded
   async function handleOnChange(e: React.SyntheticEvent) {
     const target = e.target as HTMLInputElement & {
@@ -48,7 +55,10 @@ export default function UploadButton() {
 
   return (
     <div className="upload-row">
-      <input type="file" onChange={handleOnChange} />
+      <p>Alias Name: </p>
+      <input type="text" className="alias" onChange={handleAlias}/>
+      <input type="file" onChange={handleOnChange} className="choose-file"/>
+
       <div onClick={handleClick} className="upload-button">
         <IconContext.Provider value={{ size: "2em" }}>
           <MdDriveFolderUpload />
