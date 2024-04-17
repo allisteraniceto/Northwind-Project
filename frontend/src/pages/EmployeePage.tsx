@@ -7,8 +7,8 @@ import RatingTile from "../components/RatingTile";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import AttachmentList from "../components/AttachmentList";
 import SelectedEmployee from "../components/SelectedEmployee";
-import Footer from "../components/Footer";
 import YearCardList from "../components/YearCardList";
+// import Footer from "../components/Footer";
 
 import config from "../../config.json";
 
@@ -52,6 +52,7 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
       <div className="page">
         <div className="employee-dashboard">
           <div className="employee-rating-pane">
+            <h3 className="employee-rating-header">My Rating</h3>
             <RatingTile ratingNum={48} />
           </div>
           <div className="employee-criteria-pane">
@@ -72,7 +73,7 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
           <div className="performance-review-button-container">
             <PerformanceReviewButton
               linkTo="/EmployeeReviewForm"
-              reviewStatus="Finalized"
+              reviewStatus="Submit"
             />
           </div>
         </div>
@@ -97,7 +98,7 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
           />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

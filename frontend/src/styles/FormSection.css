@@ -21,6 +21,7 @@
 
 /*questions pane*/
 .question-pane {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,8 +92,7 @@
   height: 50px;
 }
 
-
-.upload-row .alias{
+.upload-row .alias {
   height: 1.5rem;
   border: 1px solid;
   border-color: #000000;
@@ -101,16 +101,15 @@
   margin-right: 2.5rem;
 }
 
-.upload-row .choose-file{
+.upload-row .choose-file {
   margin-left: 2rem;
   margin-right: 3rem;
 }
 
-.upload-row p{
+.upload-row p {
   font-size: 15px;
   margin: 1rem;
 }
-
 
 .upload-button {
   /* position: absolute;
@@ -164,7 +163,16 @@
   border-radius: 20px;
   background-color: white;
   padding: 20px;
+  padding-bottom: 15px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.sign-submit-row {
+  display: flex;
+  flex-direction: row;
+  width: 10rem;
+  margin-bottom: 0px;
 }

@@ -44,7 +44,7 @@
 }
 
 .performance-review-button-container {
-  grid-column: 2/3;
+  grid-column: 1/2;
   grid-row: 2/3;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .link button:disabled {
-  /* background-color: rgb(69, 69, 69); */
+  background-color: rgb(69, 69, 69);
 }
 
 /* Hover effect on the button */

@@ -72,10 +72,12 @@ function HrPage() {
         </div>
         <div className="selected-employee-container">
           <SelectedEmployee EmployeeId={selectedEmployeeID} />
-          <PerformanceReviewButton
-            linkTo="/ManagerReviewForm"
-            reviewStatus="Finalized"
-          />
+          <div className="performance-review-button-container">
+            <PerformanceReviewButton
+              linkTo="/ManagerReviewForm"
+              reviewStatus="Finalized"
+            />
+          </div>
         </div>
         <div className="attachments-container">
           <div className="attachment-list-header">

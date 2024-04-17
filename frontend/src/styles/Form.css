@@ -20,10 +20,10 @@
 
 .centered-form.big {
   position: absolute;
-  top: 250px;
+  top: 5rem;
   max-width: 1000px;
-  width: 50%;
-  height: 80%;
+  width: 45rem;
+  height: 35rem;
   max-height: 800px;
   z-index: 1; /*bring forward*/
 }
@@ -35,8 +35,8 @@
 
 .expand-button {
   position: absolute; /* child container */
-  top: .7rem;
-  right: .7rem;
+  top: 0.7rem;
+  right: 0.7rem;
   height: 1.5rem;
   width: 1.5rem;
 }

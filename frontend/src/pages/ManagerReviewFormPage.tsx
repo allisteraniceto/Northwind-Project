@@ -18,13 +18,23 @@ export default function ManagerReviewFormPage() {
           <p>Ratings</p>
         </div>
         <div className="signature-submit-container">
-          <p>Signature and Submit</p>
-          <SubmitOrSignButton
-            formType="manager"
-            status=""
-            buttonType="submit"
-          />
-          <SubmitOrSignButton formType="manager" status="" buttonType="sign" />
+          <p>
+            By signing this review form, I acknowledge that I have reviewed the
+            contents of this performance review and understand the feedback
+            provided.
+          </p>
+          <div className="sign-submit-row">
+            <SubmitOrSignButton
+              formType="employee"
+              status=""
+              buttonType="submit"
+            />
+            <SubmitOrSignButton
+              formType="employee"
+              status=""
+              buttonType="sign"
+            />
+          </div>
         </div>
       </div>
     </div>
