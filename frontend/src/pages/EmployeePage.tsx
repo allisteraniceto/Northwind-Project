@@ -82,7 +82,11 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
             <h3>Attachments</h3>
             {/* Display performance review year only when a year are selected */}
             {selectedYear === null ? (
-              <p>Please select a performance review year</p>
+              <p>
+                <span style={{ color: "#FF0000" }}>
+                  *Please select a performance review year
+                </span>
+              </p>
             ) : (
               <p>Performance Review Year: {selectedYear}</p>
             )}
