@@ -50,7 +50,7 @@ export default function StatusPane({ email }: Props) {
     textColor = "red";
     buttonColor = "green";
     buttonText = "Schedule a Meeting";
-  } else if (status === "Signed by Employrr") {
+  } else if (status === "Signed by Employer") {
     textColor = "green";
     displayButton = false;
   }
@@ -59,12 +59,12 @@ export default function StatusPane({ email }: Props) {
       backgroundColor: buttonColor,
       color: "white",
       border: "none",
-      padding: "10px 20px",
+      padding: "5px 5px",
       cursor: "pointer",
       borderRadius: "5px",
       fontSize: "16px",
-      marginTop: "20px",
-      maxWidth: "200px",
+      marginTop: "5px",
+      maxWidth: "170px",
     },
   };
 
@@ -73,8 +73,8 @@ export default function StatusPane({ email }: Props) {
       <div dangerouslySetInnerHTML={{ __html: "<!-- comment text -->" }} />
       <nav className="statusPane">
         <nav className="status">
-          Status: <>&nbsp;</> {status}
-          <div style={{ color: textColor }}>{status}</div>
+          Status: 
+          <div style={{ color: textColor }}  >{status}</div>
         </nav>
         <nav className="statusButton" style={{ color: textColor }}>
           {displayButton && (
