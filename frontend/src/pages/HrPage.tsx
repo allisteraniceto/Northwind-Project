@@ -7,6 +7,7 @@ import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import AttachmentList from "../components/AttachmentList";
 import SelectedEmployee from "../components/SelectedEmployee";
 import BackButton from "../components/BackButton";
+import StartReviewProcessButton from "../components/StartReviewProcessButton";
 
 import "../styles/HrDashboard.css";
 import "../styles/EmployeeList.css";
@@ -78,6 +79,7 @@ function HrPage() {
               reviewStatus="Finalized"
             />
           </div>
+          <StartReviewProcessButton />
         </div>
         <div className="attachments-container">
           <div className="attachment-list-header">
