@@ -17,12 +17,11 @@ export default function EmployeeReviewFormPage() {
           <FormList isEmployee={true} />
         </div>
         <div className="employee-info-container">
-          <StatusPane status="Opened" email="john.doe@gmail.com" />
+          <StatusPane email="john.doe@gmail.com" />
         </div>
         <div className="ratings-container">
           <div className="ratings">
-            {<StarRanking formType="employee" readOnlyStarRanking={0}></StarRanking>}
-            {<StarRanking formType="manager" readOnlyStarRanking={1}></StarRanking>}
+            {<StarRanking formType="employee" readOnlyStarRanking={false}></StarRanking>}
           </div>
         </div>
         <div className="signature-submit-container">

@@ -4,12 +4,11 @@ import axios from "axios";
 import config from "../../config.json";
 
 interface Props {
-  status: string;
   email: string;
 }
 
-export default function StatusPane({ status, email }: Props) {
-  let statustwo;
+export default function StatusPane({ email }: Props) {
+    let status = "Initizalized";
   //modify to get employee name and status
   useEffect(() => {
     // Make a GET request to API endpoint to get the status of this review
@@ -25,7 +24,7 @@ export default function StatusPane({ status, email }: Props) {
         );
 
         // Handle the response data
-        statustwo = response.data;
+        status = response.data;
       } catch (error: any) {
         console.error("Error fetching data:", error.message);
       }
@@ -39,11 +38,11 @@ export default function StatusPane({ status, email }: Props) {
   let displayButton = true;
   let mailtoLink = "mailto:" + email;
 
-  if (status === "Not Opened") {
+  if (status === "Initialized") {
     textColor = "grey";
-  } else if (status === "Opened") {
+  } else if (status === "Commit Submitted") {
     textColor = "blue";
-  } else if (status === "Employee Reviewed") {
+  } else if (status === "Feedback Submitted") {
     textColor = "brown";
     buttonColor = "green";
     buttonText = "Schedule a Meeting";
@@ -51,7 +50,7 @@ export default function StatusPane({ status, email }: Props) {
     textColor = "red";
     buttonColor = "green";
     buttonText = "Schedule a Meeting";
-  } else if (status === "Complete") {
+  } else if (status === "Signed by Employrr") {
     textColor = "green";
     displayButton = false;
   }
@@ -74,8 +73,8 @@ export default function StatusPane({ status, email }: Props) {
       <div dangerouslySetInnerHTML={{ __html: "<!-- comment text -->" }} />
       <nav className="statusPane">
         <nav className="status">
-          Status: <>&nbsp;</>
-          <div style={{ color: textColor }}>{statustwo}</div>
+          Status: <>&nbsp;</> {status}
+          <div style={{ color: textColor }}>{status}</div>
         </nav>
         <nav className="statusButton" style={{ color: textColor }}>
           {displayButton && (
@@ -91,3 +90,4 @@ export default function StatusPane({ status, email }: Props) {
     </>
   );
 }
+//onClick={() => (window.location.href = mailtoLink)}
