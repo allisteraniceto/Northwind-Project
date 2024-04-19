@@ -64,7 +64,7 @@ export default function UploadButton() {
 
   return (
     <div className="upload-row">
-      <p>Alias Name: </p>
+      <p>Caption: </p>
       <input
         type="text"
         className="alias"
