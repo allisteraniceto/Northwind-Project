@@ -1,10 +1,6 @@
 import Header from "../components/Header";
 import FormList from "../components/FormList";
 import SubmitOrSignButton from "../components/SubmitOrSignButton";
-import StarRanking from "../components/StarRanking";
-import StatusPane from "../components/StatusPane";
-
-import "../styles/FormPage.css";
 
 export default function ManagerReviewFormPage() {
   return (
@@ -15,12 +11,10 @@ export default function ManagerReviewFormPage() {
           <FormList isEmployee={false} />
         </div>
         <div className="employee-info-container">
-          <StatusPane email="john.doe@gmail.com" />
+          <p>Employee Info</p>
         </div>
         <div className="ratings-container">
-          <div className="ratings">
-            {<StarRanking formType="manager" readOnlyStarRanking={true}></StarRanking>}
-          </div>
+          <p>Ratings</p>
         </div>
         <div className="signature-submit-container">
           <p>Signature and Submit</p>

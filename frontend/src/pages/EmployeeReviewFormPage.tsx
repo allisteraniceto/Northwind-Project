@@ -1,11 +1,6 @@
 import Header from "../components/Header";
 import FormList from "../components/FormList";
 import SubmitOrSignButton from "../components/SubmitOrSignButton";
-import StarRanking from "../components/StarRanking";
-import StatusPane from "../components/StatusPane";
-
-import "../styles/FormPage.css";
-import "../styles/FormSection.css";
 
 export default function EmployeeReviewFormPage() {
   // props.setReviewForm(true); //set reviewForm prop to true
@@ -17,12 +12,10 @@ export default function EmployeeReviewFormPage() {
           <FormList isEmployee={true} />
         </div>
         <div className="employee-info-container">
-          <StatusPane email="john.doe@gmail.com" />
+          <p>Employee Info</p>
         </div>
         <div className="ratings-container">
-          <div className="ratings">
-            {<StarRanking formType="employee" readOnlyStarRanking={false}></StarRanking>}
-          </div>
+          <p>Ratings</p>
         </div>
         <div className="signature-submit-container">
           <p>Signature and Submit</p>

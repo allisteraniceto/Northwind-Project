@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj": {}
+    "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj": {}
   },
   "projects": {
-    "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj": {
+    "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj",
+        "projectUniqueName": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj",
-        "packagesPath": "/home/deck/.nuget/packages/",
-        "outputPath": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/obj/",
+        "projectPath": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\allister18\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/deck/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\allister18\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,16 +81,11 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.16, 6.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -97,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.116/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
