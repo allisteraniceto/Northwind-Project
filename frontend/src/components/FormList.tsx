@@ -8,7 +8,7 @@ interface ReviewFormListProps {
   isEmployee: boolean;
 }
 
-export default function ReviewFormList({ isEmployee }: ReviewFormListProps) {
+export default function ReviewFormList(prop: ReviewFormListProps) {
   const questions = [
     //review form questions
     "Job description and/or Job highlights noting any significant changes",
@@ -32,11 +32,11 @@ export default function ReviewFormList({ isEmployee }: ReviewFormListProps) {
             <FormRow
               questionNum={index + 1}
               formQuestion={question}
-              isEmployee={isEmployee}
+              isEmployee={prop.isEmployee}
             />
           ))}
         </div>
-        {isEmployee ? <UploadButton /> : ""}
+        <UploadButton />
       </div>
     </>
   );
