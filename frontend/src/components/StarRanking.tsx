@@ -110,7 +110,7 @@ export default function StarRanking({ formType, readOnlyStarRanking}: Props) {
   return (
     <>
       <nav className="starRanking">
-      <>&nbsp; </>Employee Ratings<>&nbsp; </><>&nbsp; </><>&nbsp; </><>&nbsp; </><>&nbsp; </><>&nbsp; </><>&nbsp; </><>&nbsp; </>Manager Ratings
+      <>&nbsp; </><>&nbsp; </>Employee Ratings<>&nbsp; </><>&nbsp; </><>&nbsp; </>Manager Ratings
       <nav className="starScroll">
       <nav className="subratings">
         <Star formType={String(formType)} questionNum = {1} category="Growth Mindset" readOnlyStar={readOnlyStarRanking} childToParent={childToParent1} key="id1"></Star>
@@ -119,7 +119,7 @@ export default function StarRanking({ formType, readOnlyStarRanking}: Props) {
         <Star
           formType={String(formType)}
           questionNum = {4}
-          category="Collaboration/Teamwork"
+          category="Collaboration/ Teamwork"
           readOnlyStar={readOnlyStarRanking}
           childToParent={childToParent4}
           key="id4"
@@ -143,7 +143,7 @@ export default function StarRanking({ formType, readOnlyStarRanking}: Props) {
         <Star
           formType={String(formType)}
           questionNum = {4}
-          category="Collaboration/Teamwork"
+          category="Collaboration/ Teamwork"
           readOnlyStar={!readOnlyStarRanking}
           childToParent={childToParent12}
           key="id12"

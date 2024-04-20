@@ -1,7 +1,8 @@
 .starRanking {
     background-color: #fff;
-    margin: 0;
-    padding: 20px;
+    margin: 0px;
+    padding: 10px;
+    width:360px;
     display: flex;
     align-items: left;
     flex-direction: column
@@ -10,7 +11,7 @@
   .category{
     background-color: #fff;
     margin: 0;
-    padding-left: 20px;
+    padding-left: 10px;
     display: flex;
     align-items: left;
     flex-direction: row
@@ -20,16 +21,17 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    width: 140px;
   } 
 
   .ratings{
     display: flex;
     flex-direction: row;
     align-items: left;
+    width: 350px;
   } 
 
   .starScroll{
-    height: 85%;
   overflow-x: auto;
   box-sizing: border-box;
   margin-bottom: 10px;
@@ -43,13 +45,15 @@
     display: flex;
     flex-direction: column;
     align-items: left;
+    margin: 0;
+    padding: 10px;
   }
 
   .totals{
     display: flex;
     flex-direction: column;
     align-items: left;
-    width:210px;
+    width:150px;
   }
   .bothTotals{
     display: flex;

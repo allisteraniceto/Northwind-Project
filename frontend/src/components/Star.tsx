@@ -122,13 +122,13 @@ export default function Star(props: StarProps) {
         <nav className="rating">
           {!props.readOnlyStar &&
           (<Rating
-            style={{ maxWidth: 250 }}
+            style={{ maxWidth: 150 }}
             value={selectedRating}
             onChange= {setSelectedRating}
           />)}
           {props.readOnlyStar &&
           (<Rating
-            style={{ maxWidth: 250 }}
+            style={{ maxWidth: 150 }}
             value={selectedRating}
           />)}
         </nav>
