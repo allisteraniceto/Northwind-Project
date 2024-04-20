@@ -17,6 +17,7 @@
 }
 
 .employee-rating-pane {
+  position: relative;
   grid-row: 1/2;
   display: flex;
   justify-content: center;
@@ -27,6 +28,12 @@
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   background-color: white;
   margin: 10px;
+}
+
+.employee-rating-header {
+  position: absolute;
+  top: 1.5rem;
+  left: 3rem;
 }
 
 .rating-tile {
@@ -41,7 +48,7 @@
 }
 
 .rating-tile h1 {
-  font-size: 200%;
+  font-size: 4rem;
   color: #ffffff;
 }
 

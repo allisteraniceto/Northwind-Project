@@ -13,15 +13,15 @@
   grid-row: 1/4;
   display: flex;
   flex-direction: column;
-  min-height: 600px;
-  max-height: 100vh;
   box-sizing: border-box;
   margin: 10px;
   margin-right: 5px;
+  min-height: 40rem;
 }
 
 /*questions pane*/
 .question-pane {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -88,9 +88,27 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   width: 100%;
   height: 50px;
+}
+
+.upload-row .alias {
+  height: 1.5rem;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 2.5px;
+  background-color: #f0f0f0;
+  margin-right: 2.5rem;
+}
+
+.upload-row .choose-file {
+  margin-left: 2rem;
+  margin-right: 3rem;
+}
+
+.upload-row p {
+  font-size: 15px;
+  margin: 1rem;
 }
 
 .upload-button {
@@ -115,8 +133,6 @@
 .employee-info-container {
   grid-column: 2/3;
   grid-row: 1/2;
-  /* width: 85%; */
-  max-height: 150px;
   margin: 10px;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -147,7 +163,16 @@
   border-radius: 20px;
   background-color: white;
   padding: 20px;
+  padding-bottom: 15px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.sign-submit-row {
+  display: flex;
+  flex-direction: row;
+  width: 10rem;
+  margin-bottom: 0px;
 }

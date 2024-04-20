@@ -1,6 +1,7 @@
-import StatusIcon from "./statusicon";
+import Status from "./Status";
 import CorgiGif from "/cool-corgi.gif";
 import CompleteCount from "./CompleteCount";
+import Employees from "../dummy-employees.json";
 
 import "../styles/EmployeeList.css";
 
@@ -28,19 +29,25 @@ export default function EmployeeCard({
     onSelect(employeeHID);
   };
 
+  //will replace with GET REQUEST
+  const employeeFind = Employees.employees.find(
+    (emp) => emp.employee_id === employeeHID
+  );
+  const headshot = employee ? `${employeeFind?.headshot}` : CorgiGif;
+
   return (
     <div
       className={`employee-card ${isSelected ? "clicked" : ""}`}
       onClick={handleClick}>
       <div className="headshot-container">
-        <img className="headshot-card" src={CorgiGif} alt="User Headshot" />
+        <img className="headshot-card" src={headshot} alt={"User Headshot"} />
       </div>
       <div className="employee-name">
         <p>{employee}</p>
       </div>
       <div className="status">
         {cardType === "EmployeeList" ? (
-          <StatusIcon employeeHID={employeeHID} />
+          <Status employeeHID={employeeHID} />
         ) : (
           <CompleteCount managerHID={employeeHID} />
         )}
