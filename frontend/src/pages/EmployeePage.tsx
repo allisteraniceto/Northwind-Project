@@ -7,8 +7,8 @@ import RatingTile from "../components/RatingTile";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import AttachmentList from "../components/AttachmentList";
 import SelectedEmployee from "../components/SelectedEmployee";
-import Footer from "../components/Footer";
 import YearCardList from "../components/YearCardList";
+// import Footer from "../components/Footer";
 
 import config from "../../config.json";
 
@@ -52,6 +52,7 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
       <div className="page">
         <div className="employee-dashboard">
           <div className="employee-rating-pane">
+            <h3 className="employee-rating-header">My Rating</h3>
             <RatingTile ratingNum={48} />
           </div>
           <div className="employee-criteria-pane">
@@ -72,7 +73,7 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
           <div className="performance-review-button-container">
             <PerformanceReviewButton
               linkTo="/EmployeeReviewForm"
-              reviewStatus="Finalized"
+              reviewStatus="Submit"
             />
           </div>
         </div>
@@ -81,7 +82,11 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
             <h3>Attachments</h3>
             {/* Display performance review year only when a year are selected */}
             {selectedYear === null ? (
-              <p>Please select a performance review year</p>
+              <p>
+                <span style={{ color: "#FF0000" }}>
+                  *Please select a performance review year
+                </span>
+              </p>
             ) : (
               <p>Performance Review Year: {selectedYear}</p>
             )}
@@ -97,7 +102,7 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
           />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

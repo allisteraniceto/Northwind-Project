@@ -109,9 +109,17 @@ function ManagerPage(props: ManagerPageProps) {
             {selectedEmployeeID !== null && selectedYear !== null ? (
               <p>Performance Review Year: {selectedYear}</p>
             ) : selectedEmployeeID !== null ? (
-              <p>Please select a performance review year</p>
+              <p>
+                <span style={{ color: "#FF0000" }}>
+                  *Please select a performance review year
+                </span>
+              </p>
             ) : (
-              <p>Please select an employee</p>
+              <p>
+                <span style={{ color: "#FF0000" }}>
+                  *Please select an employee
+                </span>
+              </p>
             )}
           </div>
 
