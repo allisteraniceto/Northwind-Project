@@ -41,13 +41,13 @@ interface StarProps {
 
 export default function Star(props: StarProps) {
 
-  const [getRatingInputObject, setInputObject] = useState({
+  const [getRatingInputObject] = useState({
     formType: props.formType,
     inputValue: 0,
     questionNum: props.questionNum,
   });
 
-  const [setRatingInputObject, setOutputRating] = useState({
+  const [setRatingInputObject] = useState({
     formType: props.formType,
     inputValue: 0,
     questionNum: props.questionNum,
@@ -107,7 +107,8 @@ export default function Star(props: StarProps) {
     
     }
   };
-  props.childToParent(selectedRating)
+  props.childToParent(selectedRating);
+  saveRating();
   }, [selectedRating]); //run each time the rating is changed
 
 
