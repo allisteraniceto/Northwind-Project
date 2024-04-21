@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import Header from "../components/Header";
 import EmployeeList from "../components/EmployeeList";
-import PerformanceReviewButton from "../components/PerformanceReviewButton";
+// import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import AttachmentList from "../components/AttachmentList";
 import SelectedEmployee from "../components/SelectedEmployee";
 import BackButton from "../components/BackButton";
@@ -74,10 +74,10 @@ function HrPage() {
         <div className="selected-employee-container">
           <SelectedEmployee EmployeeId={selectedEmployeeID} />
           <div className="performance-review-button-container">
-            <PerformanceReviewButton
+            {/* <PerformanceReviewButton
               linkTo="/ManagerReviewForm"
               reviewStatus="Finalized"
-            />
+            /> */}
           </div>
           <StartReviewProcessButton />
         </div>
