@@ -110,7 +110,7 @@ export default function StarRanking({ formType, readOnlyStarRanking}: Props) {
   return (
     <>
       <nav className="starRanking">
-      <>&nbsp; </><>&nbsp; </>Employee Ratings<>&nbsp; </><>&nbsp; </><>&nbsp; </>Manager Ratings
+      <p style={{ fontWeight: 'bold' }}><>&nbsp; </>Employee Ratings<>&nbsp; </><>&nbsp; </><>&nbsp; </>Manager Ratings</p>
       <nav className="starScroll">
       <nav className="subratings">
         <Star formType={String(formType)} questionNum = {1} category="Growth Mindset" readOnlyStar={readOnlyStarRanking} childToParent={childToParent1} key="id1"></Star>
@@ -164,11 +164,11 @@ export default function StarRanking({ formType, readOnlyStarRanking}: Props) {
         <nav className="bothTotals">
         <nav className = "totals">
         <p><>&nbsp;</><>&nbsp;</><>&nbsp;</>Total Ratings: {rating1+rating2+rating3+rating4+rating5+rating6+rating7+rating8}</p>
-        <>&nbsp;</><>&nbsp;</><>&nbsp;</>Average: {(rating1+rating2+rating3+rating4+rating5+rating6+rating7+rating8)/8}
+        <>&nbsp;</><>&nbsp;</><>&nbsp;</>Overall: {(rating1+rating2+rating3+rating4+rating5+rating6+rating7+rating8)/8}
         </nav>
         <nav className = "totals">
         <p><>&nbsp;</><>&nbsp;</><>&nbsp;</>Total Ratings: {rating9+rating10+rating11+rating12+rating13+rating14+rating15+rating16}</p>
-        <>&nbsp;</><>&nbsp;</><>&nbsp;</>Average: {(rating9+rating10+rating11+rating12+rating13+rating14+rating15+rating16)/8}
+        <>&nbsp;</><>&nbsp;</><>&nbsp;</>Overall: {(rating9+rating10+rating11+rating12+rating13+rating14+rating15+rating16)/8}
         </nav>
         </nav>
       </nav>
