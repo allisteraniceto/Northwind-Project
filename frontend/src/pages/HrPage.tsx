@@ -7,6 +7,7 @@ import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import AttachmentList from "../components/AttachmentList";
 import SelectedEmployee from "../components/SelectedEmployee";
 import BackButton from "../components/BackButton";
+import StartReviewProcessButton from "../components/StartReviewProcessButton";
 
 import "../styles/HrDashboard.css";
 import "../styles/EmployeeList.css";
@@ -72,10 +73,13 @@ function HrPage() {
         </div>
         <div className="selected-employee-container">
           <SelectedEmployee EmployeeId={selectedEmployeeID} />
-          <PerformanceReviewButton
-            linkTo="/ManagerReviewForm"
-            reviewStatus="Finalized"
-          />
+          <div className="performance-review-button-container">
+            <PerformanceReviewButton
+              linkTo="/ManagerReviewForm"
+              reviewStatus="Finalized"
+            />
+          </div>
+          <StartReviewProcessButton />
         </div>
         <div className="attachments-container">
           <div className="attachment-list-header">
