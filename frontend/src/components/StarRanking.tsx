@@ -163,12 +163,12 @@ export default function StarRanking({ formType, readOnlyStarRanking}: Props) {
         </nav>
         <nav className="bothTotals">
         <nav className = "totals">
-        <p><>&nbsp;</><>&nbsp;</><>&nbsp;</>Total Ratings: {rating1+rating2+rating3+rating4+rating5+rating6+rating7+rating8}</p>
-        <>&nbsp;</><>&nbsp;</><>&nbsp;</>Overall: {(rating1+rating2+rating3+rating4+rating5+rating6+rating7+rating8)/8}
+        <p style={{ fontWeight: 'bold' }}><>&nbsp;</><>&nbsp;</><>&nbsp;</>Total Ratings: {rating1+rating2+rating3+rating4+rating5+rating6+rating7+rating8}</p>
+        <p style={{ fontWeight: 'bold' }}><>&nbsp;</><>&nbsp;</><>&nbsp;</>Overall: {(rating1+rating2+rating3+rating4+rating5+rating6+rating7+rating8)/8}</p>
         </nav>
         <nav className = "totals">
-        <p><>&nbsp;</><>&nbsp;</><>&nbsp;</>Total Ratings: {rating9+rating10+rating11+rating12+rating13+rating14+rating15+rating16}</p>
-        <>&nbsp;</><>&nbsp;</><>&nbsp;</>Overall: {(rating9+rating10+rating11+rating12+rating13+rating14+rating15+rating16)/8}
+        <p style={{ fontWeight: 'bold' }}><>&nbsp;</><>&nbsp;</><>&nbsp;</>Total Ratings: {rating9+rating10+rating11+rating12+rating13+rating14+rating15+rating16}</p>
+        <p style={{ fontWeight: 'bold' }}><>&nbsp;</><>&nbsp;</><>&nbsp;</>Overall: {(rating9+rating10+rating11+rating12+rating13+rating14+rating15+rating16)/8}</p>
         </nav>
         </nav>
       </nav>
