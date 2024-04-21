@@ -7,6 +7,7 @@ import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import AttachmentList from "../components/AttachmentList";
 import SelectedEmployee from "../components/SelectedEmployee";
 import BackButton from "../components/BackButton";
+import StartReviewProcessButton from "../components/StartReviewProcessButton";
 
 import "../styles/HrDashboard.css";
 import "../styles/EmployeeList.css";
@@ -15,8 +16,8 @@ import "../styles/InteractionsPane.css"; //.interactions-section, .elected-emplo
 
 import YearCardList from "../components/YearCardList";
 
-import '../styles/YearCard.css'; // Import the CSS file
-import '../styles/YearCardList.css'; // Import the CSS file
+import "../styles/YearCard.css"; // Import the CSS file
+import "../styles/YearCardList.css"; // Import the CSS file
 
 function HrPage() {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
@@ -42,13 +43,10 @@ function HrPage() {
     setSelectedEmployeeID(null);
   };
 
-    
   const handleYearSelected = (year: number | null) => {
     console.log(`Year ${year} selected`);
     setSelectedYear(year);
   };
-
-
 
   //track expandManager state
   useEffect(() => {
@@ -74,34 +72,38 @@ function HrPage() {
           />
         </div>
         <div className="selected-employee-container">
-               
-          {/* Display performance review year only when both an employee and a year are selected */}
-          {selectedEmployeeID !== null && selectedYear !== null ? (
-          <p>Performance Review Year: {selectedYear}</p>
-        ) : selectedEmployeeID !== null ? (
-          <p>Please select a performance review year</p>
-        ) : (
-          <p>Please select an employee</p>
-        )}
-
-        <SelectedEmployee EmployeeId={selectedEmployeeID} />
-          <PerformanceReviewButton
-            linkTo="/ManagerReviewForm"
-            reviewStatus="Finalized"
-          />
-          <p>User ID: {selectedEmployeeID}</p>
+          <SelectedEmployee EmployeeId={selectedEmployeeID} />
+          <div className="performance-review-button-container">
+            <PerformanceReviewButton
+              linkTo="/ManagerReviewForm"
+              reviewStatus="Finalized"
+            />
+          </div>
+          <StartReviewProcessButton />
         </div>
         <div className="attachments-container">
           <div className="attachment-list-header">
             <h3>Attachments</h3>
+            {/* Display performance review year only when both an employee and a year are selected */}
+            {selectedEmployeeID !== null && selectedYear !== null ? (
+              <p>Performance Review Year: {selectedYear}</p>
+            ) : selectedEmployeeID !== null ? (
+              <p>Please select a performance review year</p>
+            ) : (
+              <p>Please select an employee</p>
+            )}
           </div>
+
           {/*conditionally render attachment list*/}
-          {selectedEmployeeID && <AttachmentList />}
+          {selectedEmployeeID && selectedYear && <AttachmentList />}
         </div>
         <div className="previous-years-container">
           {/*PREVIOUS REVIEWS*/}
-          <YearCardList startYear={2023} endYear={2029} onYearSelected={handleYearSelected} />
-
+          <YearCardList
+            startYear={2023}
+            endYear={2029}
+            onYearSelected={handleYearSelected}
+          />
         </div>
       </div>
     </div>
