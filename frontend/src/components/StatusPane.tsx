@@ -72,7 +72,7 @@ export default function StatusPane({ email }: Props) {
     <>
       <div dangerouslySetInnerHTML={{ __html: "<!-- comment text -->" }} />
       <nav className="statusPane">
-        <nav className="status">
+        <nav className="status-check">
           Status: 
           <div style={{ color: textColor }}  >{status}</div>
         </nav>

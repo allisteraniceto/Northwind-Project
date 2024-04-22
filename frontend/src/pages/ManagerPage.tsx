@@ -17,7 +17,7 @@ import "../styles/InteractionsPane.css";
 import AttachmentList from "../components/AttachmentList";
 import PerformanceReviewButton from "../components/PerformanceReviewButton";
 import SelectedEmployee from "../components/SelectedEmployee.tsx";
-import StatusPane from "../components/StatusPane";
+// import StatusPane from "../components/StatusPane";
 
 import "../styles/InteractionsPane.css"; //.interactions-section, .elected-employee-container, .previous-years-container
 import "../styles/ManagerSection.css";
@@ -102,7 +102,7 @@ function ManagerPage(props: ManagerPageProps) {
               reviewStatus="Finalized"
             />
           </div>
-          <StatusPane email="john.doe@gmail.com" />
+          {/* <StatusPane email="john.doe@gmail.com" /> */}
         </div>
         <div className="attachments-container">
           <div className="attachment-list-header">
