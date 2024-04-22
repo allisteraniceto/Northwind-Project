@@ -11,14 +11,14 @@ import "../styles/Attachments.css";
 interface Attachment {
   [key: number]: string;
 }
-const currentYear = new Date().getFullYear();
+// const currentYear = new Date().getFullYear();
 
 interface AttachmentListProps {
   selectedYear: number;
 }
 
 export default function AttachmentList({
-  selectedYear = 2023, //default = current year
+  selectedYear, //default = current year
 }: AttachmentListProps) {
   const [attachmentList, setAttachmentList] = useState<Attachment>({});
 
@@ -35,7 +35,7 @@ export default function AttachmentList({
           `${config.apiUrl}/Attachments/GetAllAttachments`,
           {
             params: {
-              year: 2023,
+              year: selectedYear,
             },
           }
         ); //no endpoint yet for attachments
@@ -45,10 +45,11 @@ export default function AttachmentList({
       } catch (error) {
         //handle errors
         console.error("Error making GET request:", error);
+        setAttachmentList({});
       }
     };
     getAllAttachments();
-  }, []);
+  }, [selectedYear]);
 
   //pass the set function down to EmployeeCard
   const handleAttachmentSelect = (attachmentId: number) => {

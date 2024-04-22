@@ -6,7 +6,7 @@ import DownloadButton from "./DownloadButton";
 type HandleFunction = (employeeId: number) => void; //defined type here
 
 //need this for download button
-const currentYear = new Date().getFullYear();
+// const currentYear = new Date().getFullYear();
 
 interface AttachmentProps {
   attachName: string;
