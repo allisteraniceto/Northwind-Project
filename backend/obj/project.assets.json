@@ -3051,11 +3051,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "c:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
+      "projectPath": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\allister18\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\obj\\",
+      "outputPath": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\allister18\\AppData\\Roaming\\NuGet\\NuGet.Config",

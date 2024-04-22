@@ -13,7 +13,7 @@ public class AttachmentsController : ControllerBase
         _dbContext = dbContext;
     }
 
-    [HttpGet]
+    [HttpPost]
     [Route("UploadAttachment")]
     public async Task<IActionResult> UploadAttachment(IFormFile file, string caption)
     {

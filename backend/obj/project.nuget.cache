@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rzGbAseI92dDl70WAuGy44fzJp9W/oSPoG2fesch1FRCkw8gQQ7xB+2EgZBf6VRKJFVp5Ds4/D6mLDQhbDZj8A==",
+  "dgSpecHash": "2iDr3UIg7aIudtTNivcBIzQnCcvUUZqnsKiDDIkJHKKOVCrimd3RWNAOMNdObk36jTmHTxD5NiQVar09QWlpiQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
+  "projectFilePath": "C:\\Users\\allister18\\OneDrive - Washington State University (email.wsu.edu)\\Documents\\Senior Project\\Northwind-Project\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\allister18\\.nuget\\packages\\csvhelper\\6.0.0\\csvhelper.6.0.0.nupkg.sha512",
     "C:\\Users\\allister18\\.nuget\\packages\\entityframework\\6.0.0\\entityframework.6.0.0.nupkg.sha512",
