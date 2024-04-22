@@ -1,0 +1,26 @@
+.statusPane {
+  background-color: #fff;
+  height: px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column
+}
+
+.status-check{
+  grid-row: 2/3;
+  grid-column: 2/3;
+  background-color: #fff;
+  height: px;
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  align-items: left;
+  flex-direction: row;
+}
+
+.statusButton {
+  display: flex;
+  flex-direction: column;
+}

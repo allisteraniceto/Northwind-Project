@@ -1,0 +1,62 @@
+.starRanking {
+    background-color: #fff;
+    margin: 0px;
+    padding: 10px;
+    width:360px;
+    display: flex;
+    align-items: left;
+    flex-direction: column
+  }
+  
+  .category{
+    background-color: #fff;
+    margin: 0;
+    padding-left: 10px;
+    display: flex;
+    align-items: left;
+    flex-direction: row
+  }
+  
+  .text{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 140px;
+  } 
+
+  .ratings{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    width: 350px;
+  } 
+
+  .starScroll{
+  overflow-x: auto;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  scroll-behavior: smooth;
+  height: 275px;
+  display: flex;
+  flex-direction: row;
+  }
+
+  .subratings{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .totals{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width:160px;
+  }
+  .bothTotals{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+  }
