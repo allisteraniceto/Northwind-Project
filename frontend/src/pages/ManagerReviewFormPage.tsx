@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import FormList from "../components/FormList";
 import SubmitOrSignButton from "../components/SubmitOrSignButton";
+import StarRanking from "../components/StarRanking";
 import SelectedEmployee from "../components/SelectedEmployee";
 
 export default function ManagerReviewFormPage() {
@@ -15,7 +16,9 @@ export default function ManagerReviewFormPage() {
           <SelectedEmployee EmployeeId={6} />
         </div>
         <div className="ratings-container">
-          <p>Ratings</p>
+          <div className="ratings">
+            {<StarRanking formType="manager" readOnlyStarRanking={true}></StarRanking>}
+          </div>
         </div>
         <div className="signature-submit-container">
           <p>
