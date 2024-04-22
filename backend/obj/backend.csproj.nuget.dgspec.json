@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj": {}
+    "C:\\VSCodeProjects\\Northwind-Project\\backend\\backend.csproj": {}
   },
   "projects": {
-    "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj": {
+    "C:\\VSCodeProjects\\Northwind-Project\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj",
+        "projectUniqueName": "C:\\VSCodeProjects\\Northwind-Project\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/backend.csproj",
-        "packagesPath": "/home/deck/.nuget/packages/",
-        "outputPath": "/run/media/deck/0a421f88-cc73-4b8d-aacb-5bb05e07aa1f/Coding/mid-april update/Northwind-Project/backend/obj/",
+        "projectPath": "C:\\VSCodeProjects\\Northwind-Project\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
+        "outputPath": "C:\\VSCodeProjects\\Northwind-Project\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/deck/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -79,16 +79,11 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.16, 6.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -97,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.116/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
         }
       }
     }
