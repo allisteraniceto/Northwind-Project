@@ -10,11 +10,11 @@ const currentYear = new Date().getFullYear();
 
 interface AttachmentProps {
   attachName: string;
-  attachPath: string;
   attachNum: number;
   onSelect: HandleFunction;
   isSelected: boolean;
   onDelete: () => void; // Callback function to handle the delete action
+  selectedYear: number;
 }
 
 export default function AttachmentCard({
@@ -23,10 +23,13 @@ export default function AttachmentCard({
   isSelected,
   attachName,
   onDelete,
+  selectedYear,
 }: AttachmentProps) {
   const handleClick = () => {
     onSelect(attachNum);
   };
+
+  console.log(attachNum);
 
   //destructure AttachmentProps
   return (
@@ -45,7 +48,7 @@ export default function AttachmentCard({
         <DownloadButton
           attachmentId={attachNum}
           attachmentName={attachName}
-          year={currentYear}
+          year={selectedYear}
         />
       </div>
     </div>

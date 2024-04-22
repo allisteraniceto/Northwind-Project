@@ -8,39 +8,50 @@ import config from "../../config.json";
 import "../styles/FormSection.css";
 
 export default function UploadButton() {
-  const [file, setFile] = useState<string | File | undefined>();
-  const [fileAlias, setFileAlias] = useState<string | undefined>();
+  const [file, setFile] = useState<File | undefined>();
+  const [caption, setCaption] = useState<string | undefined>();
 
   const handleClick = (e: React.SyntheticEvent) => {
     e.preventDefault(); //prevent default behavior
 
-    if (!file || !fileAlias?.trim()) {
+    if (!file || !caption?.trim()) {
       window.alert("No file has been selected or file alias named");
       console.log("No file has been selected");
       return;
     }
 
-    console.log("file", file);
+    console.log("file LOG:", file);
+    console.log("caption LOG:", caption);
 
     const formData = new FormData();
+    formData.append("caption", caption);
     formData.append("file", file);
-    formData.append("alias", fileAlias);
 
     //POST request to send uploaded to file to backend
     const postRequest = async () => {
+      console.log("formData:", formData.get("caption"));
+      console.log("formData:", formData.get("file"));
       try {
         const response = await axios.post(
           `${config.apiUrl}/Attachments/UploadAttachment`,
           formData,
           {
-            onUploadProgress: (progressEvent) => {
-              console.log(progressEvent.progress);
+            params: {
+              caption: caption,
+            },
+            headers: {
+              "Content-Type": "multipart/form-data",
             },
           }
+          // {
+          //   onUploadProgress: (progressEvent) => {
+          //     console.log(progressEvent.progress);
+          //   },
+          // }
         );
         console.log(response);
-      } catch (error) {
-        console.log(error);
+      } catch (error: any) {
+        console.log(error.response.data);
       }
     };
     postRequest();
@@ -48,7 +59,7 @@ export default function UploadButton() {
 
   const handleAlias = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newInput = event.target.value;
-    setFileAlias(newInput);
+    setCaption(newInput);
     console.log(newInput);
   };
 
@@ -57,9 +68,9 @@ export default function UploadButton() {
     const target = e.target as HTMLInputElement & {
       files: FileList; //type File
     };
+    console.log("target", target.files[0]);
 
     setFile(target.files[0]); //grab first file inside targe.files
-    console.log("target", file);
   }
 
   return (

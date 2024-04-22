@@ -13,7 +13,7 @@ public class AttachmentsController : ControllerBase
         _dbContext = dbContext;
     }
 
-    [HttpPost]
+    [HttpGet]
     [Route("UploadAttachment")]
     public async Task<IActionResult> UploadAttachment(IFormFile file, string caption)
     {
@@ -72,7 +72,7 @@ public class AttachmentsController : ControllerBase
         return Ok("File uploaded successfully.");
     }
 
-    [HttpPost]
+    [HttpGet]
     [Route("DownloadAttachment")]
     public async Task<IActionResult> DownloadAttachment(int fileID, int year)
     {
@@ -103,7 +103,7 @@ public class AttachmentsController : ControllerBase
 
     }
 
-    [HttpPost]
+    [HttpGet]
     [Route("GetAllAttachments")]
     public async Task<IActionResult> GetAllAttachments(int year)
     {
@@ -135,7 +135,7 @@ public class AttachmentsController : ControllerBase
         return Ok(attachments_dictionary);
     }
 
-    [HttpPost]
+    [HttpDelete]
     [Route("DeleteAttachment")]
     public async Task<IActionResult> DeleteAttachment(int year, int fileID)
     {
