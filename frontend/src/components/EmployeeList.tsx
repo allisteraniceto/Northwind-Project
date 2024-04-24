@@ -54,6 +54,7 @@ export default function EmployeeList(props: EmployeeListProps) {
   //GET request to retrieve list of employees (direct reports)
   useEffect(() => {
     const fetchData = async () => {
+      console.log("managerHID:", props.managerHID);
       try {
         const response = await axios.get(
           `${config.apiUrl}/${props.dashboard}/${props.listType}`,

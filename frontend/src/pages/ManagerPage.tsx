@@ -126,7 +126,9 @@ function ManagerPage(props: ManagerPageProps) {
           </div>
 
           {/*conditionally render attachment list*/}
-          {selectedEmployeeID && selectedYear && <AttachmentList />}
+          {selectedEmployeeID && selectedYear && (
+            <AttachmentList selectedYear={selectedYear} />
+          )}
         </div>
         <div className="previous-years-container">
           {/*PREVIOUS REVIEWS*/}

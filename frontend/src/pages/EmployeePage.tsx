@@ -91,7 +91,7 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
               <p>Performance Review Year: {selectedYear}</p>
             )}
           </div>
-          {selectedYear && <AttachmentList />}
+          {selectedYear && <AttachmentList selectedYear={selectedYear} />}
         </div>
         <div className="previous-years-container">
           {/* PREVIOUS REVIEWS */}

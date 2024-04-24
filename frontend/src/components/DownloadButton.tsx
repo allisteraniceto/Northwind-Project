@@ -16,14 +16,14 @@ function DownloadButton({
 }: DownloadButtonProps) {
   const downloadAttachment = async () => {
     try {
-      const response = await axios.post(
+      const response = await axios.get(
         `${config.apiUrl}/Attachments/DownloadAttachment`,
         {
-          attachmentId: attachmentId,
-          attachmentName: attachmentName,
-          year: year,
-        },
-        { responseType: "blob" }
+          params: {
+            fileID: attachmentId,
+            year: year,
+          },
+        }
       );
 
       const url = window.URL.createObjectURL(new Blob([response.data]));
