@@ -1,6 +1,6 @@
 import FormRow from "./FormRow";
 
-import UploadButton from "./UploadButton";
+import Upload from "./Upload";
 
 import "../styles/FormSection.css";
 
@@ -36,7 +36,7 @@ export default function ReviewFormList(prop: ReviewFormListProps) {
             />
           ))}
         </div>
-        <UploadButton />
+        <Upload />
       </div>
     </>
   );

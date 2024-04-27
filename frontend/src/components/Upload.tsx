@@ -7,7 +7,7 @@ import config from "../../config.json";
 
 import "../styles/FormSection.css";
 
-export default function UploadButton() {
+export default function Upload() {
   const [file, setFile] = useState<File | undefined>();
   const [caption, setCaption] = useState<string | undefined>();
 
