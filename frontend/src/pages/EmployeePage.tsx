@@ -53,7 +53,7 @@ export default function EmployeePage({ employeeHID }: EmployeePageProps) {
         <div className="employee-dashboard">
           <div className="employee-rating-pane">
             <h3 className="employee-rating-header">My Rating</h3>
-            <RatingTile ratingNum={48} />
+            <RatingTile ratingNum={38} />
           </div>
           <div className="employee-criteria-pane">
             <ul>

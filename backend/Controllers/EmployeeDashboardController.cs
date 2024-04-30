@@ -5,8 +5,8 @@ using System.Text.Json;
 [Route("[controller]")]
 public class EmployeeDashboardController : ControllerBase
 {
+    private readonly APIDbContext _dbContext; 
     
-
     /* WILL MAKE LATER SINCE NO ATTACHMENT AND ATTACHMENT LIST IN DATABASE YET */
     
     // //GET request to get ALL Attachments
@@ -28,6 +28,26 @@ public class EmployeeDashboardController : ControllerBase
 
     //     return Ok(queryResult);
     // }
+    [HttpGet]
+    [Route("GetEmployeeRating")]
+    public IActionResult GetEmployeeRating(int employee_HID, int year)
+    {
+        var review = default(Review);
+        //find current review for employee and rating ID
+        review = _dbContext.Reviews.FirstOrDefault(review => review.EmployeeHID == employee_HID && review.Year == year);
+        
+        if (review == null){return NotFound("No review was found for the employee");}
+
+        var rating = default(Rating);
+        rating = _dbContext.Ratings.FirstOrDefault(rating => rating.ReviewID == review.ReviewID);
+
+        //handle empty review
+        if (rating != null){
+            return Ok(rating.Value);
+        } else{
+            return NotFound("No rating was found for the employee");
+        }
+    }
 
     [HttpGet]
     [Route("EmulateEmployee")]
