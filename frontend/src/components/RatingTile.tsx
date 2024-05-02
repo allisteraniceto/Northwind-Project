@@ -4,7 +4,7 @@ import "../styles/EmployeeList.css";
 import "../styles/EmployeeDashboard.css";
 
 interface RatingTile {
-  ratingNum: number;
+  ratingNum: number | null;
 }
 
 export default function RatingTile({ ratingNum }: RatingTile) {

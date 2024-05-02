@@ -18,7 +18,11 @@ export default function EmployeeReviewFormPage() {
         </div>
         <div className="ratings-container">
           <div className="ratings">
-            {<StarRanking formType="employee" readOnlyStarRanking={false}></StarRanking>}
+            {
+              <StarRanking
+                formType="employee"
+                readOnlyStarRanking={false}></StarRanking>
+            }
           </div>
         </div>
         <div className="signature-submit-container">
